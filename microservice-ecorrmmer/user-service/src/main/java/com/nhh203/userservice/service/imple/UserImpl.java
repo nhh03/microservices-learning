@@ -1,10 +1,7 @@
 package com.nhh203.userservice.service.imple;
 
 
-import com.nhh203.userservice.exception.wrapper.EmailOrUsernameNotFoundException;
-import com.nhh203.userservice.exception.wrapper.PasswordNotFoundException;
-import com.nhh203.userservice.exception.wrapper.PhoneNumberNotFoundException;
-import com.nhh203.userservice.exception.wrapper.UserNotFoundException;
+import com.nhh203.userservice.exception.wrapper.*;
 import com.nhh203.userservice.model.dto.request.ChangePasswordRequest;
 import com.nhh203.userservice.model.dto.request.Login;
 import com.nhh203.userservice.model.dto.request.SignUp;
@@ -22,7 +19,10 @@ import com.nhh203.userservice.service.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
+import org.springframework.dao.DataAccessException;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -32,6 +32,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
 
+import java.util.Objects;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
@@ -144,32 +145,102 @@ public class UserImpl implements UserService {
     }
 
     @Override
-    public Mono<User> update(Long userId, SignUp update) {
-        return null;
+    public Mono<User> update(Long id, SignUp updateDTO) {
+
+        try {
+
+            User existingUser = userRepository.findById(id).orElseThrow(() -> new UserNotFoundException("User not found userId: " + id + " for update"));
+
+            modelMapper.map(updateDTO, existingUser);
+            existingUser.setPassword(passwordEncoder.encode(updateDTO.getPassword()));
+
+
+            return Mono.just(userRepository.save(existingUser));
+        } catch (Exception exception) {
+            return Mono.error(exception);
+        }
     }
 
     @Override
     public Mono<String> changePassword(ChangePasswordRequest request) {
-        return null;
+        try {
+
+            UserDetails userDetails = getCurrentUserDetails();
+            String username = userDetails.getUsername();
+
+
+            User existingUser = findByUsername(username)
+                    .orElseThrow(() -> new UserNotFoundException("User not found with username " + username));
+
+            if (passwordEncoder.matches(request.getOldPassword(), userDetails.getPassword())) {
+                if (validateNewPassword(request.getNewPassword(), request.getConfirmPassword())) {
+                    existingUser.setPassword(passwordEncoder.encode(request.getNewPassword()));
+                    userRepository.save(existingUser);
+                }
+
+                return Mono.just("Password changed failed.");
+            } else {
+                return Mono.error(new PasswordNotFoundException("Incorrect password"));
+            }
+
+
+        } catch (Exception exception) {
+            return Mono.error(new UserNotAuthenticatedException("Transaction silently rolled back"));
+        }
     }
+
+
+    private boolean validateNewPassword(String newPassword, String confirmPassword) {
+        return Objects.equals(newPassword, confirmPassword);
+    }
+
+    private UserDetails getCurrentUserDetails() {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        if (authentication.isAuthenticated() && authentication.getPrincipal() instanceof UserDetails) {
+            return (UserDetails) authentication.getPrincipal();
+        } else {
+            throw new UserNotAuthenticatedException("User not authenticated.");
+        }
+    }
+
 
     @Override
     public String delete(Long id) {
-        return null;
+        userRepository.findById(id)
+                .ifPresentOrElse(
+                        user -> {
+                            try {
+                                userRepository.delete(user);
+                            } catch (DataAccessException e) {
+                                throw new RuntimeException("Error deleting user with userId: " + id, e);
+                            }
+                        },
+                        () -> {
+                            throw new UserNotFoundException("User not found for userId: " + id);
+                        }
+                );
+        return "User with id " + id + " deleted successfully.";
     }
 
     @Override
     public Optional<User> findById(Long userId) {
-        return Optional.of(userRepository.findById(userId)).orElseThrow(() -> new UserNotFoundException("User not found with userId: " + userId));
+        return Optional.of(userRepository
+                        .findById(userId))
+                .orElseThrow(() -> new UserNotFoundException("User not found with userId: " + userId));
     }
 
     @Override
     public Optional<User> findByUsername(String userName) {
-        return Optional.ofNullable(userRepository.findByUsername(userName).orElseThrow(() -> new UserNotFoundException("User not found with userName: " + userName)));
+        return Optional.ofNullable(userRepository
+                .findByUsername(userName)
+                .orElseThrow(() -> new UserNotFoundException("User not found with userName: " + userName)));
     }
 
     @Override
     public Page<UserDto> findAllUsers(int page, int size, String sortBy, String sortOrder) {
-        return null;
+        Sort sort = Sort.by(Sort.Direction.fromString(sortOrder), sortBy);
+        PageRequest pageRequest = PageRequest.of(page, size, sort);
+        Page<User> usersPage = userRepository.findAll(pageRequest);
+        return usersPage.map(user -> modelMapper.map(user, UserDto.class));
     }
 }

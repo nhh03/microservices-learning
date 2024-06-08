@@ -59,11 +59,4 @@ public class UserAuth {
                     return Mono.just(new ResponseEntity<>("Logout failed.", HttpStatus.BAD_REQUEST));
                 });
     }
-
-
-    @GetMapping("/demo")
-    public String getDemo() {
-        return "okok";
-    }
-
 }
