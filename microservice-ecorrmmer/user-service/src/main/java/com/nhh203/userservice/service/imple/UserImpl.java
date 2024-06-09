@@ -146,15 +146,10 @@ public class UserImpl implements UserService {
 
     @Override
     public Mono<User> update(Long id, SignUp updateDTO) {
-
         try {
-
             User existingUser = userRepository.findById(id).orElseThrow(() -> new UserNotFoundException("User not found userId: " + id + " for update"));
-
             modelMapper.map(updateDTO, existingUser);
             existingUser.setPassword(passwordEncoder.encode(updateDTO.getPassword()));
-
-
             return Mono.just(userRepository.save(existingUser));
         } catch (Exception exception) {
             return Mono.error(exception);
@@ -164,27 +159,21 @@ public class UserImpl implements UserService {
     @Override
     public Mono<String> changePassword(ChangePasswordRequest request) {
         try {
-
             UserDetails userDetails = getCurrentUserDetails();
             String username = userDetails.getUsername();
-
-
             User existingUser = findByUsername(username)
                     .orElseThrow(() -> new UserNotFoundException("User not found with username " + username));
-
             if (passwordEncoder.matches(request.getOldPassword(), userDetails.getPassword())) {
                 if (validateNewPassword(request.getNewPassword(), request.getConfirmPassword())) {
                     existingUser.setPassword(passwordEncoder.encode(request.getNewPassword()));
                     userRepository.save(existingUser);
                 }
-
                 return Mono.just("Password changed failed.");
             } else {
                 return Mono.error(new PasswordNotFoundException("Incorrect password"));
             }
-
-
         } catch (Exception exception) {
+            log.error(exception.getMessage(), exception);
             return Mono.error(new UserNotAuthenticatedException("Transaction silently rolled back"));
         }
     }

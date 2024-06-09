@@ -1,5 +1,7 @@
 package com.nhh203.userservice.config;
 
+import com.nhh203.userservice.security.jwt.JwtEntryPoint;
+import com.nhh203.userservice.security.jwt.JwtTokenFilter;
 import com.nhh203.userservice.security.userprinciple.UserDetailService;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
@@ -31,6 +33,9 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 public class WebSecurityConfig {
 
     private final UserDetailService userDetailService;
+    private final JwtEntryPoint jwtEntryPoint;
+    private final JwtTokenFilter jwtTokenFilter;
+
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
@@ -38,9 +43,18 @@ public class WebSecurityConfig {
                 .cors(Customizer.withDefaults())
                 .authorizeHttpRequests(request ->
                         request
-                                .requestMatchers("/api/**").permitAll()
+                                .requestMatchers("/api/auth/**").permitAll()
+                                .requestMatchers("/api/manager/change-password").authenticated()
+                                .requestMatchers("/api/manager/delete/**").authenticated()
+                                .requestMatchers("/api/auth/logout").authenticated()
+                                .requestMatchers("/api/manager/user/**").permitAll()
+                                .requestMatchers("/v2/api-docs", "/swagger-ui/**", "/swagger-resources/**", "/webjars/**").permitAll()
+                                .anyRequest().authenticated()
                 )
-                .sessionManagement(manager -> manager.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
+                .sessionManagement(manager -> manager.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                .exceptionHandling((exception) -> exception.authenticationEntryPoint(jwtEntryPoint).accessDeniedPage("/error/accedd-denied"))
+                .authenticationProvider(authenticationProvider())
+                .addFilterBefore(jwtTokenFilter, UsernamePasswordAuthenticationFilter.class);
         return httpSecurity.build();
     }
 

@@ -48,15 +48,15 @@ public class UserAuth {
                 });
     }
 
-    @PostMapping("/logout")
-    @PreAuthorize("isAuthenticated() and hasAuthority('USER')")
-    public Mono<ResponseEntity<String>> logout() {
-        log.info("Logout endpoint called");
-        return userService.logout()
-                .then(Mono.just(new ResponseEntity<>("Logged out successfully.", HttpStatus.OK)))
-                .onErrorResume(error -> {
-                    log.error("Logout failed", error);
-                    return Mono.just(new ResponseEntity<>("Logout failed.", HttpStatus.BAD_REQUEST));
-                });
-    }
+//    @PostMapping("/logout")
+//    @PreAuthorize("isAuthenticated() and hasAuthority('USER')")
+//    public Mono<ResponseEntity<String>> logout() {
+//        log.info("Logout endpoint called");
+//        return userService.logout()
+//                .then(Mono.just(new ResponseEntity<>("Logged out successfully.", HttpStatus.OK)))
+//                .onErrorResume(error -> {
+//                    log.error("Logout failed", error);
+//                    return Mono.just(new ResponseEntity<>("Logout failed.", HttpStatus.BAD_REQUEST));
+//                });
+//    }
 }

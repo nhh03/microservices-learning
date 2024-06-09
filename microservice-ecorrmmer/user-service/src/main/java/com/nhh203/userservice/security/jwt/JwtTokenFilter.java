@@ -6,6 +6,7 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
@@ -32,7 +33,7 @@ public class JwtTokenFilter extends OncePerRequestFilter {
 
         try {
             String token = getJwt(request);
-
+            log.warn("token :  {} ", token);
             if (token != null && jwtProvider.validateToken(token)) {
                 String username = jwtProvider.getUserNameFromToken(token);
                 UserDetails userDetails = userDetailService.loadUserByUsername(username);
@@ -49,20 +50,19 @@ public class JwtTokenFilter extends OncePerRequestFilter {
                 response.setHeader("Refresh-Token", refreshToken);
             }
 
+            filterChain.doFilter(request, response);
 
         } catch (Exception e) {
             log.error("Can't set user authentication -> Message: ", e);
         }
 
-        // Ensure the filter chain continues
-        filterChain.doFilter(request, response);
     }
 
 
     private String getJwt(HttpServletRequest request) {
         String authHeader = request.getHeader("Authorization");
         if (authHeader != null && authHeader.startsWith("Bearer")) {
-            return authHeader.replace("Bearer", "");
+            return authHeader.replace("Bearer ", "");
         }
         return null;
     }

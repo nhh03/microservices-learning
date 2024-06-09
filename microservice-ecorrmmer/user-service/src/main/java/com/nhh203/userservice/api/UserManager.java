@@ -14,6 +14,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
+import reactor.core.publisher.Mono;
 
 @Slf4j
 @RestController
@@ -28,15 +29,20 @@ public class UserManager {
 
     @PutMapping("update/{id}")
     @PreAuthorize("isAuthenticated() and hasAuthority('USER')")
-    public ResponseEntity<ResponseMessage> update(@PathVariable("id") Long id, @RequestBody SignUp updateDTO) {
-        return new ResponseEntity<>(new ResponseMessage("OK"), HttpStatus.OK);
+    public Mono<ResponseEntity<ResponseMessage>> update(@PathVariable("id") Long id, @RequestBody SignUp updateDTO) {
+        return userService.update(id, updateDTO)
+                .flatMap(user -> Mono.just(new ResponseEntity<>(
+                        new ResponseMessage("Update user: " + updateDTO.getUsername() + " successfully."),
+                        HttpStatus.OK)))
+                .onErrorResume(error -> Mono.just(
+                        new ResponseEntity<>(new ResponseMessage("Update user: " + updateDTO.getUsername() + " failed " + error.getMessage()),
+                                HttpStatus.BAD_REQUEST)));
     }
 
     @PutMapping("/change-password")
     @PreAuthorize("isAuthenticated() and hasAuthority('USER')")
-    public String changePassword(@RequestBody ChangePasswordRequest request) {
-//        return userService.changePassword(request);
-        return "ok";
+    public Mono<String> changePassword(@RequestBody ChangePasswordRequest request) {
+        return userService.changePassword(request);
     }
 
     @DeleteMapping("delete/{id}")
@@ -44,9 +50,6 @@ public class UserManager {
     public String delete(@PathVariable("id") Long id) {
         return userService.delete(id);
     }
-
-
-
 
 
 }

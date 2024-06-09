@@ -27,9 +27,7 @@ public class UserRole {
     public ResponseEntity<?> assignRoles(@PathVariable Long id, @RequestBody String roleNames) {
         boolean success = roleService.assignRole(id, roleNames);
         if (success) {
-            return new ResponseEntity<>("Roles have been assigned to users with IDs " + id,
-                    headerGenerator.getHeadersForSuccessGetMethod(),
-                    HttpStatus.OK);
+            return new ResponseEntity<>("Roles have been assigned to users with IDs " + id, headerGenerator.getHeadersForSuccessGetMethod(), HttpStatus.OK);
         }
         return new ResponseEntity<>("Has full rights for the User" + id, headerGenerator.getHeadersForError(), HttpStatus.OK);
     }
@@ -38,17 +36,18 @@ public class UserRole {
     @PostMapping("/{id}/revoke-roles")
     @PreAuthorize("hasAuthority('ADMIN')")
     public ResponseEntity<?> revokeRoles(@PathVariable Long id, @RequestBody String roleNames) {
-        return new ResponseEntity<>("Has full rights for the User" + id,
-                headerGenerator.getHeadersForError(),
-                HttpStatus.OK);
+        boolean success = roleService.revokeRole(id, roleNames);
+        if (success) {
+            return new ResponseEntity<>("Roles have been revokes to users with IDs " + id, headerGenerator.getHeadersForSuccessGetMethod(), HttpStatus.OK);
+        }
+
+        return new ResponseEntity<>("Has full rights for the User" + id, headerGenerator.getHeadersForError(), HttpStatus.OK);
     }
 
     @GetMapping("/{id}/user-roles")
     public ResponseEntity<List<String>> getUserRoles(@PathVariable Long id) {
         List<String> userRoles = roleService.getUserRoles(id);
-        return new ResponseEntity<>(userRoles,
-                headerGenerator.getHeadersForSuccessGetMethod(),
-                HttpStatus.OK);
+        return new ResponseEntity<>(userRoles, headerGenerator.getHeadersForSuccessGetMethod(), HttpStatus.OK);
     }
 
 
