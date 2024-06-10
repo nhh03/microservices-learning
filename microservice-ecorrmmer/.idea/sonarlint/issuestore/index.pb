@@ -1,21 +1,9 @@
 
-z
-Jsrc/main/java/com/nhh203/discoveryservice/DiscoveryServiceApplication.java,4\3\436e26da8079f2bdb221ba4569b6d8985df4e864
-n
->src/main/java/com/nhh203/apigateway/ApiGatewayApplication.java,4\9\49fed9ecd45c4a894451fd4a086116847dccf5a2
-l
-<src/main/java/com/nhh203/userservice/api/HomeController.java,5\7\574a0d0ed1778a047db5ad9b25be37cf3699aa3a
-p
-@src/main/java/com/nhh203/userservice/UserServiceApplication.java,9\0\9091b62a52fe6dcd49d6cdf18903d474b2b85d88
+f
+6src/main/java/com/nhh203/userservice/api/UserRole.java,8\c\8cf1caa62fbcfccdf151380a52fa4ce385e2ba51
 f
 6src/main/java/com/nhh203/userservice/api/UserAuth.java,f\f\ffd9356276738f0bfafee2e51bcced94e05f01af
-7
-pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
-|
-Lsrc/main/java/com/nhh203/userservice/model/dto/response/ResponseMessage.java,9\1\91919a39c35a461717f9578fb86e902fdc7fafbb
-r
-Bsrc/main/java/com/nhh203/userservice/model/dto/request/SignUp.java,1\1\11b037d24d991785c6d6ae900f10343eee0fa60f
-‚
-Rsrc/main/java/com/nhh203/userservice/security/userprinciple/UserDetailService.java,2\0\2016156307cf5ebe39bc6a6bc9cb65d7a7432fdf
 r
 Bsrc/main/java/com/nhh203/userservice/config/WebSecurityConfig.java,4\9\49253c7c0dc6b5b1a50fb864b5d5bfb4f37de673
+i
+9src/main/java/com/nhh203/userservice/api/UserManager.java,b\e\be8d8a00651dcec1463ba5d322c7b883b5fecff1

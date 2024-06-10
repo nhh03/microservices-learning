@@ -1,11 +1,11 @@
 package com.nhh203.userservice.service.imple;
 
 
+import com.google.gson.Gson;
+import com.nhh203.userservice.constant.KafkaConstant;
+import com.nhh203.userservice.event.EventProducer;
 import com.nhh203.userservice.exception.wrapper.*;
-import com.nhh203.userservice.model.dto.request.ChangePasswordRequest;
-import com.nhh203.userservice.model.dto.request.Login;
-import com.nhh203.userservice.model.dto.request.SignUp;
-import com.nhh203.userservice.model.dto.request.UserDto;
+import com.nhh203.userservice.model.dto.request.*;
 import com.nhh203.userservice.model.dto.response.InformationMessage;
 import com.nhh203.userservice.model.dto.response.JwtResponseMessage;
 import com.nhh203.userservice.model.entity.RoleName;
@@ -16,7 +16,9 @@ import com.nhh203.userservice.security.jwt.JwtProvider;
 import com.nhh203.userservice.security.userprinciple.UserDetailService;
 import com.nhh203.userservice.security.userprinciple.UserPrinciple;
 import com.nhh203.userservice.service.UserService;
+import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
+import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.dao.DataAccessException;
@@ -32,6 +34,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -39,16 +43,17 @@ import java.util.stream.Collectors;
 @Service
 @RequiredArgsConstructor
 @Slf4j
+@FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class UserImpl implements UserService {
 
-    private final UserRepository userRepository;
-    private final ModelMapper modelMapper;
-    private final PasswordEncoder passwordEncoder;
-    private final RoleRepository roleRepository;
-    private final UserDetailService userDetailsService;
-    private final JwtProvider jwtProvider;
-
-//    private final WebClient.Builder webClientBuilder;
+    UserRepository userRepository;
+    ModelMapper modelMapper;
+    PasswordEncoder passwordEncoder;
+    RoleRepository roleRepository;
+    UserDetailService userDetailsService;
+    JwtProvider jwtProvider;
+    EventProducer eventProducer;
+    Gson gson;
 
 
     @Override
@@ -123,8 +128,8 @@ public class UserImpl implements UserService {
     public Mono<Void> logout() {
         return Mono.defer(() -> {
             Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-            SecurityContextHolder.getContext().setAuthentication(null);
             String currentToken = getCurrentToken();
+            SecurityContextHolder.getContext().setAuthentication(null);
             if (authentication != null && authentication.isAuthenticated()) {
                 String updatedToken = jwtProvider.reduceTokenExpiration(currentToken);
             }
@@ -167,6 +172,11 @@ public class UserImpl implements UserService {
                 if (validateNewPassword(request.getNewPassword(), request.getConfirmPassword())) {
                     existingUser.setPassword(passwordEncoder.encode(request.getNewPassword()));
                     userRepository.save(existingUser);
+
+                    // send email through kafka client
+                    EmailDetails emailDetails = emailDetailsConfig(username);
+                    eventProducer.send(KafkaConstant.PROFILE_ONBOARDING_TOPIC, gson.toJson(emailDetails));
+
                 }
                 return Mono.just("Password changed failed.");
             } else {
@@ -176,6 +186,25 @@ public class UserImpl implements UserService {
             log.error(exception.getMessage(), exception);
             return Mono.error(new UserNotAuthenticatedException("Transaction silently rolled back"));
         }
+    }
+
+    private EmailDetails emailDetailsConfig(String username) {
+        return EmailDetails.builder()
+                .recipient("nguyenhuyhoa2003@gmail.com")
+                .msgBody(textSendEmailChangePasswordSuccessfully(username))
+                .subject("Password Change Successful: " + LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")))
+                .attachment("Please be careful, don't let this information leak")
+                .build();
+    }
+
+    public String textSendEmailChangePasswordSuccessfully(String username) {
+        return "Hey " + username + "!\n\n" +
+                "This is a confirmation that your password has been successfully changed.\n" +
+                " If you did not initiate this change, please contact our support team immediately.\n" +
+                "If you have any questions or concerns, feel free to reach out to us.\n\n" +
+                "Best regards:\n\n" +
+                "Contact: hoangtien2k3qx1@gmail.com\n" +
+                "Fanpage: https://hoangtien2k3qx1.github.io/";
     }
 
 

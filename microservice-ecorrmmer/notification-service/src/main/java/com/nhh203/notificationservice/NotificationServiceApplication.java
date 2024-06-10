@@ -1,5 +1,7 @@
 package com.nhh203.notificationservice;
 
+import com.nhh203.notificationservice.constant.KafkaConstant;
+import com.nhh203.notificationservice.dto.EmailDetails;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -14,9 +16,8 @@ public class NotificationServiceApplication {
     }
 
 
-    @KafkaListener(topics = "notificationTopic")
-    public void handleNotification(OrderPlacedEvent orderPlacedEvent) {
-        log.info("Got message <{}>", orderPlacedEvent.getOrderNumber());
-
+    @KafkaListener(topics = KafkaConstant.PROFILE_ONBOARDING_TOPIC)
+    public void handleNotification(EmailDetails emailDetails) {
+        log.info("Got message <{}>", emailDetails.toString());
     }
 }

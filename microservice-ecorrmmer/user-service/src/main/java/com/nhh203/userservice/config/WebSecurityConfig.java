@@ -17,6 +17,7 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.config.http.SessionCreationPolicy;
@@ -36,35 +37,29 @@ public class WebSecurityConfig {
     private final JwtEntryPoint jwtEntryPoint;
     private final JwtTokenFilter jwtTokenFilter;
 
-
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
-        httpSecurity.csrf(AbstractHttpConfigurer::disable)
+        httpSecurity
+                .csrf(AbstractHttpConfigurer::disable)
                 .cors(Customizer.withDefaults())
                 .authorizeHttpRequests(request ->
                         request
-                                .requestMatchers("/api/auth/**").permitAll()
-                                .requestMatchers("/api/manager/change-password").authenticated()
-                                .requestMatchers("/api/manager/delete/**").authenticated()
-                                .requestMatchers("/api/auth/logout").authenticated()
-                                .requestMatchers("/api/manager/user/**").permitAll()
-                                .requestMatchers("/v2/api-docs", "/swagger-ui/**", "/swagger-resources/**", "/webjars/**").permitAll()
+                                .requestMatchers("/api/users/auth/**").permitAll()
+                                .requestMatchers("/api/users/manager/change-password").authenticated()
+                                .requestMatchers("/api/users/manager/delete/**").authenticated()
+                                .requestMatchers("/api/users/auth/logout").authenticated()
+                                .requestMatchers("/api/users/manager/user/**").permitAll()
+                                .requestMatchers("/swagger-ui/**", "/v3/api-docs/**", "/swaggers-ui.html").permitAll()
                                 .anyRequest().authenticated()
                 )
                 .sessionManagement(manager -> manager.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-                .exceptionHandling((exception) -> exception.authenticationEntryPoint(jwtEntryPoint).accessDeniedPage("/error/accedd-denied"))
+                .exceptionHandling((exception) -> exception
+                        .authenticationEntryPoint(jwtEntryPoint)
+                        .accessDeniedPage("/error/accedd-denied")
+                )
                 .authenticationProvider(authenticationProvider())
                 .addFilterBefore(jwtTokenFilter, UsernamePasswordAuthenticationFilter.class);
         return httpSecurity.build();
-    }
-
-
-    @Bean
-    public AuthenticationProvider authenticationProvider() {
-        DaoAuthenticationProvider daoAuthenticationProvider = new DaoAuthenticationProvider();
-        daoAuthenticationProvider.setUserDetailsService(userDetailService);
-        daoAuthenticationProvider.setPasswordEncoder(passwordEncoder());
-        return daoAuthenticationProvider;
     }
 
 
@@ -74,8 +69,20 @@ public class WebSecurityConfig {
     }
 
     @Bean
-    public AuthenticationManager authenticationManager(AuthenticationConfiguration authenticationConfiguration) throws Exception {
-        return authenticationConfiguration.getAuthenticationManager();
+    public AuthenticationManager authenticationManager(HttpSecurity http) throws Exception {
+        AuthenticationManagerBuilder authenticationManagerBuilder = http.getSharedObject(AuthenticationManagerBuilder.class);
+        authenticationManagerBuilder
+                .userDetailsService(userDetailService)
+                .passwordEncoder(passwordEncoder());
+        return authenticationManagerBuilder.build();
+    }
+
+    @Bean
+    public AuthenticationProvider authenticationProvider() {
+        DaoAuthenticationProvider daoAuthenticationProvider = new DaoAuthenticationProvider();
+        daoAuthenticationProvider.setUserDetailsService(userDetailService);
+        daoAuthenticationProvider.setPasswordEncoder(passwordEncoder());
+        return daoAuthenticationProvider;
     }
 
 }

@@ -7,6 +7,7 @@ import com.nhh203.userservice.model.dto.response.InformationMessage;
 import com.nhh203.userservice.model.dto.response.JwtResponseMessage;
 import com.nhh203.userservice.model.dto.response.ResponseMessage;
 import com.nhh203.userservice.service.UserService;
+import io.swagger.annotations.Api;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -17,7 +18,7 @@ import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Mono;
 
 @RestController
-@RequestMapping("/api/auth")
+@RequestMapping("/api/users/auth")
 @RequiredArgsConstructor
 @Slf4j
 public class UserAuth {
@@ -48,15 +49,15 @@ public class UserAuth {
                 });
     }
 
-//    @PostMapping("/logout")
-//    @PreAuthorize("isAuthenticated() and hasAuthority('USER')")
-//    public Mono<ResponseEntity<String>> logout() {
-//        log.info("Logout endpoint called");
-//        return userService.logout()
-//                .then(Mono.just(new ResponseEntity<>("Logged out successfully.", HttpStatus.OK)))
-//                .onErrorResume(error -> {
-//                    log.error("Logout failed", error);
-//                    return Mono.just(new ResponseEntity<>("Logout failed.", HttpStatus.BAD_REQUEST));
-//                });
-//    }
+    @PostMapping("/logout")
+    @PreAuthorize("isAuthenticated() and hasAuthority('USER')")
+    public Mono<ResponseEntity<String>> logout() {
+        log.info("Logout endpoint called");
+        return userService.logout()
+                .then(Mono.just(new ResponseEntity<>("Logged out successfully.", HttpStatus.OK)))
+                .onErrorResume(error -> {
+                    log.error("Logout failed", error);
+                    return Mono.just(new ResponseEntity<>("Logout failed.", HttpStatus.BAD_REQUEST));
+                });
+    }
 }

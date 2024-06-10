@@ -1,11 +1,13 @@
 
-u
-java:S1128"SRemove this unused import 'org.springframework.beans.factory.annotation.Autowired'.(¡¸Îùÿÿÿÿ8‡Œ®µÿ1
-
-java:S1128"€Remove this unused import 'org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder'.(£ØÓ‰8ˆŒ®µÿ1
-˜
-java:S1128"{Remove this unused import 'org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity'.(Ô¦ø8ˆŒ®µÿ1
-z
-java:S1128"]Remove this unused import 'org.springframework.security.core.userdetails.UserDetailsService'.(¶…¥à8ˆŒ®µÿ1
-
-java:S1128"qRemove this unused import 'org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter'.(÷ìïŠ8ˆŒ®µÿ1
+
+java:S16118"7Remove the parentheses around the "exception" parameter(—îå€ûÿÿÿÿ8¹ú·”€2J$53d85825-811d-4f07-a71b-365ba093db04
+›
+java:S1128	"SRemove this unused import 'org.springframework.beans.factory.annotation.Autowired'.(¡¸Îùÿÿÿÿ8Íú·”€2J$933e4c6f-8b0a-4aa1-8eea-c1a0e8e1b0cf
+Í
+java:S1128"„Remove this unused import 'org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration'.(İÍ»æúÿÿÿÿ8Íú·”€2J$63d8531c-9a5a-4d47-8176-96163d803194
+¾
+java:S1128"{Remove this unused import 'org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity'.(Ô¦ø8Íú·”€2J$4655c684-8de7-41e8-85c9-9959cddfeadc
+§
+java:S1128"dRemove this unused import 'org.springframework.security.config.annotation.web.builders.WebSecurity'.(–ëğ8Îú·”€2J$bff69336-37bb-466d-9da3-5f9603447cbb
+ 
+java:S1128"]Remove this unused import 'org.springframework.security.core.userdetails.UserDetailsService'.(¶…¥à8Îú·”€2J$29ee4d94-684b-4bb1-b692-e67866d8c729

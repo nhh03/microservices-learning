@@ -15,9 +15,12 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import org.springframework.stereotype.Component;
+import org.springframework.util.AntPathMatcher;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
 
 
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
@@ -30,15 +33,14 @@ public class JwtTokenFilter extends OncePerRequestFilter {
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
-
         try {
             String token = getJwt(request);
-            log.warn("token :  {} ", token);
+//            log.warn("token :  {} ", token);
             if (token != null && jwtProvider.validateToken(token)) {
                 String username = jwtProvider.getUserNameFromToken(token);
                 UserDetails userDetails = userDetailService.loadUserByUsername(username);
                 UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(
-                        userDetails, null, userDetails.getAuthorities()
+                        userDetails, token, userDetails.getAuthorities()
                 );
 
                 authenticationToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
@@ -66,5 +68,4 @@ public class JwtTokenFilter extends OncePerRequestFilter {
         }
         return null;
     }
-
 }
