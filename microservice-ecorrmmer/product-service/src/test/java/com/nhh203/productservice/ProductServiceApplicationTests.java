@@ -1,6 +1,6 @@
 package com.nhh203.productservice;
 
-import com.nhh203.productservice.dto.ProductRequest;
+import com.nhh203.productservice.dto.req.ProductRequest;
 import com.nhh203.productservice.repository.ProductRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Assertions;

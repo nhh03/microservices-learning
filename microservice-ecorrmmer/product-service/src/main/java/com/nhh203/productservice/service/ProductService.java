@@ -1,51 +1,27 @@
 package com.nhh203.productservice.service;
 
 
-import com.nhh203.productservice.dto.ProductResponse;
-import com.nhh203.productservice.dto.ProductRequest;
-import com.nhh203.productservice.model.Product;
-import com.nhh203.productservice.repository.ProductRepository;
-import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Service;
+import com.nhh203.productservice.dto.res.ProductResponse;
+import com.nhh203.productservice.dto.req.ProductRequest;
+import reactor.core.publisher.Flux;
 
 import java.util.List;
 
-@Service
-@RequiredArgsConstructor
-@Slf4j
-public class ProductService {
 
-    private final ProductRepository productRepository;
+public interface ProductService {
 
+    Flux<List<ProductResponse>> getAllProducts();
 
-    public void createProduct(ProductRequest productRequest) {
-        Product product = Product.builder()
-                .name(productRequest.getName())
-                .description(productRequest.getDescription())
-                .price(productRequest.getPrice())
-                .build();
+    ProductResponse findById(final Integer productId);
 
-        productRepository.save(product);
-        log.info("Product {} is saved", product.getId());
-    }
+    ProductResponse save(final ProductRequest productDto);
 
+    ProductResponse update(final ProductRequest productDto);
 
-    public List<ProductResponse> getAllProducts() {
-        List<Product> products = productRepository.findAll();
+    ProductResponse update(final Integer productId, final ProductRequest productDto);
 
-        return products.stream().map(this::mapToProductResponse).toList();
-    }
+    void deleteById(final Integer productId);
 
-
-    private ProductResponse mapToProductResponse(Product product) {
-        return ProductResponse.builder()
-                .id(product.getId())
-                .name(product.getName())
-                .description(product.getDescription())
-                .price(product.getPrice())
-                .build();
-    }
 
 }
 

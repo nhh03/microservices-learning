@@ -5,30 +5,50 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="447c1c78-67d2-470c-a366-c5ba87c39106" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/nhh203/notificationservice/api/EmailAPI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/nhh203/notificationservice/config/MailConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/nhh203/notificationservice/entity/Notification.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/nhh203/notificationservice/service/implement/EmailServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/9/49253c7c0dc6b5b1a50fb864b5d5bfb4f37de673" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/c/8cf1caa62fbcfccdf151380a52fa4ce385e2ba51" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/e/be8d8a00651dcec1463ba5d322c7b883b5fecff1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/f/ffd9356276738f0bfafee2e51bcced94e05f01af" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/1/911bb29f312903c2e6d38b72e9f493f6d7e35e50" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/1/911bb29f312903c2e6d38b72e9f493f6d7e35e50" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/config/client/ClientConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/config/mapper/MapperConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/constant/AppConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/controller/CategoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/dto/req/CategoryRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/dto/res/CategoryResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/exception/ApiExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/exception/payload/ExceptionMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/exception/wrapper/CategoryNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/exception/wrapper/ProductNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/helper/ProductMappingHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/model/AbstractMappedEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/model/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/repository/CategoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/service/CategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/service/implement/CategoryServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/service/implement/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/9/098c5859fdef17b286469764d8a7c61f4099908d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/7/47324a09b8a5281fca0c866e989c2079feaf5024" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/9/4970a7c2896568b741cd12258d0dae443484052b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/b/5bbf9fe54cd504c990ba60c8f94126237ea89701" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/6/d6c265e24045f5c239eb476e0fd30fc9d8c7ba81" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/9/49253c7c0dc6b5b1a50fb864b5d5bfb4f37de673" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/8/c/8cf1caa62fbcfccdf151380a52fa4ce385e2ba51" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/b/e/be8d8a00651dcec1463ba5d322c7b883b5fecff1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/f/f/ffd9356276738f0bfafee2e51bcced94e05f01af" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/0/9/098c5859fdef17b286469764d8a7c61f4099908d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/7/47324a09b8a5281fca0c866e989c2079feaf5024" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/9/4970a7c2896568b741cd12258d0dae443484052b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/5/b/5bbf9fe54cd504c990ba60c8f94126237ea89701" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/d/6/d6c265e24045f5c239eb476e0fd30fc9d8c7ba81" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/nhh203/notificationservice/NotificationServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/nhh203/notificationservice/NotificationServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/nhh203/notificationservice/event/EventConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/nhh203/notificationservice/event/EventConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/nhh203/notificationservice/service/EmailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/nhh203/notificationservice/service/EmailService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/nhh203/notificationservice/service/NotificationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/nhh203/notificationservice/service/NotificationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/nhh203/userservice/api/UserAuth.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/nhh203/userservice/api/UserAuth.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/nhh203/userservice/service/imple/UserImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/nhh203/userservice/service/imple/UserImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/ProductServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/ProductServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/dto/ProductRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/dto/req/ProductRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/dto/ProductResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/dto/res/ProductResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/repository/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/test/java/com/nhh203/productservice/ProductServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/test/java/com/nhh203/productservice/ProductServiceApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +57,9 @@
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$/demo">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/payment-service">
       <ProjectState />
     </projectState>
   </component>
@@ -121,7 +144,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "SDKs",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "run.configurations.included.in.services": "true",
@@ -134,6 +157,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.nhh203.productservice.dto" />
       <recent name="com.nhh203.orderservice.dto" />
       <recent name="com.nhh203.inventoryservice.dto" />
     </key>
@@ -219,6 +243,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PaymentServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="payment-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.nhh203.paymentservice.PaymentServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ProductServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="product-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.nhh203.productservice.ProductServiceApplication" />
@@ -235,6 +267,7 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Spring Boot.PaymentServiceApplication" />
       <item itemvalue="Spring Boot.NotificationServiceApplication" />
       <item itemvalue="Spring Boot.ApiGatewayApplication" />
       <item itemvalue="Spring Boot.ConfigServerApplication" />
@@ -288,7 +321,11 @@
       <workItem from="1718029718911" duration="12459000" />
       <workItem from="1718088017457" duration="1745000" />
       <workItem from="1718091551170" duration="2380000" />
-      <workItem from="1718100106671" duration="458000" />
+      <workItem from="1718100106671" duration="2067000" />
+      <workItem from="1718110307762" duration="3192000" />
+      <workItem from="1718114326626" duration="32000" />
+      <workItem from="1718131789681" duration="105000" />
+      <workItem from="1718131960629" duration="300000" />
     </task>
     <servers />
   </component>
