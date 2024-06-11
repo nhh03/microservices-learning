@@ -26,7 +26,6 @@ public class UserAuth {
 
     @PostMapping({"/signup", "/register"})
     public Mono<ResponseMessage> register(@Valid @RequestBody SignUp signUp) {
-        log.info(signUp.toString());
         return userService
                 .register(signUp)
                 .map(user -> new ResponseMessage("Create user: " + signUp.getUsername() + " successfully."))
@@ -60,4 +59,8 @@ public class UserAuth {
                     return Mono.just(new ResponseEntity<>("Logout failed.", HttpStatus.BAD_REQUEST));
                 });
     }
+
+
+
+
 }

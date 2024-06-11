@@ -1,0 +1,16 @@
+
+d
+java:S5411>"(Use a primitive boolean expression here.(›‡´çJ$a9b3f006-fffe-44e3-a42f-9b687689453c
+i
+java:S5411A"(Use a primitive boolean expression here.(¦ÄÜşÿÿÿÿJ$15466a72-2a8c-4b1e-9349-113145c3c0d1
+d
+java:S5411D"(Use a primitive boolean expression here.(”‰İùJ$3f01f34f-83b4-4347-8db7-3bed638e7abe
+‚	java:S112é"FDefine and throw a dedicated exception instead of using a generic one.(µé«²J$783dd1b8-e92c-44fc-9f46-1617d13cab48
+›
+java:S1192?"_Define a constant instead of duplicating this literal " is existed, please try again." 3 times.(Î½òéJ$6e3d4492-95d4-423c-b9bd-f2f7a3bcee23
+s
+java:S1481†"1Remove this unused "updatedToken" local variable.(ä¦·ñøÿÿÿÿJ$93d69977-6008-4ea1-bbed-eef031194613
+ˆ
+java:S6201‘"FReplace this instanceof check and cast with 'instanceof String string'(¿ğµÂúÿÿÿÿJ$07382896-8fab-4d40-b709-80efd752f51d
+
+java:S6201Ù"PReplace this instanceof check and cast with 'instanceof UserDetails userdetails'(é¤™šJ$05a54410-dca3-4d1b-ac44-b0e30c63c6da

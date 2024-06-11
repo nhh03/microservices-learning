@@ -203,8 +203,8 @@ public class UserImpl implements UserService {
                 " If you did not initiate this change, please contact our support team immediately.\n" +
                 "If you have any questions or concerns, feel free to reach out to us.\n\n" +
                 "Best regards:\n\n" +
-                "Contact: hoangtien2k3qx1@gmail.com\n" +
-                "Fanpage: https://hoangtien2k3qx1.github.io/";
+                "Contact: nguyenhuyhoa2003@gmail.com\n" +
+                "Fanpage: https://github.com/nguyenhuyhoa11102003/";
     }
 
 

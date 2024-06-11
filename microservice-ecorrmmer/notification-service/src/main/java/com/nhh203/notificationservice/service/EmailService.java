@@ -1,6 +1,7 @@
 package com.nhh203.notificationservice.service;
 
 import com.nhh203.notificationservice.dto.EmailDetails;
+import jakarta.mail.MessagingException;
 import org.springframework.web.multipart.MultipartFile;
 import reactor.core.publisher.Mono;
 
