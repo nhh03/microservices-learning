@@ -15,14 +15,12 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 public class ProductResponse {
     private String id;
-    private String name;
     private String productTitle;
     private BigDecimal price;
     private String imageUrl;
     private String sku;
     private Integer quantity;
-
-    @JsonProperty("category")
-    @JsonInclude(JsonInclude.Include.NON_NULL)
     private CategoryResponse categoryResponse;
+    private String createAt;
+    private String updateAt;
 }

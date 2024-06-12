@@ -10,7 +10,7 @@ import java.util.List;
 
 public interface CategoryService {
 
-    Flux<List<CategoryResponse>> findAll();
+    Flux<CategoryResponse> findAll();
 
     Page<CategoryResponse> findAllCategory(int page, int size);
 
@@ -19,8 +19,6 @@ public interface CategoryService {
     CategoryResponse findById(final Integer categoryId);
 
     Mono<CategoryResponse> save(final CategoryRequest categoryRequest);
-
-    CategoryResponse update(final CategoryRequest categoryDto);
 
     CategoryResponse update(final Integer categoryId, final CategoryRequest categoryDto);
 

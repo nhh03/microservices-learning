@@ -10,7 +10,7 @@ import java.util.List;
 
 public interface ProductService {
 
-    Flux<List<ProductResponse>> getAllProducts();
+    Flux<ProductResponse> getAllProducts();
 
     ProductResponse findById(final Integer productId);
 
@@ -18,9 +18,9 @@ public interface ProductService {
 
     ProductResponse update(final ProductRequest productDto);
 
-    ProductResponse update(final Integer productId, final ProductRequest productDto);
+    ProductResponse update(final String productId, final ProductRequest productDto);
 
-    void deleteById(final Integer productId);
+    void deleteById(final String productId);
 
 
 }
