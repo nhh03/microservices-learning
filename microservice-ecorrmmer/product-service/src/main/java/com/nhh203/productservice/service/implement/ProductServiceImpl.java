@@ -44,9 +44,9 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public ProductResponse findById(Integer productId) {
+    public ProductResponse findById(String productId) {
         log.info("ProductDto, service; fetch product by id");
-        Optional<Product> product = this.productRepository.findById(String.valueOf(productId));
+        Optional<Product> product = this.productRepository.findById(productId);
         if (product.isEmpty()) {
             log.error("Product with id {} not found", productId);
             return null;

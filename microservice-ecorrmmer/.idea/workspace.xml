@@ -5,37 +5,75 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="447c1c78-67d2-470c-a366-c5ba87c39106" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/3/03ef4f3bff16fa41e81148828b5247fea5bf82fe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/0/3/03ef4f3bff16fa41e81148828b5247fea5bf82fe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/Utils/BeanUtilsUpdate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/config/Gson/GsonConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/helper/CategoryMappingHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/repository/CategoryRepositoryPagingAndSorting.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/1/11a57f24eaa233f4349e250d8d01a47acde63981" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/6/7670cfecba281740f36563c0ac8b9f9d0725be21" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/1/1/11a57f24eaa233f4349e250d8d01a47acde63981" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/7/6/7670cfecba281740f36563c0ac8b9f9d0725be21" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart-service/src/main/java/com/nhh203/cartservice/controllers/CartController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart-service/src/main/java/com/nhh203/cartservice/model/dto/request/CartDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart-service/src/main/java/com/nhh203/cartservice/model/dto/response/CartResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart-service/src/main/java/com/nhh203/cartservice/model/dto/response/CartResponseWithMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart-service/src/main/java/com/nhh203/cartservice/model/entity/CartEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart-service/src/main/java/com/nhh203/cartservice/model/entity/CartItemEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart-service/src/main/java/com/nhh203/cartservice/repository/CartItemRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart-service/src/main/java/com/nhh203/cartservice/repository/CartRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart-service/src/main/java/com/nhh203/cartservice/service/ICart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart-service/src/main/java/com/nhh203/cartservice/service/impl/CartImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-service/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-service/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-service/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-service/src/main/java/com/nhh203/commonservice/CommonServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-service/src/main/java/com/nhh203/commonservice/config/MapperConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-service/src/main/java/com/nhh203/commonservice/config/WebConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-service/src/main/java/com/nhh203/commonservice/dto/ProductResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-service/src/test/java/com/nhh203/commonservice/CommonServiceApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/nhh203/orderservice/helper/MapperOrder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/nhh203/orderservice/model/AbstractMappedEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/nhh203/orderservice/service/IOrder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/nhh203/orderservice/service/impl/OrderImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/3/03ef4f3bff16fa41e81148828b5247fea5bf82fe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/4/049d78d98442cbae44004b62ac60aa6980fe57f5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/5/25295712b2fb03b181a301992fd8526cf112be66" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/4/34377a0f8da1edcbf1ca11a670045820a89f7aef" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/1/911bb29f312903c2e6d38b72e9f493f6d7e35e50" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/7/47bd19f32be91e2c21fb4f604ab1ce5462e0a37c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/9/49fed9ecd45c4a894451fd4a086116847dccf5a2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/6/56e9ca0603f2886248001fab1b91528525b09624" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/8/a84d0fe1300f8bd83ab47853a7b9e72c8b138936" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/2/d209e6e6148408ce28f9888e86ac617aec612c0f" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/0/3/03ef4f3bff16fa41e81148828b5247fea5bf82fe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/0/4/049d78d98442cbae44004b62ac60aa6980fe57f5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/2/5/25295712b2fb03b181a301992fd8526cf112be66" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/3/4/34377a0f8da1edcbf1ca11a670045820a89f7aef" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/1/911bb29f312903c2e6d38b72e9f493f6d7e35e50" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/7/47bd19f32be91e2c21fb4f604ab1ce5462e0a37c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/9/49fed9ecd45c4a894451fd4a086116847dccf5a2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/5/6/56e9ca0603f2886248001fab1b91528525b09624" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/a/8/a84d0fe1300f8bd83ab47853a7b9e72c8b138936" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/d/2/d209e6e6148408ce28f9888e86ac617aec612c0f" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/nhh203/apigateway/ApiGatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/nhh203/apigateway/ApiGatewayApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/com/nhh203/paymentservice/PaymentServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/nhh203/paymentservice/PaymentServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/ProductServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/ProductServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/controller/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/nhh203/orderservice/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/nhh203/orderservice/controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/nhh203/orderservice/dto/OrderLineItemsDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/nhh203/orderservice/dto/OrderLineItemsDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/nhh203/orderservice/dto/OrderRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/nhh203/orderservice/dto/OrderRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/nhh203/orderservice/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/nhh203/orderservice/model/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/nhh203/orderservice/model/OrderLineItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/nhh203/orderservice/model/OrderLineItems.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/nhh203/orderservice/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/nhh203/orderservice/service/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/dto/req/CategoryRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/dto/req/CategoryRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/dto/req/ProductRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/dto/req/ProductRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/dto/res/CategoryResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/dto/res/CategoryResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/dto/res/ProductResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/dto/res/ProductResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/helper/ProductMappingHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/helper/ProductMappingHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/model/AbstractMappedEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/model/AbstractMappedEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/model/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/model/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/service/CategoryService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/service/implement/CategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/service/implement/CategoryServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/service/implement/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/service/implement/ProductServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,12 +128,15 @@
     </option>
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
   <component name="ProjectId" id="2hECjyqyc3vmPEk4ijqu7rEKbnp" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="abbreviatePackageNames" value="true" />
     <option name="autoscrollFromSource" value="true" />
@@ -105,6 +146,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "JUnit.ProductServiceApplicationTests.shouldCreateProduct.executor": "Run",
     "Maven.discovery-service [clean].executor": "Run",
     "RequestMappingsPanelOrder0": "0",
@@ -115,11 +157,13 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.ApiGatewayApplication.executor": "Debug",
+    "Spring Boot.CartServiceApplication.executor": "Debug",
+    "Spring Boot.CommonServiceApplication.executor": "Debug",
     "Spring Boot.DiscoveryServiceApplication.executor": "Debug",
     "Spring Boot.GatewayServiceApplication.executor": "Run",
     "Spring Boot.InventoryServiceApplication.executor": "Debug",
     "Spring Boot.NotificationServiceApplication.executor": "Run",
-    "Spring Boot.OrderServiceApplication.executor": "Debug",
+    "Spring Boot.OrderServiceApplication.executor": "Run",
     "Spring Boot.ProductServiceApplication.executor": "Debug",
     "Spring Boot.Service2Application.executor": "Run",
     "Spring Boot.UserServiceApplication.executor": "Debug",
@@ -135,7 +179,7 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -172,7 +216,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ProductServiceApplication">
+  <component name="RunManager" selected="Spring Boot.OrderServiceApplication">
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -188,6 +232,21 @@
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="api-gateway" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.nhh203.apigateway.ApiGatewayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CartServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="cart-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.nhh203.cartservice.CartServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CommonServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="common-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.nhh203.commonservice.CommonServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -254,11 +313,13 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Spring Boot.CommonServiceApplication" />
+      <item itemvalue="Spring Boot.DiscoveryServiceApplication" />
+      <item itemvalue="Spring Boot.ApiGatewayApplication" />
+      <item itemvalue="Spring Boot.CartServiceApplication" />
       <item itemvalue="Spring Boot.PaymentServiceApplication" />
       <item itemvalue="Spring Boot.NotificationServiceApplication" />
-      <item itemvalue="Spring Boot.ApiGatewayApplication" />
       <item itemvalue="Spring Boot.ConfigServerApplication" />
-      <item itemvalue="Spring Boot.DiscoveryServiceApplication" />
       <item itemvalue="Spring Boot.InventoryServiceApplication" />
       <item itemvalue="Spring Boot.OrderServiceApplication" />
       <item itemvalue="Spring Boot.ProductServiceApplication" />
@@ -315,7 +376,17 @@
       <workItem from="1718131960629" duration="513000" />
       <workItem from="1718165794881" duration="1754000" />
       <workItem from="1718208014753" duration="855000" />
-      <workItem from="1718209283040" duration="1166000" />
+      <workItem from="1718209283040" duration="3317000" />
+      <workItem from="1718214014140" duration="97000" />
+      <workItem from="1718214159631" duration="24000" />
+      <workItem from="1718214319622" duration="1111000" />
+      <workItem from="1718251421030" duration="1022000" />
+      <workItem from="1718260140471" duration="1024000" />
+      <workItem from="1718261721721" duration="4270000" />
+      <workItem from="1718266726424" duration="4646000" />
+      <workItem from="1718276684515" duration="246000" />
+      <workItem from="1718276963359" duration="7705000" />
+      <workItem from="1718286168679" duration="6195000" />
     </task>
     <servers />
   </component>
@@ -332,6 +403,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

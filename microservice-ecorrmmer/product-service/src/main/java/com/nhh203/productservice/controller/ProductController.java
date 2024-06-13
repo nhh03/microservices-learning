@@ -49,7 +49,7 @@ public class ProductController {
                                                     @NotBlank(message = "Input must not be blank!")
                                                     @Valid final String productId) {
         log.info("ProductDto, resource; fetch product by id");
-        return ResponseEntity.ok(productService.findById(Integer.parseInt(productId)));
+        return ResponseEntity.ok(productService.findById(productId));
     }
 
     // TODO: Update information of all product
@@ -72,4 +72,5 @@ public class ProductController {
         productService.deleteById(productId);
         return new ResponseEntity<>("Xóa thành công", HttpStatus.OK);
     }
+
 }

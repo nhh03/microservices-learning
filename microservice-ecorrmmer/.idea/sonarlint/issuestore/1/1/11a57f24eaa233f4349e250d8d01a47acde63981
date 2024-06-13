@@ -1,0 +1,25 @@
+
+¢
+java:S1488X"fImmediately return this expression instead of assigning it to the temporary variable "orderLineItems".(©­×‚J$9e249161-d4e5-40ca-be44-ae3b8bbb85c3
+n
+java:S1144W"-Remove this unused private "mapToDto" method.(ôÒ€ ûÿÿÿÿJ$399df2c1-b623-4580-8615-7a2b163bc369
+t
+java:S1172$"3Remove this unused method parameter "orderRequest".(‰¯¡àùÿÿÿÿJ$40c29abf-9048-4e8f-b554-9c6b22c5ff50
+w	java:S125%"<This block of commented-out lines of code should be removed.(¿©¯ÈJ$55d675a3-1fd0-46ee-a466-ae4ad8f7f76e
+y
+java:S1172W"8Remove this unused method parameter "orderLineItemsDto".(ôÒ€ ûÿÿÿÿJ$71cea332-a092-4e6a-82b3-28dbcb0cd790
+|	java:S125Y"<This block of commented-out lines of code should be removed.(õ¦Æ±ûÿÿÿÿJ$5ed08396-d895-4606-95e1-15ad26cc899b
+‡
+java:S1128"KRemove this unused import 'com.nhh203.orderservice.config.WebClientConfig'.(õ£ç‘J$1409a387-b037-4562-82e6-1fd666a03363
+‹
+java:S1128"JRemove this unused import 'com.nhh203.orderservice.dto.InventoryResponse'.(³ÉÉˆþÿÿÿÿJ$659af2fd-6b61-43ed-b99d-f535274b4e5c
+{
+java:S1128	"@Remove this unused import 'com.nhh203.orderservice.model.Order'.(­Äæ9J$db9719ce-07ed-4998-825d-81db91642cc2
+r
+java:S1128"7Remove this unused import 'io.micrometer.tracing.Span'.(”èÖ`J$08e31002-0ae6-4985-b980-a1d5c24afc22
+n
+java:S1128"-Remove this unused import 'java.util.Arrays'.(î–˜ÉüÿÿÿÿJ$eb19fc73-d4ae-40d0-90ab-16cf6a816019
+l
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±ÄøÿÿÿÿJ$e7d53aed-4469-42f8-84cf-b16724884e32
+l
+java:S1128"+Remove this unused import 'java.util.UUID'.(ÀãÄ£úÿÿÿÿJ$668047ec-2c78-4578-a64e-481c4c8a2007

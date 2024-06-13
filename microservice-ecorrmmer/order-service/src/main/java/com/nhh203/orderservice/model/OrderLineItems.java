@@ -1,12 +1,11 @@
 package com.nhh203.orderservice.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import jakarta.persistence.*;
 
+import java.io.Serial;
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 
@@ -16,11 +15,23 @@ import java.math.BigDecimal;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class OrderLineItems {
+@Builder
+public class OrderLineItems extends AbstractMappedEntity implements Serializable {
+
+    @Serial
+    private static final long serialVersionUID = 1L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String skuCode;
-    private BigDecimal price;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "orderId", referencedColumnName = "id")
+    private Order orderId;
+
+    private String note;
+    private String productId;
     private Integer quantity;
+    private Double price;
+
 }

@@ -1,0 +1,14 @@
+
+n
+java:S1452"&Remove usage of generic wildcard type.(Á¨ Àúÿÿÿÿ8Áî‹2J$17970101-5afd-4f3c-8469-1097dad0ab4a
+~	java:S125&"<This block of commented-out lines of code should be removed.(åÎË 8Ãî‹2J$22dc802e-1183-4172-ad2e-06d6f9f941af
+f
+java:S1128"IRemove this unused import 'com.nhh203.orderservice.service.OrderService'.(ÊÒŒ¾8ä—È“2
+y
+java:S1128"\Remove this unused import 'io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker'.(›èÌÇ8ä—È“2
+l
+java:S1128"JRemove this unused import 'io.github.resilience4j.retry.annotation.Retry'.(Ä³ß¾úÿÿÿÿ8ä—È“2
+x
+java:S1128	"VRemove this unused import 'io.github.resilience4j.timelimiter.annotation.TimeLimiter'.(–Üòøÿÿÿÿ8å—È“2
+`
+java:S1128"CRemove this unused import 'java.util.concurrent.CompletableFuture'.(ôŞä´8å—È“2

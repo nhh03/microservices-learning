@@ -12,7 +12,7 @@ public interface ProductService {
 
     Flux<ProductResponse> getAllProducts();
 
-    ProductResponse findById(final Integer productId);
+    ProductResponse findById(final String productId);
 
     ProductResponse save(final ProductRequest productDto);
 
