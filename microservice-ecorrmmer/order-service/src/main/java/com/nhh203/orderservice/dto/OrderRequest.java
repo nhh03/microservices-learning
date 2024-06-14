@@ -25,5 +25,5 @@ public class OrderRequest implements Serializable {
     private String statusOrder; // Chờ xác nhận, Chờ lấy hàng, Chờ giao hàng, Hoàn thành, Đã hủy, Trả hàng/Hoàn tiền
     private Double totalMoney;
     private Long idSeller;
-    private List<OrderLineItemsDto> orderLineItemsDtoList;
+    private List<OrderLineItemsRequest> orderLineItemsRequestList;
 }

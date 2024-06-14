@@ -2,6 +2,7 @@ package com.nhh203.orderservice.controller;
 
 
 import com.nhh203.orderservice.dto.OrderRequest;
+import com.nhh203.orderservice.model.Order;
 import com.nhh203.orderservice.service.IOrder;
 import com.nhh203.orderservice.service.OrderService;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
@@ -23,12 +24,56 @@ public class OrderController {
 
     private final IOrder orderService;
 
+    @GetMapping("/demo")
+    public String demo() {
+        return "Hello World";
+    }
+
+    @GetMapping("/user/{phoneNumber}/{status}")
+    public ResponseEntity<?> getOrdersByUser(@PathVariable String phoneNumber, @PathVariable String status, @RequestHeader("Authorization") String token) {
+        return ResponseEntity.status(HttpStatus.OK).body(orderService.getOrderByUser(phoneNumber, status, token));
+    }
+
+    @GetMapping("/seller/{sellerId}/{status}")
+    public ResponseEntity<?> getOrdersBySeller(@PathVariable String sellerId, @PathVariable String status, @RequestHeader("Authorization") String token) {
+        return ResponseEntity.status(HttpStatus.OK).body(orderService.getOrderBySeller(Long.valueOf(sellerId), status, token));
+    }
+
+    @GetMapping("/{orderId}")
+    public ResponseEntity<?> getOrderById(@PathVariable Long orderId) {
+        Order order = orderService.getOneOder(orderId);
+        if (order != null) {
+            return ResponseEntity.ok(order);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
     @PostMapping("")
     public ResponseEntity<?> createOrder(@RequestBody OrderRequest orderRequest) {
-        return ResponseEntity
-                .status(HttpStatus.CREATED)
-                .body(orderService.createOder(orderRequest));
+        return ResponseEntity.status(HttpStatus.CREATED).body(orderService.createOder(orderRequest));
     }
+
+
+    @PutMapping("/update/{orderId}/status")
+    public ResponseEntity<Void> updateStatusOrder(@PathVariable Long orderId, @RequestParam String statusOrder, @RequestParam(defaultValue = "0") String token) {
+        if (token.equals("0")) {
+            orderService.updateStatusOrder(orderId, statusOrder);
+
+        } else {
+            orderService.updateStatusOrder(orderId, statusOrder, token);
+
+        }
+        return ResponseEntity.ok().build();
+    }
+
+
+    @PutMapping("/update/{orderId}/delivery")
+    public ResponseEntity<Void> updateStatusDeliveryOrder(@PathVariable Long orderId, @RequestParam String statusDelivery) {
+        orderService.updateStatusDeliveryOrder(orderId, statusDelivery);
+        return ResponseEntity.ok().build();
+    }
+
 
 //    @PostMapping
 //    @ResponseStatus(HttpStatus.CREATED)

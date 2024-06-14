@@ -1,15 +1,11 @@
 package com.nhh203.orderservice.service;
 
 
-import com.nhh203.orderservice.config.WebClientConfig;
-import com.nhh203.orderservice.dto.InventoryResponse;
 import com.nhh203.orderservice.dto.OrderRequest;
-import com.nhh203.orderservice.dto.OrderLineItemsDto;
+import com.nhh203.orderservice.dto.OrderLineItemsRequest;
 import com.nhh203.orderservice.event.OrderPlacedEvent;
-import com.nhh203.orderservice.model.Order;
 import com.nhh203.orderservice.model.OrderLineItems;
 import com.nhh203.orderservice.repository.OrderRepository;
-import io.micrometer.tracing.Span;
 import io.micrometer.tracing.Tracer;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
@@ -17,10 +13,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
-
-import java.util.Arrays;
-import java.util.List;
-import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
@@ -84,7 +76,7 @@ public class OrderService {
     }
 
 
-    private OrderLineItems mapToDto(OrderLineItemsDto orderLineItemsDto) {
+    private OrderLineItems mapToDto(OrderLineItemsRequest orderLineItemsRequest) {
         OrderLineItems orderLineItems = new OrderLineItems();
 //        orderLineItems.setPrice(orderLineItemsDto.getPrice());
 //        orderLineItems.setQuantity(orderLineItemsDto.getQuantity());

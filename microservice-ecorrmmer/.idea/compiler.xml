@@ -10,7 +10,6 @@
         <module name="config-server" />
         <module name="cart-service" />
         <module name="inventory-service" />
-        <module name="payment-service" />
         <module name="common-service" />
         <module name="api-gateway" />
         <module name="product-service" />
@@ -22,6 +21,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="commonservice" target="17" />
+      <module name="payment-service" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
