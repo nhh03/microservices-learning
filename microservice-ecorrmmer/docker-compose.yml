@@ -4,6 +4,7 @@ services:
   zookeeper:
     image: confluentinc/cp-zookeeper:7.0.1
     container_name: zookeeper
+    restart: on-failure
     ports:
       - "2181:2181"
     environment:
@@ -26,4 +27,25 @@ services:
       KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
       KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
 
+  mysqlcontainer:
+    image: mysql:latest
+    restart: always
+    container_name: mysqlcontainer1
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: root
+      MYSQL_PASSWORD: root
+    volumes:
+      - 02631344d602dc0669347dcc5c1db71cc5212df4a5486a0791e7ea8075092459:/var/lib/mysql
 
+  zipkin:
+    image: openzipkin/zipkin:latest
+    container_name: zipkin
+    ports:
+      - "9411:9411"
+
+volumes:
+  02631344d602dc0669347dcc5c1db71cc5212df4a5486a0791e7ea8075092459:
+    external: true

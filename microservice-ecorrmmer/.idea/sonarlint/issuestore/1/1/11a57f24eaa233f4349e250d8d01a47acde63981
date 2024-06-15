@@ -1,16 +1,0 @@
-
-¢
-java:S1488P"fImmediately return this expression instead of assigning it to the temporary variable "orderLineItems".(©­×‚J$6439ad42-5629-424d-95bf-85bf69cbb1fc
-n
-java:S1144O"-Remove this unused private "mapToDto" method.(©ƒµúÿÿÿÿJ$09a4a048-55ea-45b8-bbdf-326e6806361f
-t
-java:S1172"3Remove this unused method parameter "orderRequest".(‰¯¡àùÿÿÿÿJ$b59071c5-dff9-4429-9d14-545c735c6577
-ƒ	java:S125"<This block of commented-out lines of code should be removed.(Şäîùøÿÿÿÿ8ŸÌÓÒ2J$21568966-de7f-4b83-8282-4dff0ca81e83
-w	java:S125"<This block of commented-out lines of code should be removed.(¿©¯ÈJ$0e1ab6fb-8325-4fa3-921b-23a3971a9885
-}
-java:S1172O"<Remove this unused method parameter "orderLineItemsRequest".(©ƒµúÿÿÿÿJ$9024ffa1-bff2-40af-a8a1-3c0a76fafee3
-|	java:S125Q"<This block of commented-out lines of code should be removed.(õ¦Æ±ûÿÿÿÿJ$18d53603-ea7c-4a21-a22e-d3c4b27de04a
-
-java:S1128"KRemove this unused import 'com.nhh203.orderservice.event.OrderPlacedEvent'.(èš8¢ÌÓÒ2J$004602d3-1b64-49b3-931b-083fcafd339f
-‘
-java:S1128"IRemove this unused import 'org.springframework.kafka.core.KafkaTemplate'.(˜€›‹üÿÿÿÿ8¢ÌÓÒ2J$2eecab7b-1065-4237-8753-2ad9eb19cade
