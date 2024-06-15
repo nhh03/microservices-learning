@@ -5,7 +5,6 @@ const eurekaPort = 8761;
 const hostName = (process.env.HOSTNAME || 'localhost')
 const ipAddr = '172.0.0.1';
 
-
 exports.registerWithEureka = function (appName, PORT) {
     const client = new Eureka({
         instance: {

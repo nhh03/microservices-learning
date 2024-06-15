@@ -8,6 +8,4 @@ import org.springframework.context.ApplicationEvent;
 @NoArgsConstructor
 public class OrderPlacedEvent {
     private String orderNumber;
-
-
 }

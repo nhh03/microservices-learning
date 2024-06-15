@@ -5,54 +5,49 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="447c1c78-67d2-470c-a366-c5ba87c39106" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/nhh203/orderservice/dto/OrderLineItemResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/nhh203/orderservice/dto/OrderResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/nhh203/orderservice/repository/OrderItemRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/payment-service/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/f/0f0a7cc9d5a92d82e6af94bee09fb4e35b4003a6" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/1/11a57f24eaa233f4349e250d8d01a47acde63981" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/1/11a57f24eaa233f4349e250d8d01a47acde63981" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/e/2efaab01331d37352d15d3cace489f6c6f9435e4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/d/6d863067a478393be6098062bedc621561a729dd" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/d/6d863067a478393be6098062bedc621561a729dd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/6/7670cfecba281740f36563c0ac8b9f9d0725be21" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/7/77583ca8df37614fd20cdc08b12a7cf75b093b44" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/a/7a5f7c86a0cd6539a35677b90968705b2cd19378" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/c/cc550cfcd2c3ecf2e905e10e421cfe3ec39e91e4" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/c/cc550cfcd2c3ecf2e905e10e421cfe3ec39e91e4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/4/d4c3d231a0c4a583b5f3525d9dc6c6d6cd2a9853" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/4/d4c3d231a0c4a583b5f3525d9dc6c6d6cd2a9853" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/c/dc92800251a60357d30590d17718070a6ef84ea3" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/c/dc92800251a60357d30590d17718070a6ef84ea3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/e/de1a21f7985d39cb933c1af486d0b38ed5e74698" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/0/f06f424d1859fba568fb9a964aeda87efe1cd910" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/0/f06f424d1859fba568fb9a964aeda87efe1cd910" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart-service/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/discovery-service/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/nhh203/orderservice/config/gson/CofigGson.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/nhh203/orderservice/config/kafka/KafkaConsumerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/nhh203/orderservice/config/kafka/KafkaProducerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/nhh203/orderservice/event/EventConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/nhh203/orderservice/event/EventProducer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/0/9091b62a52fe6dcd49d6cdf18903d474b2b85d88" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/0/f/0f0a7cc9d5a92d82e6af94bee09fb4e35b4003a6" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/2/e/2efaab01331d37352d15d3cace489f6c6f9435e4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/7/6/7670cfecba281740f36563c0ac8b9f9d0725be21" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/7/7/77583ca8df37614fd20cdc08b12a7cf75b093b44" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/7/a/7a5f7c86a0cd6539a35677b90968705b2cd19378" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/d/e/de1a21f7985d39cb933c1af486d0b38ed5e74698" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/0/9091b62a52fe6dcd49d6cdf18903d474b2b85d88" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/nhh203/orderservice/OrderServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/nhh203/orderservice/OrderServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cart-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/cart-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/java/com/nhh203/configserver/ConfigServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/java/com/nhh203/configserver/ConfigServerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discovery-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discovery-service/src/main/java/com/nhh203/discoveryservice/DiscoveryServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-service/src/main/java/com/nhh203/discoveryservice/DiscoveryServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discovery-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/nhh203/orderservice/config/WebClientConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/nhh203/orderservice/config/WebClientConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/nhh203/orderservice/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/nhh203/orderservice/controller/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/nhh203/orderservice/dto/OrderLineItemsDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/nhh203/orderservice/dto/OrderLineItemsRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/nhh203/orderservice/dto/OrderRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/nhh203/orderservice/dto/OrderRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/nhh203/orderservice/helper/MapperOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/nhh203/orderservice/helper/MapperOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/nhh203/orderservice/model/AbstractMappedEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/nhh203/orderservice/model/AbstractMappedEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/nhh203/orderservice/repository/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/nhh203/orderservice/repository/OrderRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/nhh203/orderservice/service/IOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/nhh203/orderservice/service/IOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/nhh203/orderservice/event/OrderPlacedEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/nhh203/orderservice/event/OrderPlacedEvent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/nhh203/orderservice/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/nhh203/orderservice/service/OrderService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/nhh203/orderservice/service/impl/OrderImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/nhh203/orderservice/service/impl/OrderImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-service/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-service/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-service/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-service/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-service/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-service/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/com/nhh203/paymentservice/PaymentServiceApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-service/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-service/src/test/java/com/nhh203/paymentservice/PaymentServiceApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/discovery/eureka-helper.js" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/discovery/eureka-helper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/nhh203/userservice/api/UserAuth.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/nhh203/userservice/api/UserAuth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +87,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://$MAVEN_REPOSITORY$/io/projectreactor/reactor-core/3.6.6/reactor-core-3.6.6-sources.jar!/reactor/core/publisher/Mono.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/6.1.8/spring-web-6.1.8-sources.jar!/org/springframework/http/ResponseEntity.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/user-service/src/main/java/com/nhh203/userservice/config/WebSecurityConfig.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiProvider">{
@@ -108,7 +104,7 @@
     </option>
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
@@ -124,46 +120,47 @@
     <option name="showLibraryContents" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;JUnit.ProductServiceApplicationTests.shouldCreateProduct.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.discovery-service [clean].executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.ApiGatewayApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;Spring Boot.CartServiceApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;Spring Boot.CommonServiceApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;Spring Boot.DiscoveryServiceApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;Spring Boot.GatewayServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.InventoryServiceApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;Spring Boot.NotificationServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.OrderServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.ProductServiceApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;Spring Boot.Service2Application.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.UserServiceApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/java/microservice-ecorrmmer/microservice-ecorrmmer/payment-service&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "JUnit.ProductServiceApplicationTests.shouldCreateProduct.executor": "Run",
+    "Maven.discovery-service [clean].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.ApiGatewayApplication.executor": "Run",
+    "Spring Boot.CartServiceApplication.executor": "Debug",
+    "Spring Boot.CommonServiceApplication.executor": "Debug",
+    "Spring Boot.ConfigServerApplication.executor": "Debug",
+    "Spring Boot.DiscoveryServiceApplication.executor": "Debug",
+    "Spring Boot.GatewayServiceApplication.executor": "Run",
+    "Spring Boot.InventoryServiceApplication.executor": "Debug",
+    "Spring Boot.NotificationServiceApplication.executor": "Run",
+    "Spring Boot.OrderServiceApplication.executor": "Debug",
+    "Spring Boot.ProductServiceApplication.executor": "Debug",
+    "Spring Boot.Service2Application.executor": "Run",
+    "Spring Boot.UserServiceApplication.executor": "Debug",
+    "jdk.selected.JAVA_MODULE": "17",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/java/microservice-ecorrmmer/microservice-ecorrmmer/payment-service",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -197,7 +194,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.OrderServiceApplication">
+  <component name="RunManager" selected="Spring Boot.ApiGatewayApplication">
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -270,14 +267,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PaymentServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
-      <module name="payment-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.nhh203.paymentservice.PaymentServiceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ProductServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="product-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.nhh203.productservice.ProductServiceApplication" />
@@ -295,14 +284,13 @@
     </configuration>
     <list>
       <item itemvalue="Spring Boot.CommonServiceApplication" />
-      <item itemvalue="Spring Boot.DiscoveryServiceApplication" />
-      <item itemvalue="Spring Boot.ApiGatewayApplication" />
       <item itemvalue="Spring Boot.CartServiceApplication" />
-      <item itemvalue="Spring Boot.PaymentServiceApplication" />
-      <item itemvalue="Spring Boot.NotificationServiceApplication" />
+      <item itemvalue="Spring Boot.DiscoveryServiceApplication" />
       <item itemvalue="Spring Boot.ConfigServerApplication" />
-      <item itemvalue="Spring Boot.InventoryServiceApplication" />
       <item itemvalue="Spring Boot.OrderServiceApplication" />
+      <item itemvalue="Spring Boot.ApiGatewayApplication" />
+      <item itemvalue="Spring Boot.NotificationServiceApplication" />
+      <item itemvalue="Spring Boot.InventoryServiceApplication" />
       <item itemvalue="Spring Boot.ProductServiceApplication" />
       <item itemvalue="Spring Boot.UserServiceApplication" />
     </list>
@@ -370,6 +358,8 @@
       <workItem from="1718286168679" duration="10976000" />
       <workItem from="1718325129024" duration="7022000" />
       <workItem from="1718344645053" duration="10043000" />
+      <workItem from="1718382493168" duration="3364000" />
+      <workItem from="1718423494099" duration="15169000" />
     </task>
     <servers />
   </component>

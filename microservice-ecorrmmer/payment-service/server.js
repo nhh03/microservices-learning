@@ -10,6 +10,8 @@ const eurekaHelper = require('./discovery/eureka-helper.js');
 const paymentRouter = require('./routers/Payment.js');
 const orderRouter = require('./routers/Vnpay.js');
 
+const paymentService = require('./services/Payment.js');    
+
 const consumer = require('./kafka/consumer.js')
 
 app.use(bodyParser.json());
@@ -25,13 +27,13 @@ app.listen(port, async() => {
 
 eurekaHelper.registerWithEureka('payment-service', port);
 
-
-const topic = process.env.KAFKA_TOPIC
+// const topic = process.env.KAFKA_TOPIC
+// console.log('topic', topic)
 async function main(){
     try {
         await consumer.connect()
         await consumer.subscribe({
-            topic,
+            topic :  'payment-cod',
             fromBeginning: true,
         })
         console.log('Connect kafka consumer successfully')
@@ -41,10 +43,12 @@ async function main(){
                 console.log('Received message', {
                     topic,
                     partition,
-                    key: message.key.toString(),
+                    offset: message.offset,
                     value: message.value.toString()
                 })
-                const orderInfo = JSON.parse(message.value.toString());
+                let data = message.value.toString()
+                const payment = await paymentService.createPayment( data, 'COD', 'PENDING', '','');
+                console.log('Payment created :', payment)
             }
         })
     } catch (error) {

@@ -1,0 +1,23 @@
+
+i
+java:S1452$"&Remove usage of generic wildcard type.(Åƒ“8²ª€Ò2J$8b246745-3239-4ca4-b728-248f38813c6b
+n
+java:S1452)"&Remove usage of generic wildcard type.(«êˆÛıÿÿÿÿ8´ª€Ò2J$09dc4fff-8999-46c6-846a-bb926f3745b4
+i
+java:S1452."&Remove usage of generic wildcard type.( òç–8´ª€Ò2J$4ba8817f-0094-4f78-b8cf-eb9c7ad5aa61
+n
+java:S14528"&Remove usage of generic wildcard type.(“¹ª„øÿÿÿÿ8¶ª€Ò2J$0d5a8cf6-a9fb-4ed2-9386-e351fd882b32
+~	java:S125^"<This block of commented-out lines of code should be removed.(åÎË 8¹ª€Ò2J$5ec29b89-9b73-4852-9802-b9aec68cd90b
+f
+java:S1128"IRemove this unused import 'com.nhh203.orderservice.service.OrderService'.(ÊÒŒ¾8ô¼òÒ2
+y
+java:S1128	"\Remove this unused import 'io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker'.(›èÌÇ8ô¼òÒ2
+l
+java:S1128
+"JRemove this unused import 'io.github.resilience4j.retry.annotation.Retry'.(Ä³ß¾úÿÿÿÿ8ô¼òÒ2
+x
+java:S1128"VRemove this unused import 'io.github.resilience4j.timelimiter.annotation.TimeLimiter'.(–Üòøÿÿÿÿ8ô¼òÒ2
+k
+java:S1128"IRemove this unused import 'org.springframework.kafka.core.KafkaTemplate'.(˜€›‹üÿÿÿÿ8ô¼òÒ2
+`
+java:S1128"CRemove this unused import 'java.util.concurrent.CompletableFuture'.(ôŞä´8ô¼òÒ2

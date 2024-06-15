@@ -40,13 +40,20 @@ public class OrderImpl implements IOrder {
     @Override
     public Order createOder(OrderRequest orderRequest) {
 
-        Order order = Order.builder().phoneNumber(orderRequest.getPhoneNumber()).address(orderRequest.getAddress()).statusDelivery(orderRequest.getStatusDelivery()).statusOrder(orderRequest.getStatusOrder()).totalMoney(orderRequest.getTotalMoney()).idSeller(orderRequest.getIdSeller()).build();
+        Order order = Order.builder()
+                .phoneNumber(orderRequest.getPhoneNumber())
+                .address(orderRequest.getAddress())
+                .statusDelivery(orderRequest.getStatusDelivery())
+                .statusOrder(orderRequest.getStatusOrder())
+                .totalMoney(orderRequest.getTotalMoney())
+                .idSeller(orderRequest.getIdSeller()).build();
 
         List<OrderLineItems> orderItemsEntityList = orderRequest.getOrderLineItemsRequestList().stream().map(orderLineItemsDto -> {
             OrderLineItems orderLineItems = MapperOrder.mapToOrderLineItems(orderLineItemsDto);
             orderLineItems.setOrderId(order);
             return orderLineItems;
         }).toList();
+
         order.setOrderLineItemsList(orderItemsEntityList);
         entityManager.persist(order);
         return order;

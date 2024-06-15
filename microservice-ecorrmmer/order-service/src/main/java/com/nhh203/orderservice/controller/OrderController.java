@@ -2,6 +2,7 @@ package com.nhh203.orderservice.controller;
 
 
 import com.nhh203.orderservice.dto.OrderRequest;
+import com.nhh203.orderservice.event.EventProducer;
 import com.nhh203.orderservice.model.Order;
 import com.nhh203.orderservice.service.IOrder;
 import com.nhh203.orderservice.service.OrderService;
@@ -12,6 +13,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.concurrent.CompletableFuture;
@@ -23,6 +25,7 @@ import java.util.concurrent.CompletableFuture;
 public class OrderController {
 
     private final IOrder orderService;
+    private final EventProducer eventProducer;
 
     @GetMapping("/demo")
     public String demo() {
@@ -49,9 +52,19 @@ public class OrderController {
         }
     }
 
-    @PostMapping("")
-    public ResponseEntity<?> createOrder(@RequestBody OrderRequest orderRequest) {
-        return ResponseEntity.status(HttpStatus.CREATED).body(orderService.createOder(orderRequest));
+    @PostMapping("{statuspayment}")
+    public ResponseEntity<?> createOrder(@PathVariable("statuspayment") String statuspayment, @RequestBody OrderRequest orderRequest) {
+        Order createdOrder = orderService.createOder(orderRequest);
+        if (createdOrder != null) {
+            if (statuspayment.equals("0")) {
+                String content = createdOrder.getId().toString();
+                eventProducer.sendMessage("payment-cod", content);
+            }
+            return ResponseEntity.status(HttpStatus.CREATED).body(createdOrder);
+        } else {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Order not created");
+        }
+
     }
 
 
@@ -59,10 +72,8 @@ public class OrderController {
     public ResponseEntity<Void> updateStatusOrder(@PathVariable Long orderId, @RequestParam String statusOrder, @RequestParam(defaultValue = "0") String token) {
         if (token.equals("0")) {
             orderService.updateStatusOrder(orderId, statusOrder);
-
         } else {
             orderService.updateStatusOrder(orderId, statusOrder, token);
-
         }
         return ResponseEntity.ok().build();
     }
