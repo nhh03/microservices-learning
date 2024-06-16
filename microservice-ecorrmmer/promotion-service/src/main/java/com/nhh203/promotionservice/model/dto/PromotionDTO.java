@@ -1,4 +1,5 @@
 package com.nhh203.promotionservice.model.dto;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.ElementCollection;
 import lombok.*;
 
@@ -9,6 +10,8 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+
+// promotion request
 public class PromotionDTO {
     private Long id;
     private String name;
@@ -21,5 +24,5 @@ public class PromotionDTO {
     private Long idUser;
 
     @ElementCollection
-    private List<Long> idProducts;
+    private List<String> idProducts;
 }

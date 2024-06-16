@@ -5,52 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="447c1c78-67d2-470c-a366-c5ba87c39106" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/promotion-service/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/promotion-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/promotion-service/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/promotion-service/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/promotion-service/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/promotion-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/promotion-service/src/main/java/com/nhh203/promotionservice/PromotionServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/promotion-service/src/main/java/com/nhh203/promotionservice/controller/PromotionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/promotion-service/src/main/java/com/nhh203/promotionservice/model/DiscountAppEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/promotion-service/src/main/java/com/nhh203/promotionservice/model/DiscountCodeEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/promotion-service/src/main/java/com/nhh203/promotionservice/model/dto/PromotionDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/promotion-service/src/main/java/com/nhh203/promotionservice/repository/DiscountAppRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/promotion-service/src/main/java/com/nhh203/promotionservice/repository/DiscountCodeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/promotion-service/src/main/java/com/nhh203/promotionservice/service/IDiscount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/promotion-service/src/main/java/com/nhh203/promotionservice/service/implement/PromotionImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/promotion-service/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/promotion-service/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/promotion-service/src/test/java/com/nhh203/promotionservice/PromotionServiceApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/1/11a57f24eaa233f4349e250d8d01a47acde63981" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/3/436e26da8079f2bdb221ba4569b6d8985df4e864" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/7/47137b525e2da3a2a4552d57cebd08046e30fa9f" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/9/49fed9ecd45c4a894451fd4a086116847dccf5a2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/6/7670cfecba281740f36563c0ac8b9f9d0725be21" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/7/77583ca8df37614fd20cdc08b12a7cf75b093b44" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/9/791f226691268c657c9fd213a78a441eaa76bb99" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/a/7a5f7c86a0cd6539a35677b90968705b2cd19378" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/a/8aec5d6c344cfb80ffb0e05074a76910cf81ee7a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/f/8fa8f08ee3810068abc2bf467677b6b62f55c5f5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/3/a3de8f95566802a7aecb66b5d5de82793947bcf1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/e/be8d8a00651dcec1463ba5d322c7b883b5fecff1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/b/cba97581675fd4c158bd7b27e8db02234e329a1b" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/c/cc550cfcd2c3ecf2e905e10e421cfe3ec39e91e4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/d/cd75c450cbfb0968116027039fc490f2c16f843e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/4/d4c3d231a0c4a583b5f3525d9dc6c6d6cd2a9853" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/e/de8b5a501dd7da4a106449dafa3a0cf1b863ecc7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/0/e05488e3e6a0377e7d43d9fef786d3b09eba0df4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/a/eac1751d284b01dd45815be5e009b547032a0c8e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/f/ffd9356276738f0bfafee2e51bcced94e05f01af" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/promotion-service/src/main/java/com/nhh203/promotionservice/model/DiscountCodeEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/promotion-service/src/main/java/com/nhh203/promotionservice/model/DiscountCodeEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/promotion-service/src/main/java/com/nhh203/promotionservice/service/implement/PromotionImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/promotion-service/src/main/java/com/nhh203/promotionservice/service/implement/PromotionImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,48 +81,48 @@
     <option name="showLibraryContents" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "JUnit.ProductServiceApplicationTests.shouldCreateProduct.executor": "Run",
-    "Maven.discovery-service [clean].executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.ApiGatewayApplication.executor": "Run",
-    "Spring Boot.CartServiceApplication.executor": "Debug",
-    "Spring Boot.CommonServiceApplication.executor": "Debug",
-    "Spring Boot.ConfigServerApplication.executor": "Debug",
-    "Spring Boot.DiscoveryServiceApplication.executor": "Debug",
-    "Spring Boot.GatewayServiceApplication.executor": "Run",
-    "Spring Boot.InventoryServiceApplication.executor": "Debug",
-    "Spring Boot.NotificationServiceApplication.executor": "Run",
-    "Spring Boot.OrderServiceApplication.executor": "Debug",
-    "Spring Boot.ProductServiceApplication.executor": "Debug",
-    "Spring Boot.PromotionServiceApplication.executor": "Debug",
-    "Spring Boot.Service2Application.executor": "Run",
-    "Spring Boot.UserServiceApplication.executor": "Debug",
-    "jdk.selected.JAVA_MODULE": "17",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/java/microservice-ecorrmmer/microservice-ecorrmmer",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;JUnit.ProductServiceApplicationTests.shouldCreateProduct.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.discovery-service [clean].executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.ApiGatewayApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.CartServiceApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;Spring Boot.CommonServiceApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;Spring Boot.ConfigServerApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;Spring Boot.DiscoveryServiceApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;Spring Boot.GatewayServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.InventoryServiceApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;Spring Boot.NotificationServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.OrderServiceApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;Spring Boot.ProductServiceApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;Spring Boot.PromotionServiceApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;Spring Boot.Service2Application.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.UserServiceApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/java/microservice-ecorrmmer/microservice-ecorrmmer/promotion-service&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -374,7 +331,8 @@
       <workItem from="1718344645053" duration="10043000" />
       <workItem from="1718382493168" duration="3364000" />
       <workItem from="1718423494099" duration="18843000" />
-      <workItem from="1718451514100" duration="1371000" />
+      <workItem from="1718451514100" duration="2162000" />
+      <workItem from="1718454592557" duration="38000" />
     </task>
     <servers />
   </component>

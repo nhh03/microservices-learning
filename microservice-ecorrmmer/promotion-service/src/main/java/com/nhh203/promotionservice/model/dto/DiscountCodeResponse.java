@@ -1,22 +1,21 @@
-package com.nhh203.promotionservice.model;
+package com.nhh203.promotionservice.model.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.nhh203.promotionservice.model.DiscountAppEntity;
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.ZonedDateTime;
 import java.util.List;
-import java.util.Set;
 
-@Entity
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
+@Data
 @Builder
-public class DiscountCodeEntity {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+@NoArgsConstructor
+@AllArgsConstructor
+public class DiscountCodeResponse {
 	private Long id;
 	private String name;
 	private String description;
@@ -26,8 +25,5 @@ public class DiscountCodeEntity {
 	private ZonedDateTime endDate;
 	private double discountValue; // Giá trị ưu đãi
 	private Long idUser;
-
-	@OneToMany(mappedBy = "discountCode", cascade = CascadeType.ALL)
-	@JsonIgnore
 	private List<DiscountAppEntity> discountAppEntities;
 }

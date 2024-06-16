@@ -13,11 +13,11 @@ import java.util.List;
 @NoArgsConstructor
 @Builder
 public class DiscountAppEntity {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    @ManyToOne
-    @JoinColumn(name = "discount_code_id", referencedColumnName = "id")
-    private DiscountCodeEntity discountCode;
-    private Long IdProduct;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	@ManyToOne
+	@JoinColumn(name = "discount_code_id", referencedColumnName = "id")
+	private DiscountCodeEntity discountCode;
+	private String idProduct;
 }
