@@ -1,0 +1,24 @@
+server:
+  port: 8805
+
+spring:
+  application:
+    name: Config-Server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/nguyenhuyhoa11102003/spring-config-repo.git
+          clone-on-start: true
+          skip-ssl-validation: true
+
+management:
+  endpoint:
+    web:
+      exposure:
+        include: "*"
+
+
+
+
+
