@@ -16,7 +16,6 @@ import java.util.Optional;
 @EntityScan({"com.example.customer.model"})
 @EnableJpaAuditing(auditorAwareRef = "auditorAware")
 public class DatabaseAutoConfig {
-
     @Bean
     public AuditorAware<String> auditorAware() {
         return () -> {

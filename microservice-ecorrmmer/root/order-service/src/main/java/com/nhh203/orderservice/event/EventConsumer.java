@@ -2,10 +2,9 @@ package com.nhh203.orderservice.event;
 
 
 import com.google.gson.Gson;
-import com.nhh203.orderservice.service.impl.OrderImpl;
+import com.nhh203.orderservice.service.impl.OrderServiceImpl;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -13,7 +12,7 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class EventConsumer {
     private final Gson gson;
-    private final OrderImpl order;
+    private final OrderServiceImpl order;
 
 //    @KafkaListener(topics = "${kafka.topic.orderCancel}", groupId = "${kafka.consumer.groupId}")
 //    public void consumeOrderCancel(String message) {
