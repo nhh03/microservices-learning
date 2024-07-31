@@ -23,42 +23,19 @@ public class PromotionController {
 	private final IDiscount discountCode;
 	private final ModelMapper modelMapper;
 
-	@GetMapping("/test")
-	public String hello() {
-		return "Hello World!";
-	}
-
-
 	@GetMapping("/user/{userId}")
 	public List<DiscountCodeEntity> getDiscountCodesByUserId(@PathVariable("userId") Long userId) {
 		return discountCode.findDiscountCodesByUserId(userId);
 	}
-
 
 	@GetMapping("/product/{productId}")
 	public List<DiscountAppEntity> getDiscountAppsByProductId(@PathVariable("productId") String productId) {
 		return discountCode.findByProductIdBetweenDate(productId);
 	}
 
-
 	@GetMapping("/{id}")
 	public ResponseEntity<DiscountCodeResponse> getDiscountAppsById(@PathVariable Long id) {
 		DiscountCodeEntity discountCodeEntity = discountCode.findById(id);
-
-		//		DiscountCodeResponse discountCodeResponse = DiscountCodeResponse.builder()
-		//				.id(discountCodeEntity.getId())
-		//				.name(discountCodeEntity.getName())
-		//				.description(discountCodeEntity.getDescription())
-		//				.code(discountCodeEntity.getCode())
-		//				.isActive(discountCodeEntity.getIsActive())
-		//				.startDate(discountCodeEntity.getStartDate())
-		//				.endDate(discountCodeEntity.getEndDate())
-		//				.discountValue(discountCodeEntity.getDiscountValue())
-		//				.idUser(discountCodeEntity.getIdUser())
-		//				.discountAppEntities(discountCodeEntity.getDiscountAppEntities())
-		//				.build();
-
-		// use mapper
 		DiscountCodeResponse discountCodeResponse = modelMapper.map(discountCodeEntity, DiscountCodeResponse.class);
 		return ResponseEntity.ok(discountCodeResponse);
 	}
@@ -72,7 +49,6 @@ public class PromotionController {
 		return new ResponseEntity<>(createdDiscountAppEntities, HttpStatus.CREATED);
 	}
 
-
 	@PutMapping("/{id}")
 	public ResponseEntity<?> update(@PathVariable("id") Long id, @RequestBody PromotionDTO promotionDTO) {
 		promotionDTO.setId(id);
@@ -82,7 +58,6 @@ public class PromotionController {
 		}
 		return new ResponseEntity<>(updatedDiscountAppEntities, HttpStatus.OK);
 	}
-
 
 	@PutMapping("/{id}/status")
 	public ResponseEntity<?> updateStatus(@PathVariable Long id, @RequestParam boolean isActive) {

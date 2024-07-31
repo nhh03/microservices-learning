@@ -6,16 +6,10 @@ import com.nhh203.promotionservice.model.dto.PromotionDTO;
 import com.nhh203.promotionservice.repository.DiscountAppRepository;
 import com.nhh203.promotionservice.repository.DiscountCodeRepository;
 import com.nhh203.promotionservice.service.IDiscount;
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.PersistenceContext;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.common.errors.ResourceNotFoundException;
-import org.modelmapper.ModelMapper;
-import org.springframework.beans.BeanUtils;
-import org.springframework.beans.BeanWrapper;
-import org.springframework.beans.BeanWrapperImpl;
 import org.springframework.stereotype.Service;
 
 import java.time.ZonedDateTime;
@@ -26,41 +20,16 @@ import java.util.*;
 @Slf4j
 @RequiredArgsConstructor
 public class PromotionImpl implements IDiscount {
-
-//	@PersistenceContext
-	////	private EntityManager entityManager;
-
 	private final DiscountCodeRepository discountCodeRepository;
 	private final DiscountAppRepository discountAppRepository;
-
 
 	@Transactional
 	@Override
 	public List<DiscountAppEntity> addDiscount(PromotionDTO promotionDTO) {
 		try {
-			DiscountCodeEntity discountCodeEntity = DiscountCodeEntity
-					.builder()
-					.name(promotionDTO.getName())
-					.description(promotionDTO.getDescription())
-					.code(promotionDTO.getCode())
-					.isActive(promotionDTO.getIsActive())
-					.startDate(promotionDTO.getStartDate())
-					.endDate(promotionDTO.getEndDate())
-					.discountValue(promotionDTO.getDiscountValue())
-					.idUser(promotionDTO.getIdUser()).build();
-
-			List<DiscountAppEntity> discountAppEntities = promotionDTO
-					.getIdProducts()
-					.stream()
-					.map(productId -> DiscountAppEntity
-							.builder()
-							.discountCode(discountCodeEntity)
-							.idProduct(productId)
-							.build())
-					.toList();
-
+			DiscountCodeEntity discountCodeEntity = DiscountCodeEntity.builder().name(promotionDTO.getName()).description(promotionDTO.getDescription()).code(promotionDTO.getCode()).isActive(promotionDTO.getIsActive()).startDate(promotionDTO.getStartDate()).endDate(promotionDTO.getEndDate()).discountValue(promotionDTO.getDiscountValue()).idUser(promotionDTO.getIdUser()).build();
+			List<DiscountAppEntity> discountAppEntities = promotionDTO.getIdProducts().stream().map(productId -> DiscountAppEntity.builder().discountCode(discountCodeEntity).idProduct(productId).build()).toList();
 			discountCodeEntity.setDiscountAppEntities(discountAppEntities);
-			// entityManager.persist(discountCodeEntity);
 			discountCodeRepository.save(discountCodeEntity);
 			return discountAppEntities;
 		} catch (Exception e) {
@@ -137,11 +106,7 @@ public class PromotionImpl implements IDiscount {
 
 				List<DiscountAppEntity> discountAppEntities = discountCodeEntity.getDiscountAppEntities();
 				this.discountAppRepository.deleteAll(discountAppEntities);
-				List<DiscountAppEntity> newDiscountAppEntities = promotionDTO.getIdProducts().stream().map(productId -> DiscountAppEntity
-						.builder()
-						.discountCode(discountCodeEntity)
-						.idProduct(productId)
-						.build()).toList();
+				List<DiscountAppEntity> newDiscountAppEntities = promotionDTO.getIdProducts().stream().map(productId -> DiscountAppEntity.builder().discountCode(discountCodeEntity).idProduct(productId).build()).toList();
 				List<DiscountAppEntity> savedDiscountAppEntities = discountAppRepository.saveAll(newDiscountAppEntities);
 				discountCodeEntity.setDiscountAppEntities(savedDiscountAppEntities);
 				discountCodeRepository.save(discountCodeEntity);

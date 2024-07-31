@@ -9,19 +9,12 @@ import java.util.List;
 
 public interface IDiscount {
     List<DiscountAppEntity> addDiscount(PromotionDTO promotionDTO);
-
     List<DiscountAppEntity> findByProductId(String idProduct);
-
     DiscountCodeEntity findById(Long id);
-
     List<DiscountAppEntity> findByProductIdBetweenDate(String idProduct);
-
     public void updateDiscountCodeStatus(Long id, boolean isActive);
-
     List<DiscountCodeEntity> findDiscountCodesByUserId(Long idUser);
-
     List<DiscountAppEntity> updateDiscount(PromotionDTO promotionDTO);
-
     List<DiscountCodeEntity> getActiveDiscountCodesBetweenDates(ZonedDateTime startDate, ZonedDateTime endDate);
      boolean deleteByIdProductIn(List<String> idProducts);
 }
