@@ -24,6 +24,7 @@ public class SecurityConfig {
 				.authorizeHttpRequests(auth -> auth
 						.requestMatchers("/actuator/prometheus", "/actuator/health/**",
 								"/swagger-ui", "/swagger-ui/**", "/error", "/v3/api-docs/**").permitAll()
+						//						.requestMatchers("/backoffice/**").hasRole("ADMIN")
 						.requestMatchers("/backoffice/**").permitAll()
 						.requestMatchers("/storefront/**").permitAll()
 						.anyRequest().authenticated()
@@ -41,10 +42,8 @@ public class SecurityConfig {
 					.map(role -> new SimpleGrantedAuthority("ROLE_" + role))
 					.collect(Collectors.toList());
 		};
-
 		var jwtAuthenticationConverter = new JwtAuthenticationConverter();
 		jwtAuthenticationConverter.setJwtGrantedAuthoritiesConverter(jwtGrantedAuthoritiesConverter);
-
 		return jwtAuthenticationConverter;
 	}
 

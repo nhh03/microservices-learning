@@ -17,6 +17,8 @@
     <description>root</description>
 
     <modules>
+        <module>backoffice-bff</module>
+        <module>storefront-bff</module>
         <module>product-service</module>
         <module>api-gateway</module>
         <module>customer</module>
@@ -29,6 +31,7 @@
         <module>notification-service</module>
         <module>promotion-service</module>
         <module>rating</module>
+        <module>tax</module>
     </modules>
 
     <properties>

@@ -12,6 +12,7 @@ import com.nhh203.productservice.viewmodel.category.CategoryGetDetailVm;
 import com.nhh203.productservice.viewmodel.category.CategoryGetVm;
 import com.nhh203.productservice.viewmodel.category.CategoryPostVm;
 import com.nhh203.productservice.viewmodel.error.ErrorVm;
+import io.swagger.v3.oas.annotations.Hidden;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -42,6 +43,8 @@ public class CategoryController {
 	private final CategoryService categoryService;
 	private final CategoryRepository categoryRepository;
 
+
+	@Hidden
 	// TODO : fetch all categories
 	@GetMapping("/categories")
 	public ResponseEntity<Flux<CategoryResponse>> findAll() {
@@ -55,6 +58,7 @@ public class CategoryController {
 	}
 
 
+	@Hidden
 	// TODO : create category
 	@PostMapping("/categories")
 	public ResponseEntity<Mono<CategoryResponse>> save(@RequestBody @NotNull(message = "Input must not be NULL")
@@ -63,6 +67,7 @@ public class CategoryController {
 		return ResponseEntity.ok(categoryService.save(categoryRequest));
 	}
 
+	@Hidden
 	// TODO: Get all list categories with paging
 	@GetMapping("/categories/paging")
 	public ResponseEntity<Page<CategoryResponse>> getAllCategories(
@@ -73,6 +78,7 @@ public class CategoryController {
 		return new ResponseEntity<>(categoryPage, HttpStatus.OK);
 	}
 
+	@Hidden
 	// TODO: Get all list categories with paging and sorting
 	@GetMapping("/categories/paging-and-sorting")
 	public ResponseEntity<List<CategoryResponse>> getAllEmployees(
@@ -85,6 +91,7 @@ public class CategoryController {
 		return new ResponseEntity<List<CategoryResponse>>(list, new HttpHeaders(), HttpStatus.OK);
 	}
 
+	@Hidden
 	// TODO : fetch category by id
 	@GetMapping("/categories/{categoryId}")
 	public ResponseEntity<CategoryResponse> findById(@PathVariable("categoryId")
@@ -94,6 +101,8 @@ public class CategoryController {
 		return ResponseEntity.ok(categoryService.findById(Integer.parseInt(categoryId)));
 	}
 
+
+	@Hidden
 	// TODO: Update information of a category
 	@PutMapping("/categories/{categoryId}")
 	@Transactional
@@ -106,6 +115,8 @@ public class CategoryController {
 		return ResponseEntity.ok(categoryService.update(Integer.parseInt(categoryId), categoryRequest));
 	}
 
+
+	@Hidden
 	// Delete a category
 	@DeleteMapping("/categories/{categoryId}")
 	public ResponseEntity<Boolean> deleteById(@PathVariable("categoryId") final String categoryId) {

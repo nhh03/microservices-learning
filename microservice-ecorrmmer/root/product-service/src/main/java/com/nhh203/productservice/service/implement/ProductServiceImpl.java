@@ -66,6 +66,29 @@ public class ProductServiceImpl implements ProductService {
 	ModelMapper modelMapper;
 	Gson gson;
 
+	private static void setValuesForVariantExisting(List<ProductImage> newProductImages, ProductVariationPutVm variant, Product variantInDB) {
+		if (variantInDB != null) {
+			variantInDB.setProductTitle(variant.name());
+			variantInDB.setSlug(variant.slug());
+			variantInDB.setSku(variant.sku());
+			variantInDB.setGtin(variant.gtin());
+			variantInDB.setPrice(BigDecimal.valueOf(variant.price()));
+			variantInDB.setThumbnailMediaId(variant.thumbnailMediaId());
+			List<ProductImage> productImages = variantInDB.getProductImages();
+			if (CollectionUtils.isNotEmpty(variant.productImageIds())) {
+				variant.productImageIds().forEach(imageId -> {
+					if (productImages.stream().noneMatch(pImage -> imageId.equals(pImage.getImageId()))) {
+						newProductImages.add(ProductImage.builder().imageId(imageId).product(variantInDB).build());
+					}
+				});
+			}
+		}
+	}
+
+	private static Function<Product, ProductOptionCombination> mapToOptionCombination(Map<Long, ProductOption> productOptionMap, Long optionValue, String value, Integer optionValue1) {
+		return variant -> ProductOptionCombination.builder().product(variant).productOption(productOptionMap.get(optionValue)).value(value).displayOrder(optionValue1).build();
+	}
+
 	@Override
 	public Flux<ProductResponse> getAllProducts() {
 		log.info("ProductDto List, service, fetch all products");
@@ -85,7 +108,6 @@ public class ProductServiceImpl implements ProductService {
 		}
 		return ProductMappingHelper.mapToProductResponse(product.get());
 	}
-
 
 	@Deprecated
 	@Override
@@ -185,7 +207,12 @@ public class ProductServiceImpl implements ProductService {
 			List<ProductOptionCombination> productOptionCombinations = new ArrayList<>();
 
 			productPostVm.productOptionValues().forEach(optionValue -> optionValue.value().forEach(value -> {
-				ProductOptionValue productOptionValue = ProductOptionValue.builder().product(mainSavedProduct).displayOrder(optionValue.displayOrder()).displayType(optionValue.displayType()).productOption(productOptionMap.get(optionValue.productOptionId())).value(value).build();
+				ProductOptionValue productOptionValue = ProductOptionValue.builder()
+						.product(mainSavedProduct)
+						.displayOrder(optionValue.displayOrder())
+						.displayType(optionValue.displayType())
+						.productOption(productOptionMap.get(optionValue.productOptionId())).value(value)
+						.build();
 				List<ProductOptionCombination> productOptionCombinationList = new ArrayList<>();
 
 				for (Product variant : productsVariantsSaved) {
@@ -273,18 +300,12 @@ public class ProductServiceImpl implements ProductService {
 	@Override
 	public List<ProductThumbnailVm> getProductsByBrand(String brandSlug) {
 		List<ProductThumbnailVm> productThumbnailVms = new ArrayList<>();
-		Brand brand = brandRepository
-				.findBySlug(brandSlug)
-				.orElseThrow(() -> new NotFoundException(Constants.ERROR_CODE.BRAND_NOT_FOUND, brandSlug));
+		Brand brand = brandRepository.findBySlug(brandSlug).orElseThrow(() -> new NotFoundException(Constants.ERROR_CODE.BRAND_NOT_FOUND, brandSlug));
 		List<Product> products = productRepository.findAllByBrandAndIsPublishedTrue(brand);
 		for (Product product : products) {
-			productThumbnailVms.add(new ProductThumbnailVm(
-							product.getProductId(),
-							product.getProductTitle(),
-							product.getSlug(), ""
-							//					mediaService.getMedia(product.getThumbnailMediaId()).url()
-					)
-			);
+			productThumbnailVms.add(new ProductThumbnailVm(product.getProductId(), product.getProductTitle(), product.getSlug(), ""
+					//					mediaService.getMedia(product.getThumbnailMediaId()).url()
+			));
 		}
 		return productThumbnailVms;
 	}
@@ -296,21 +317,16 @@ public class ProductServiceImpl implements ProductService {
 		Page<Product> productPage = productRepository.getFeaturedProduct(pageable);
 		List<Product> products = productPage.getContent();
 		for (Product product : products) {
-			productThumbnailVms.add(new ProductThumbnailGetVm(
-					product.getProductId(),
-					product.getProductTitle(),
-					product.getSlug(),
+			productThumbnailVms.add(new ProductThumbnailGetVm(product.getProductId(), product.getProductTitle(), product.getSlug(),
 					//					mediaService.getMedia(product.getThumbnailMediaId()).url(),
-					"123",
-					product.getPrice().doubleValue()));
+					"123", product.getPrice().doubleValue()));
 		}
 		return new ProductFeatureGetVm(productThumbnailVms, productPage.getTotalPages());
 	}
 
 	@Override
 	public ProductDetailGetVm getProductDetail(String slug) {
-		Product product = productRepository.findBySlugAndIsPublishedTrue(slug)
-				.orElseThrow(() -> new NotFoundException(Constants.ERROR_CODE.PRODUCT_NOT_FOUND, slug));
+		Product product = productRepository.findBySlugAndIsPublishedTrue(slug).orElseThrow(() -> new NotFoundException(Constants.ERROR_CODE.PRODUCT_NOT_FOUND, slug));
 
 		Long productThumbnailMediaId = product.getThumbnailMediaId();
 		//		String productThumbnailUrl = mediaService.getMedia(productThumbnailMediaId).url() ;
@@ -325,58 +341,31 @@ public class ProductServiceImpl implements ProductService {
 		List<ProductAttributeGroupGetVm> productAttributeGroupsVm = new ArrayList<>();
 		List<ProductAttributeValue> productAttributeValues = product.getAttributeValues();
 		if (CollectionUtils.isNotEmpty(productAttributeValues)) {
-			List<ProductAttributeGroup> productAttributeGroups = productAttributeValues.stream()
-					.map(productAttributeValue -> productAttributeValue.getProductAttribute()
-							.getProductAttributeGroup())
-					.distinct()
-					.toList();
+			List<ProductAttributeGroup> productAttributeGroups = productAttributeValues.stream().map(productAttributeValue -> productAttributeValue.getProductAttribute().getProductAttributeGroup()).distinct().toList();
 
 			productAttributeGroups.forEach(productAttributeGroup -> {
 				List<ProductAttributeValueVm> productAttributeValueVms = new ArrayList<>();
 				productAttributeValues.forEach(productAttributeValue -> {
-					ProductAttributeGroup group = productAttributeValue.getProductAttribute()
-							.getProductAttributeGroup();
-					if ((group != null && group.equals(productAttributeGroup))
-							|| (group == null && productAttributeGroup == null)) {
-						ProductAttributeValueVm productAttributeValueVm = new ProductAttributeValueVm(
-								productAttributeValue.getProductAttribute().getName(),
-								productAttributeValue.getValue());
+					ProductAttributeGroup group = productAttributeValue.getProductAttribute().getProductAttributeGroup();
+					if ((group != null && group.equals(productAttributeGroup)) || (group == null && productAttributeGroup == null)) {
+						ProductAttributeValueVm productAttributeValueVm = new ProductAttributeValueVm(productAttributeValue.getProductAttribute().getName(), productAttributeValue.getValue());
 						productAttributeValueVms.add(productAttributeValueVm);
 					}
 				});
-				String productAttributeGroupName = productAttributeGroup == null ? NONE_GROUP
-						: productAttributeGroup.getName();
-				ProductAttributeGroupGetVm productAttributeGroupVm = new ProductAttributeGroupGetVm(
-						productAttributeGroupName,
-						productAttributeValueVms);
+				String productAttributeGroupName = productAttributeGroup == null ? NONE_GROUP : productAttributeGroup.getName();
+				ProductAttributeGroupGetVm productAttributeGroupVm = new ProductAttributeGroupGetVm(productAttributeGroupName, productAttributeValueVms);
 				productAttributeGroupsVm.add(productAttributeGroupVm);
 			});
 		}
 
-		return new ProductDetailGetVm(
-				product.getProductId(),
-				product.getProductTitle(),
-				product.getBrand() == null ? null : product.getBrand().getName(),
-				product.getProductCategories().stream().map(category -> category.getCategory().getCategoryTitle()).toList(),
-				productAttributeGroupsVm,
-				product.getShortDescription(),
-				product.getDescription(),
-				product.getSpecification(),
-				product.isAllowedToOrder(),
-				product.isPublished(),
-				product.isFeatured(),
-				product.isHasOptions(),
-				product.getPrice().doubleValue(),
-				"",
+		return new ProductDetailGetVm(product.getProductId(), product.getProductTitle(), product.getBrand() == null ? null : product.getBrand().getName(), product.getProductCategories().stream().map(category -> category.getCategory().getCategoryTitle()).toList(), productAttributeGroupsVm, product.getShortDescription(), product.getDescription(), product.getSpecification(), product.isAllowedToOrder(), product.isPublished(), product.isFeatured(), product.isHasOptions(), product.getPrice().doubleValue(), "",
 				//				productThumbnailUrl,
 				productImageMediaUrls);
 	}
 
 	@Override
 	public void deleteProduct(String id) {
-		Product product = productRepository
-				.findById(id)
-				.orElseThrow(() -> new NotFoundException(Constants.ERROR_CODE.PRODUCT_NOT_FOUND, id));
+		Product product = productRepository.findById(id).orElseThrow(() -> new NotFoundException(Constants.ERROR_CODE.PRODUCT_NOT_FOUND, id));
 		product.setPublished(false);
 		productRepository.save(product);
 	}
@@ -385,59 +374,31 @@ public class ProductServiceImpl implements ProductService {
 	public ProductsGetVm getProductsByMultiQuery(int pageNo, int pageSize, String productName, String categorySlug, Double startPrice, Double endPrice) {
 		Pageable pageable = PageRequest.of(pageNo, pageSize);
 		Page<Product> productPage;
-		productPage = productRepository.findByProductNameAndCategorySlugAndPriceBetween(
-				productName.trim().toLowerCase(),
-				categorySlug.trim(), startPrice, endPrice, pageable);
+		productPage = productRepository.findByProductNameAndCategorySlugAndPriceBetween(productName.trim().toLowerCase(), categorySlug.trim(), startPrice, endPrice, pageable);
 		List<ProductThumbnailGetVm> productThumbnailVms = new ArrayList<>();
 		List<Product> products = productPage.getContent();
 		for (Product product : products) {
-			productThumbnailVms.add(new ProductThumbnailGetVm(
-					product.getProductId(),
-					product.getProductTitle(),
-					product.getSlug(),
-					"123",
+			productThumbnailVms.add(new ProductThumbnailGetVm(product.getProductId(), product.getProductTitle(), product.getSlug(), "123",
 					//					mediaService.getMedia(product.getThumbnailMediaId()).url(),
 					product.getPrice().doubleValue()));
 		}
-		return new ProductsGetVm(
-				productThumbnailVms,
-				productPage.getNumber(),
-				productPage.getSize(),
-				(int) productPage.getTotalElements(),
-				productPage.getTotalPages(),
-				productPage.isLast());
+		return new ProductsGetVm(productThumbnailVms, productPage.getNumber(), productPage.getSize(), (int) productPage.getTotalElements(), productPage.getTotalPages(), productPage.isLast());
 	}
 
 	@Override
 	public List<ProductVariationGetVm> getProductVariationsByParentId(String id) {
-		Product parentProduct = productRepository.findById(id)
-				.orElseThrow(() -> new NotFoundException(Constants.ERROR_CODE.PRODUCT_NOT_FOUND, id));
+		Product parentProduct = productRepository.findById(id).orElseThrow(() -> new NotFoundException(Constants.ERROR_CODE.PRODUCT_NOT_FOUND, id));
 		if (Boolean.TRUE.equals(parentProduct.isHasOptions())) {
-			List<Product> productVariations = parentProduct.getProducts().stream().filter(Product::isPublished)
-					.toList();
+			List<Product> productVariations = parentProduct.getProducts().stream().filter(Product::isPublished).toList();
 
 			return productVariations.stream().map(product -> {
-				List<ProductOptionCombination> productOptionCombinations = productOptionCombinationRepository
-						.findAllByProduct(product);
-				Map<String, String> options = productOptionCombinations.stream().collect(Collectors.toMap(
-						productOptionCombination -> productOptionCombination.getProductOption().getName(),
-						ProductOptionCombination::getValue));
-				return new ProductVariationGetVm(
-						product.getProductId(),
-						product.getProductTitle(),
-						product.getSlug(),
-						product.getSku(),
-						product.getGtin(),
-						product.getPrice(),
-						new ImageVm(product.getThumbnailMediaId(),""
-//								mediaService.getMedia(product.getThumbnailMediaId()).url()
-						),
-						product.getProductImages().stream()
-								.map(productImage -> new ImageVm(productImage.getImageId(),"")
-//										mediaService.getMedia(productImage.getImageId()).url()
-								)
-								.toList(),
-						options);
+				List<ProductOptionCombination> productOptionCombinations = productOptionCombinationRepository.findAllByProduct(product);
+				Map<String, String> options = productOptionCombinations.stream().collect(Collectors.toMap(productOptionCombination -> productOptionCombination.getProductOption().getName(), ProductOptionCombination::getValue));
+				return new ProductVariationGetVm(product.getProductId(), product.getProductTitle(), product.getSlug(), product.getSku(), product.getGtin(), product.getPrice(), new ImageVm(product.getThumbnailMediaId(), ""
+						//								mediaService.getMedia(product.getThumbnailMediaId()).url()
+				), product.getProductImages().stream().map(productImage -> new ImageVm(productImage.getImageId(), "")
+						//										mediaService.getMedia(productImage.getImageId()).url()
+				).toList(), options);
 			}).toList();
 		} else {
 			throw new BadRequestException(Constants.ERROR_CODE.PRODUCT_NOT_HAVE_VARIATION, id);
@@ -451,8 +412,7 @@ public class ProductServiceImpl implements ProductService {
 
 	@Override
 	public ProductSlugGetVm getProductSlug(String id) {
-		Product product = productRepository.findById(id)
-				.orElseThrow(() -> new NotFoundException(Constants.ERROR_CODE.PRODUCT_NOT_FOUND, id));
+		Product product = productRepository.findById(id).orElseThrow(() -> new NotFoundException(Constants.ERROR_CODE.PRODUCT_NOT_FOUND, id));
 		Product parent = product.getParent();
 		if (parent != null) {
 			return new ProductSlugGetVm(parent.getSlug(), id);
@@ -462,89 +422,41 @@ public class ProductServiceImpl implements ProductService {
 
 	@Override
 	public ProductESDetailVm getProductESDetailById(String productId) {
-		Product product = productRepository
-				.findById(productId)
-				.orElseThrow(() -> new NotFoundException(Constants.ERROR_CODE.PRODUCT_NOT_FOUND, productId));
+		Product product = productRepository.findById(productId).orElseThrow(() -> new NotFoundException(Constants.ERROR_CODE.PRODUCT_NOT_FOUND, productId));
 		Long thumbnailMediaId = null;
 		if (null != product.getThumbnailMediaId()) {
 			thumbnailMediaId = product.getThumbnailMediaId();
 		}
-		List<String> categoryNames = product.getProductCategories()
-				.stream()
-				.map(productCategory -> productCategory.getCategory().getCategoryTitle())
-				.toList();
-		List<String> attributeNames = product.getAttributeValues()
-				.stream()
-				.map(attributeValue -> attributeValue.getProductAttribute().getName())
-				.toList();
+		List<String> categoryNames = product.getProductCategories().stream().map(productCategory -> productCategory.getCategory().getCategoryTitle()).toList();
+		List<String> attributeNames = product.getAttributeValues().stream().map(attributeValue -> attributeValue.getProductAttribute().getName()).toList();
 		String brandName = null;
 		if (null != product.getBrand()) {
 			brandName = product.getBrand().getName();
 		}
-		return new ProductESDetailVm(product.getProductId(),
-				product.getProductTitle(),
-				product.getSlug(),
-				product.getPrice(),
-				product.isPublished(),
-				product.isVisibleIndividually(),
-				product.isAllowedToOrder(),
-				product.isFeatured(),
-				thumbnailMediaId,
-				brandName,
-				categoryNames,
-				attributeNames);
+		return new ProductESDetailVm(product.getProductId(), product.getProductTitle(), product.getSlug(), product.getPrice(), product.isPublished(), product.isVisibleIndividually(), product.isAllowedToOrder(), product.isFeatured(), thumbnailMediaId, brandName, categoryNames, attributeNames);
 	}
 
 	@Override
 	public List<ProductListVm> getRelatedProductsBackoffice(String id) {
-		Product product = productRepository.findById(id)
-				.orElseThrow(() -> new NotFoundException(Constants.ERROR_CODE.PRODUCT_NOT_FOUND, id));
+		Product product = productRepository.findById(id).orElseThrow(() -> new NotFoundException(Constants.ERROR_CODE.PRODUCT_NOT_FOUND, id));
 		List<ProductRelated> relatedProducts = product.getRelatedProducts();
-		return relatedProducts.stream()
-				.map(productRelated -> new ProductListVm(
-						productRelated.getRelatedProduct().getProductId(),
-						productRelated.getRelatedProduct().getProductTitle(),
-						productRelated.getRelatedProduct().getSlug(),
-						productRelated.getRelatedProduct().isAllowedToOrder(),
-						productRelated.getRelatedProduct().isPublished(),
-						productRelated.getRelatedProduct().isFeatured(),
-						productRelated.getRelatedProduct().isVisibleIndividually(),
-						productRelated.getRelatedProduct().getCreateAt().toString(),
-						productRelated.getRelatedProduct().getTaxClassId()))
-				.toList();
+		return relatedProducts.stream().map(productRelated -> new ProductListVm(productRelated.getRelatedProduct().getProductId(), productRelated.getRelatedProduct().getProductTitle(), productRelated.getRelatedProduct().getSlug(), productRelated.getRelatedProduct().isAllowedToOrder(), productRelated.getRelatedProduct().isPublished(), productRelated.getRelatedProduct().isFeatured(), productRelated.getRelatedProduct().isVisibleIndividually(), productRelated.getRelatedProduct().getCreateAt().toString(), productRelated.getRelatedProduct().getTaxClassId())).toList();
 	}
 
 	@Override
 	public ProductsGetVm getRelatedProductsStorefront(String id, int pageNo, int pageSize) {
-		Product product = productRepository.findById(id)
-				.orElseThrow(() -> new NotFoundException(Constants.ERROR_CODE.PRODUCT_NOT_FOUND, id));
-		Page<ProductRelated> relatedProductsPage = productRelatedRepository.findAllByProduct(product,
-				PageRequest.of(pageNo, pageSize));
-		List<ProductThumbnailGetVm> productThumbnailVms = relatedProductsPage.stream()
-				.filter(productRelated -> productRelated.getRelatedProduct().isPublished())
-				.map(productRelated -> {
-					Product relatedProduct = productRelated.getRelatedProduct();
-					return new ProductThumbnailGetVm(
-							relatedProduct.getProductId(),
-							relatedProduct.getProductTitle(),
-							relatedProduct.getSlug(),
-							mediaService.getMedia(relatedProduct.getThumbnailMediaId()).url(),
-							relatedProduct.getPrice().doubleValue());
-				})
-				.toList();
-		return new ProductsGetVm(
-				productThumbnailVms,
-				relatedProductsPage.getNumber(),
-				relatedProductsPage.getSize(),
-				(int) relatedProductsPage.getTotalElements(),
-				relatedProductsPage.getTotalPages(),
-				relatedProductsPage.isLast());
+		Product product = productRepository.findById(id).orElseThrow(() -> new NotFoundException(Constants.ERROR_CODE.PRODUCT_NOT_FOUND, id));
+		Page<ProductRelated> relatedProductsPage = productRelatedRepository.findAllByProduct(product, PageRequest.of(pageNo, pageSize));
+		List<ProductThumbnailGetVm> productThumbnailVms = relatedProductsPage.stream().filter(productRelated -> productRelated.getRelatedProduct().isPublished()).map(productRelated -> {
+			Product relatedProduct = productRelated.getRelatedProduct();
+			return new ProductThumbnailGetVm(relatedProduct.getProductId(), relatedProduct.getProductTitle(), relatedProduct.getSlug(), mediaService.getMedia(relatedProduct.getThumbnailMediaId()).url(), relatedProduct.getPrice().doubleValue());
+		}).toList();
+		return new ProductsGetVm(productThumbnailVms, relatedProductsPage.getNumber(), relatedProductsPage.getSize(), (int) relatedProductsPage.getTotalElements(), relatedProductsPage.getTotalPages(), relatedProductsPage.isLast());
 	}
 
 	@Override
 	public List<ProductInfoVm> getProductsForWarehouse(String name, String sku, List<Long> productIds, FilterExistInWHSelection selection) {
-		return productRepository.findProductForWarehouse(name, sku, productIds, selection.name())
-				.stream().map(ProductInfoVm::fromProduct).toList();
+		return productRepository.findProductForWarehouse(name, sku, productIds, selection.name()).stream().map(ProductInfoVm::fromProduct).toList();
 	}
 
 	@Override
@@ -552,39 +464,27 @@ public class ProductServiceImpl implements ProductService {
 		List<String> productIds = productQuantityPostVms.stream().map(ProductQuantityPostVm::productId).toList();
 		List<Product> products = productRepository.findAllByProductIdIn(productIds);
 		products.parallelStream().forEach(product -> {
-			Optional<ProductQuantityPostVm> productQuantityPostVmOptional = productQuantityPostVms
-					.parallelStream()
-					.filter(productPostVm -> product.getProductId().equals(productPostVm.productId()))
-					.findFirst();
-			productQuantityPostVmOptional.ifPresent(
-					productQuantityPostVm -> product.setStockQuantity(productQuantityPostVm.stockQuantity()));
+			Optional<ProductQuantityPostVm> productQuantityPostVmOptional = productQuantityPostVms.parallelStream().filter(productPostVm -> product.getProductId().equals(productPostVm.productId())).findFirst();
+			productQuantityPostVmOptional.ifPresent(productQuantityPostVm -> product.setStockQuantity(productQuantityPostVm.stockQuantity()));
 		});
 		productRepository.saveAll(products);
 	}
 
 	@Override
 	public void subtractStockQuantity(List<ProductQuantityPutVm> productQuantityItems) {
-		ListUtils.partition(productQuantityItems, 5)
-				.forEach(it -> partitionUpdateStockQuantityByCalculation(it, this.subtractStockQuantity()));
+		ListUtils.partition(productQuantityItems, 5).forEach(it -> partitionUpdateStockQuantityByCalculation(it, this.subtractStockQuantity()));
 	}
 
 	@Override
 	public void restoreStockQuantity(List<ProductQuantityPutVm> productQuantityItems) {
-		ListUtils.partition(productQuantityItems, 5)
-				.forEach(it -> partitionUpdateStockQuantityByCalculation(it, this.restoreStockQuantity()));
+		ListUtils.partition(productQuantityItems, 5).forEach(it -> partitionUpdateStockQuantityByCalculation(it, this.restoreStockQuantity()));
 	}
 
 	@Override
 	public void partitionUpdateStockQuantityByCalculation(List<ProductQuantityPutVm> productQuantityItems, BiFunction<Long, Long, Long> calculation) {
-		var productIds = productQuantityItems.stream()
-				.map(ProductQuantityPutVm::productId)
-				.toList();
+		var productIds = productQuantityItems.stream().map(ProductQuantityPutVm::productId).toList();
 
-		var productQuantityItemMap = productQuantityItems.stream()
-				.collect(Collectors.toMap(
-						ProductQuantityPutVm::productId,
-						Function.identity(),
-						this::mergeProductQuantityItem));
+		var productQuantityItemMap = productQuantityItems.stream().collect(Collectors.toMap(ProductQuantityPutVm::productId, Function.identity(), this::mergeProductQuantityItem));
 
 		List<Product> products = this.productRepository.findAllByProductIdIn(productIds);
 		products.forEach(product -> {
@@ -600,58 +500,38 @@ public class ProductServiceImpl implements ProductService {
 	public ProductListGetFromCategoryVm getProductsFromCategory(int pageNo, int pageSize, String categorySlug) {
 		List<ProductThumbnailVm> productThumbnailVms = new ArrayList<>();
 		Pageable pageable = PageRequest.of(pageNo, pageSize);
-		Category category = categoryRepository
-				.findBySlug(categorySlug)
-				.orElseThrow(() -> new NotFoundException(Constants.ERROR_CODE.CATEGORY_NOT_FOUND, categorySlug));
+		Category category = categoryRepository.findBySlug(categorySlug).orElseThrow(() -> new NotFoundException(Constants.ERROR_CODE.CATEGORY_NOT_FOUND, categorySlug));
 		Page<ProductCategory> productCategoryPage = productCategoryRepository.findAllByCategory(pageable, category);
 		List<ProductCategory> productList = productCategoryPage.getContent();
-		List<Product> products = productList.stream()
-				.map(ProductCategory::getProduct).toList();
+		List<Product> products = productList.stream().map(ProductCategory::getProduct).toList();
 		for (Product product : products) {
-			productThumbnailVms.add(new ProductThumbnailVm(
-							product.getProductId(),
-							product.getProductTitle(),
-							product.getSlug(), "")
+			productThumbnailVms.add(new ProductThumbnailVm(product.getProductId(), product.getProductTitle(), product.getSlug(), "")
 					//					mediaService.getMedia(product.getThumbnailMediaId()).url())
 			);
 		}
-		return new ProductListGetFromCategoryVm(
-				productThumbnailVms,
-				productCategoryPage.getNumber(),
-				productCategoryPage.getSize(),
-				(int) productCategoryPage.getTotalElements(),
-				productCategoryPage.getTotalPages(),
-				productCategoryPage.isLast());
+		return new ProductListGetFromCategoryVm(productThumbnailVms, productCategoryPage.getNumber(), productCategoryPage.getSize(), (int) productCategoryPage.getTotalElements(), productCategoryPage.getTotalPages(), productCategoryPage.isLast());
 	}
 
 	@Override
 	public List<ProductThumbnailGetVm> getFeaturedProductsById(List<String> productIds) {
 		List<Product> products = productRepository.findAllByProductIdIn(productIds);
-		return products.stream().map(product -> new ProductThumbnailGetVm(
-				product.getProductId(),
-				product.getProductTitle(),
-				product.getSlug(),
-				"",
+		return products.stream().map(product -> new ProductThumbnailGetVm(product.getProductId(), product.getProductTitle(), product.getSlug(), "",
 				//				mediaService.getMedia(product.getThumbnailMediaId()).url(),
 				product.getPrice().doubleValue())).toList();
 	}
 
 	@Override
 	public ProductDetailVm getProductById(String productId) {
-		Product product = productRepository
-				.findById(productId)
-				.orElseThrow(() -> new NotFoundException(Constants.ERROR_CODE.PRODUCT_NOT_FOUND, productId));
+		Product product = productRepository.findById(productId).orElseThrow(() -> new NotFoundException(Constants.ERROR_CODE.PRODUCT_NOT_FOUND, productId));
 		List<ImageVm> productImageMedias = new ArrayList<>();
 		if (null != product.getProductImages()) {
 			for (ProductImage image : product.getProductImages()) {
-				productImageMedias
-						.add(new ImageVm(image.getImageId(), mediaService.getMedia(image.getImageId()).url()));
+				productImageMedias.add(new ImageVm(image.getImageId(), mediaService.getMedia(image.getImageId()).url()));
 			}
 		}
 		ImageVm thumbnailMedia = null;
 		if (null != product.getThumbnailMediaId()) {
-			thumbnailMedia = new ImageVm(product.getThumbnailMediaId(),
-					mediaService.getMedia(product.getThumbnailMediaId()).url());
+			thumbnailMedia = new ImageVm(product.getThumbnailMediaId(), mediaService.getMedia(product.getThumbnailMediaId()).url());
 		}
 		List<Category> categories = new ArrayList<>();
 		if (null != product.getProductCategories()) {
@@ -663,28 +543,7 @@ public class ProductServiceImpl implements ProductService {
 		if (null != product.getBrand()) {
 			brandId = product.getBrand().getId();
 		}
-		return new ProductDetailVm(product.getProductId(),
-				product.getProductTitle(),
-				product.getShortDescription(),
-				product.getDescription(),
-				product.getSpecification(),
-				product.getSku(),
-				product.getGtin(),
-				product.getSlug(),
-				product.isAllowedToOrder(),
-				product.isPublished(),
-				product.isFeatured(),
-				product.isVisibleIndividually(),
-				product.isStockTrackingEnabled(),
-				product.getPrice().doubleValue(),
-				brandId,
-				categories,
-				product.getMetaTitle(),
-				product.getMetaKeyword(),
-				product.getMetaDescription(),
-				thumbnailMedia,
-				productImageMedias,
-				product.getTaxClassId());
+		return new ProductDetailVm(product.getProductId(), product.getProductTitle(), product.getShortDescription(), product.getDescription(), product.getSpecification(), product.getSku(), product.getGtin(), product.getSlug(), product.isAllowedToOrder(), product.isPublished(), product.isFeatured(), product.isVisibleIndividually(), product.isStockTrackingEnabled(), product.getPrice().doubleValue(), brandId, categories, product.getMetaTitle(), product.getMetaKeyword(), product.getMetaDescription(), thumbnailMedia, productImageMedias, product.getTaxClassId());
 	}
 
 	private void updateExistingVariants(ProductPutVm productPutVm, List<ProductImage> newProductImages, List<Product> existingVariants) {
@@ -707,29 +566,6 @@ public class ProductServiceImpl implements ProductService {
 
 	private BiFunction<Long, Long, Long> restoreStockQuantity() {
 		return Long::sum;
-	}
-
-	private static void setValuesForVariantExisting(List<ProductImage> newProductImages, ProductVariationPutVm variant, Product variantInDB) {
-		if (variantInDB != null) {
-			variantInDB.setProductTitle(variant.name());
-			variantInDB.setSlug(variant.slug());
-			variantInDB.setSku(variant.sku());
-			variantInDB.setGtin(variant.gtin());
-			variantInDB.setPrice(BigDecimal.valueOf(variant.price()));
-			variantInDB.setThumbnailMediaId(variant.thumbnailMediaId());
-			List<ProductImage> productImages = variantInDB.getProductImages();
-			if (CollectionUtils.isNotEmpty(variant.productImageIds())) {
-				variant.productImageIds().forEach(imageId -> {
-					if (productImages.stream().noneMatch(pImage -> imageId.equals(pImage.getImageId()))) {
-						newProductImages.add(ProductImage.builder().imageId(imageId).product(variantInDB).build());
-					}
-				});
-			}
-		}
-	}
-
-	private static Function<Product, ProductOptionCombination> mapToOptionCombination(Map<Long, ProductOption> productOptionMap, Long optionValue, String value, Integer optionValue1) {
-		return variant -> ProductOptionCombination.builder().product(variant).productOption(productOptionMap.get(optionValue)).value(value).displayOrder(optionValue1).build();
 	}
 
 	private List<ProductImage> setProductImages(List<Long> imageMediaIds, Product mainProduct) {
@@ -784,8 +620,7 @@ public class ProductServiceImpl implements ProductService {
 		return new ProductQuantityPutVm(p1.productId(), q1 + q2);
 	}
 
-	private Long getRemainAmountOfStockQuantity(Map<String, ProductQuantityPutVm> productQuantityItemMap,
-	                                            Product product, BiFunction<Long, Long, Long> calculation) {
+	private Long getRemainAmountOfStockQuantity(Map<String, ProductQuantityPutVm> productQuantityItemMap, Product product, BiFunction<Long, Long, Long> calculation) {
 		Long stockQuantity = product.getStockQuantity();
 		var productItem = productQuantityItemMap.get(product.getProductId());
 		Long quantity = productItem.quantity();

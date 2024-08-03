@@ -1,16 +1,16 @@
 ---
 version: '3.7'
 services:
-  #  nginx:
-  #    image: nginx:1.25.3
-  #    restart: no
-  #    volumes:
-  #      - ./nginx/templates:/etc/nginx/templates
-  #      - ./nginx/configuration/custom_proxy_settings.conf:/etc/nginx/conf.d/custom_proxy_settings.conf
-  #    ports:
-  #      - "80:80"
-  #    networks:
-  #      - yas-network
+#  nginx:
+#    image: nginx:1.25.3
+#    restart: no
+#    volumes:
+#      - ./nginx/templates:/etc/nginx/templates
+#      - ./nginx/configuration/custom_proxy_settings.conf:/etc/nginx/conf.d/custom_proxy_settings.conf
+#    ports:
+#      - "80:80"
+#    networks:
+#      - yas-network
 
   #  product:
   #    build: ./product-service

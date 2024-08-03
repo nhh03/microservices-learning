@@ -16,7 +16,6 @@ import java.net.URI;
 public class CustomerService {
     private final RestClient restClient;
     private final ServiceUrlConfig serviceUrlConfig;
-
     public CustomerVm getCustomer() {
         final String jwt = ((Jwt) SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getTokenValue();
         final URI url = UriComponentsBuilder
