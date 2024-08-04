@@ -4,26 +4,1176 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="447c1c78-67d2-470c-a366-c5ba87c39106" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/root/customer/src/main/java/com/example/customer/config/DatabaseAutoConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/root/customer/src/main/java/com/example/customer/config/DatabaseAutoConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/root/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/root/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/root/order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/root/order-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/OrderServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/OrderServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/config/WebClientConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/config/WebClientConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/config/gson/CofigGson.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/controller/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/event/EventConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/event/EventConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/helper/MapperOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/helper/MapperOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/model/AbstractMappedEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/model/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/model/OrderLineItems.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/repository/OrderItemRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/repository/OrderItemRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/repository/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/repository/OrderRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/service/IOrder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/service/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/service/impl/OrderImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/root/order-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/root/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/root/pom.xml" afterDir="false" />
+    <list default="true" id="4ad7a240-6f5b-4e85-8326-ff6b7f28f723" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/.env" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/api-gateway/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/api-gateway/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/api-gateway/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/api-gateway/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/api-gateway/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/api-gateway/src/main/java/com/nhh203/apigateway/ApiGatewayApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/api-gateway/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/api-gateway/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/api-gateway/src/test/java/com/nhh203/apigateway/ApiGatewayApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice-bff/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice-bff/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice-bff/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice-bff/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice-bff/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice-bff/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice-bff/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice-bff/src/main/java/com/yas/backofficebff/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice-bff/src/main/java/com/yas/backofficebff/config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice-bff/src/main/java/com/yas/backofficebff/controller/AuthenticationController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice-bff/src/main/java/com/yas/backofficebff/viewmodel/AuthenticatedUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice-bff/src/main/resources/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice-bff/src/main/resources/logback-spring.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice-bff/wait-for-it.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/.prettierignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/.prettierrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/asset/data/sidebar.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/common/components/AuthenticationInfo.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/common/components/ChooseImageCommon.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/common/components/ConfirmationDialog.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/common/components/Layout.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/common/items/Filter.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/common/items/Input.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/common/items/ListGroup.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/common/items/ModalDeleteCustom.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/common/items/OptionSelect.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/common/items/ProductModal.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/common/items/TextEditor.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/common/services/ResponseStatusHandlingService.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/common/services/ToastService.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/constants/Common.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/catalog/components/BrandGeneralInformation.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/catalog/components/CategoryImage.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/catalog/components/CategoryMapping.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/catalog/components/ChooseImages.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/catalog/components/ChooseThumbnail.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/catalog/components/CrossSellProduct.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/catalog/components/ExportProduct.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/catalog/components/ProductAttribute.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/catalog/components/ProductAttributeGroupGeneralInformation.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/catalog/components/ProductGeneralInformation.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/catalog/components/ProductImage.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/catalog/components/ProductOptionGeneralInformation.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/catalog/components/ProductSEO.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/catalog/components/ProductVariant.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/catalog/components/ProductVariation.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/catalog/components/RelatedProduct.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/catalog/components/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/catalog/constants/validationPattern.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/catalog/models/Brand.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/catalog/models/Category.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/catalog/models/Filter.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/catalog/models/FormProduct.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/catalog/models/FormProductTemplate.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/catalog/models/Media.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/catalog/models/Product.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/catalog/models/ProductAttribute.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/catalog/models/ProductAttributeGroup.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/catalog/models/ProductAttributeValue.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/catalog/models/ProductAttributeValuePost.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/catalog/models/ProductImage.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/catalog/models/ProductOption.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/catalog/models/ProductOptionValuePost.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/catalog/models/ProductPayload.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/catalog/models/ProductTemplate.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/catalog/models/ProductThumbnail.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/catalog/models/ProductThumbnails.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/catalog/models/ProductVariation.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/catalog/models/ProductVariationPost.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/catalog/models/ProductVariationPut.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/catalog/models/Products.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/catalog/services/BrandService.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/catalog/services/CategoryService.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/catalog/services/MediaService.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/catalog/services/ProductAttributeGroupService.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/catalog/services/ProductAttributeService.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/catalog/services/ProductAttributeValueService.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/catalog/services/ProductOptionService.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/catalog/services/ProductService.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/catalog/services/ProductTemplateService.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/customer/components/ProfileForm.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/customer/models/Customer.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/customer/models/Customers.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/customer/services/CustomerService.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/inventory/components/WarehouseGeneralInformation.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/inventory/models/ProductInfoVm.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/inventory/models/ProductQuantityInStock.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/inventory/models/Stock.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/inventory/models/StockHistory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/inventory/models/StockHistoryList.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/inventory/models/StockInfo.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/inventory/models/Warehouse.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/inventory/models/WarehouseDetail.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/inventory/services/StockHistoryService.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/inventory/services/StockService.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/inventory/services/WarehouseService.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/location/components/CountryGeneralInformation.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/location/components/StateOrProvinceGeneralInformation.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/location/models/Country.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/location/models/District.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/location/models/StateOrProvince.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/location/services/CountryService.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/location/services/DistrictService.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/location/services/StateOrProvinceService.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/order/components/AddressTable.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/order/components/BillingNShippingInfo.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/order/components/OrderBriefInfo.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/order/components/OrderHistory.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/order/components/OrderProductInfo.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/order/components/OrderSearch.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/order/models/Order.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/order/models/OrderAddress.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/order/models/OrderItem.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/order/models/OrderSearchForm.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/order/services/OrderService.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/payment/models/Payment.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/profile/models/ProfileRequest.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/rating/components/RatingSearch.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/rating/models/Rating.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/rating/models/RatingSearchForm.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/rating/services/RatingService.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/tax/components/TaxClassGeneralInformation.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/tax/components/TaxRateGeneralInformation.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/tax/models/TaxClass.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/tax/models/TaxRate.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/tax/services/TaxClassService.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/modules/tax/services/TaxRateService.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/next-env.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/next.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/pages/_app.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/pages/_document.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/pages/catalog/brands/[id]/edit.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/pages/catalog/brands/create.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/pages/catalog/brands/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/pages/catalog/categories/[id]/edit.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/pages/catalog/categories/[id]/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/pages/catalog/categories/[id]/listProduct.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/pages/catalog/categories/create.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/pages/catalog/categories/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/pages/catalog/product-attribute-groups/[id]/edit.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/pages/catalog/product-attribute-groups/create.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/pages/catalog/product-attribute-groups/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/pages/catalog/product-attributes/[id]/edit.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/pages/catalog/product-attributes/create.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/pages/catalog/product-attributes/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/pages/catalog/product-options/[id]/edit.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/pages/catalog/product-options/create.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/pages/catalog/product-options/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/pages/catalog/product-templates/[id]/edit.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/pages/catalog/product-templates/create.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/pages/catalog/product-templates/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/pages/catalog/products/[id]/edit.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/pages/catalog/products/[id]/productAttributes.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/pages/catalog/products/create.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/pages/catalog/products/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/pages/customers/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/pages/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/pages/inventory/warehouse-products/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/pages/inventory/warehouse-stocks/histories/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/pages/inventory/warehouse-stocks/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/pages/inventory/warehouses/[id]/edit.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/pages/inventory/warehouses/create.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/pages/inventory/warehouses/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/pages/location/countries/[id]/edit.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/pages/location/countries/create.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/pages/location/countries/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/pages/location/state-or-provinces/[id]/edit.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/pages/location/state-or-provinces/create.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/pages/location/state-or-provinces/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/pages/profile/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/pages/reviews/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/pages/sales/orders/[id]/edit.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/pages/sales/orders/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/pages/sales/shipments/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/pages/system/payment-providers/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/pages/tax/tax-classes/[id]/edit.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/pages/tax/tax-classes/create.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/pages/tax/tax-classes/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/pages/tax/tax-rates/[id]/edit.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/pages/tax/tax-rates/create.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/pages/tax/tax-rates/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/public/vercel.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/sonar-project.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/styles/ChooseImage.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/styles/CustomToast.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/styles/Filter.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/styles/Home.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/styles/Layout.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/styles/ListGroup.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/styles/ProductVariant.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/styles/Sidebar.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/styles/TextEditor.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/styles/common/app.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/styles/common/color.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/styles/common/input.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/styles/common/scroll_bar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/styles/common/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/styles/common/typography.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/styles/common/variable.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/styles/globals.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/utils/concatQueryString.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/utils/formatPrice.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/backoffice/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/cart-service/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/cart-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/cart-service/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/cart-service/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/cart-service/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/cart-service/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/cart-service/src/main/java/com/nhh203/cartservice/CartServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/cart-service/src/main/java/com/nhh203/cartservice/config/CorsConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/cart-service/src/main/java/com/nhh203/cartservice/config/DatabaseAutoConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/cart-service/src/main/java/com/nhh203/cartservice/config/RestClientConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/cart-service/src/main/java/com/nhh203/cartservice/config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/cart-service/src/main/java/com/nhh203/cartservice/config/ServiceUrlConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/cart-service/src/main/java/com/nhh203/cartservice/config/SwaggerConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/cart-service/src/main/java/com/nhh203/cartservice/controllers/CartController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/cart-service/src/main/java/com/nhh203/cartservice/exception/ApiExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/cart-service/src/main/java/com/nhh203/cartservice/exception/BadRequestException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/cart-service/src/main/java/com/nhh203/cartservice/exception/NotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/cart-service/src/main/java/com/nhh203/cartservice/listener/CustomAuditingEntityListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/cart-service/src/main/java/com/nhh203/cartservice/model/dto/request/CartDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/cart-service/src/main/java/com/nhh203/cartservice/model/dto/response/CartResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/cart-service/src/main/java/com/nhh203/cartservice/model/dto/response/CartResponseWithMessage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/cart-service/src/main/java/com/nhh203/cartservice/model/dto/response/ProductResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/cart-service/src/main/java/com/nhh203/cartservice/model/entity/AbstractAuditEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/cart-service/src/main/java/com/nhh203/cartservice/model/entity/CartEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/cart-service/src/main/java/com/nhh203/cartservice/model/entity/CartItemEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/cart-service/src/main/java/com/nhh203/cartservice/repository/CartItemRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/cart-service/src/main/java/com/nhh203/cartservice/repository/CartRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/cart-service/src/main/java/com/nhh203/cartservice/service/ICart.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/cart-service/src/main/java/com/nhh203/cartservice/service/ProductService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/cart-service/src/main/java/com/nhh203/cartservice/service/impl/CartImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/cart-service/src/main/java/com/nhh203/cartservice/utils/Constants.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/cart-service/src/main/java/com/nhh203/cartservice/utils/MessagesUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/cart-service/src/main/java/com/nhh203/cartservice/viewmodel/CartDetailVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/cart-service/src/main/java/com/nhh203/cartservice/viewmodel/CartGetDetailVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/cart-service/src/main/java/com/nhh203/cartservice/viewmodel/CartItemPutVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/cart-service/src/main/java/com/nhh203/cartservice/viewmodel/CartItemVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/cart-service/src/main/java/com/nhh203/cartservice/viewmodel/CartListVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/cart-service/src/main/java/com/nhh203/cartservice/viewmodel/ErrorVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/cart-service/src/main/java/com/nhh203/cartservice/viewmodel/ProductThumbnailVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/cart-service/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/cart-service/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/cart-service/src/main/resources/messages/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/cart-service/src/test/java/com/nhh203/cartservice/CartServiceApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/common-service/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/common-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/common-service/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/common-service/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/common-service/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/common-service/src/main/java/com/nhh203/commonservice/CommonServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/common-service/src/main/java/com/nhh203/commonservice/config/MapperConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/common-service/src/main/java/com/nhh203/commonservice/config/WebConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/common-service/src/main/java/com/nhh203/commonservice/dto/ProductResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/common-service/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/common-service/src/test/java/com/nhh203/commonservice/CommonServiceApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/config-server/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/config-server/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/config-server/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/config-server/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/config-server/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/config-server/src/main/java/com/nhh203/configserver/ConfigServerApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/config-server/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/config-server/src/test/java/com/nhh203/configserver/ConfigServerApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/customer/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/customer/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/customer/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/customer/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/customer/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/customer/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/customer/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/customer/src/main/java/com/example/customer/CustomerApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/customer/src/main/java/com/example/customer/config/CorsConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/customer/src/main/java/com/example/customer/config/DatabaseAutoConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/customer/src/main/java/com/example/customer/config/KeycloakClientConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/customer/src/main/java/com/example/customer/config/KeycloakPropsConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/customer/src/main/java/com/example/customer/config/RestClientConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/customer/src/main/java/com/example/customer/config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/customer/src/main/java/com/example/customer/config/ServiceUrlConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/customer/src/main/java/com/example/customer/config/SwaggerConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/customer/src/main/java/com/example/customer/controller/CustomerController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/customer/src/main/java/com/example/customer/controller/UserAddressController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/customer/src/main/java/com/example/customer/exception/AccessDeniedException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/customer/src/main/java/com/example/customer/exception/ApiExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/customer/src/main/java/com/example/customer/exception/CreateGuestUserException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/customer/src/main/java/com/example/customer/exception/NotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/customer/src/main/java/com/example/customer/exception/WrongEmailFormatException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/customer/src/main/java/com/example/customer/listener/CustomAuditingEntityListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/customer/src/main/java/com/example/customer/model/AbstractAuditEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/customer/src/main/java/com/example/customer/model/UserAddress.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/customer/src/main/java/com/example/customer/repository/UserAddressRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/customer/src/main/java/com/example/customer/service/CustomerService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/customer/src/main/java/com/example/customer/service/LocationService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/customer/src/main/java/com/example/customer/service/UserAddressService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/customer/src/main/java/com/example/customer/utils/Constants.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/customer/src/main/java/com/example/customer/utils/MessagesUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/customer/src/main/java/com/example/customer/viewmodel/ErrorVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/customer/src/main/java/com/example/customer/viewmodel/address/ActiveAddressVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/customer/src/main/java/com/example/customer/viewmodel/address/AddressDetailVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/customer/src/main/java/com/example/customer/viewmodel/address/AddressPostVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/customer/src/main/java/com/example/customer/viewmodel/address/AddressVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/customer/src/main/java/com/example/customer/viewmodel/customer/CustomerAdminVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/customer/src/main/java/com/example/customer/viewmodel/customer/CustomerListVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/customer/src/main/java/com/example/customer/viewmodel/customer/CustomerProfileRequestVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/customer/src/main/java/com/example/customer/viewmodel/customer/CustomerVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/customer/src/main/java/com/example/customer/viewmodel/customer/GuestUserVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/customer/src/main/java/com/example/customer/viewmodel/user_address/UserAddressVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/customer/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/customer/src/main/resources/db/changelog/data/changelog-0001.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/customer/src/main/resources/db/changelog/db.changelog-master.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/customer/src/main/resources/db/changelog/ddl/changelog-0001.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/customer/src/main/resources/logback-spring.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/customer/src/main/resources/messages/messages.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/customer/src/test/java/service/CustomerServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/discovery-service/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/discovery-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/discovery-service/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/discovery-service/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/discovery-service/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/discovery-service/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/discovery-service/src/main/java/com/nhh203/discoveryservice/DiscoveryServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/discovery-service/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/discovery-service/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/discovery-service/src/test/java/com/nhh203/discoveryservice/DiscoveryServiceApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/docker-compose.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/identity/realm-export.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/identity/themes/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/identity/themes/yas/META-INF/keycloak-themes.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/identity/themes/yas/theme/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/identity/themes/yas/theme/yas/META-INF/keycloak-themes.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/identity/themes/yas/theme/yas/theme/yas/login/components/link/primary.ftl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/identity/themes/yas/theme/yas/theme/yas/login/components/link/secondary.ftl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/identity/themes/yas/theme/yas/theme/yas/login/login.ftl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/identity/themes/yas/theme/yas/theme/yas/login/register.ftl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/identity/themes/yas/theme/yas/theme/yas/login/resources/css/login.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/identity/themes/yas/theme/yas/theme/yas/login/resources/img/background.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/identity/themes/yas/theme/yas/theme/yas/login/resources/img/eye-off.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/identity/themes/yas/theme/yas/theme/yas/login/resources/img/eye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/identity/themes/yas/theme/yas/theme/yas/login/resources/img/yaslogo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/identity/themes/yas/theme/yas/theme/yas/login/template.ftl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/identity/themes/yas/theme/yas/theme/yas/login/theme.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/inventory-service/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/inventory-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/inventory-service/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/inventory-service/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/inventory-service/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/inventory-service/src/main/java/com/nhh203/inventoryservice/InventoryServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/inventory-service/src/main/java/com/nhh203/inventoryservice/config/CorsConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/inventory-service/src/main/java/com/nhh203/inventoryservice/config/RestClientConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/inventory-service/src/main/java/com/nhh203/inventoryservice/config/ServiceUrlConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/inventory-service/src/main/java/com/nhh203/inventoryservice/config/SwaggerConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/inventory-service/src/main/java/com/nhh203/inventoryservice/constants/ApiConstant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/inventory-service/src/main/java/com/nhh203/inventoryservice/constants/MessageCode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/inventory-service/src/main/java/com/nhh203/inventoryservice/constants/PageableConstant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/inventory-service/src/main/java/com/nhh203/inventoryservice/controller/InventoryController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/inventory-service/src/main/java/com/nhh203/inventoryservice/controller/WarehouseController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/inventory-service/src/main/java/com/nhh203/inventoryservice/dto/InventoryResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/inventory-service/src/main/java/com/nhh203/inventoryservice/exception/AccessDeniedException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/inventory-service/src/main/java/com/nhh203/inventoryservice/exception/ApiExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/inventory-service/src/main/java/com/nhh203/inventoryservice/exception/BadRequestException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/inventory-service/src/main/java/com/nhh203/inventoryservice/exception/DuplicatedException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/inventory-service/src/main/java/com/nhh203/inventoryservice/exception/NotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/inventory-service/src/main/java/com/nhh203/inventoryservice/listener/CustomAuditingEntityListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/inventory-service/src/main/java/com/nhh203/inventoryservice/model/AbstractAuditEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/inventory-service/src/main/java/com/nhh203/inventoryservice/model/Inventory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/inventory-service/src/main/java/com/nhh203/inventoryservice/model/Stock.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/inventory-service/src/main/java/com/nhh203/inventoryservice/model/StockHistory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/inventory-service/src/main/java/com/nhh203/inventoryservice/model/Warehouse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/inventory-service/src/main/java/com/nhh203/inventoryservice/model/enumeration/FilterExistInWHSelection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/inventory-service/src/main/java/com/nhh203/inventoryservice/repository/InventoryRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/inventory-service/src/main/java/com/nhh203/inventoryservice/repository/StockHistoryRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/inventory-service/src/main/java/com/nhh203/inventoryservice/repository/StockRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/inventory-service/src/main/java/com/nhh203/inventoryservice/repository/WarehouseRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/inventory-service/src/main/java/com/nhh203/inventoryservice/service/InventoryService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/inventory-service/src/main/java/com/nhh203/inventoryservice/service/LocationService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/inventory-service/src/main/java/com/nhh203/inventoryservice/service/ProductService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/inventory-service/src/main/java/com/nhh203/inventoryservice/service/WarehouseService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/inventory-service/src/main/java/com/nhh203/inventoryservice/utils/MessageCode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/inventory-service/src/main/java/com/nhh203/inventoryservice/utils/MessagesUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/inventory-service/src/main/java/com/nhh203/inventoryservice/viewmodel/AddressVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/inventory-service/src/main/java/com/nhh203/inventoryservice/viewmodel/address/AddressDetailVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/inventory-service/src/main/java/com/nhh203/inventoryservice/viewmodel/address/AddressPostVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/inventory-service/src/main/java/com/nhh203/inventoryservice/viewmodel/error/ErrorVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/inventory-service/src/main/java/com/nhh203/inventoryservice/viewmodel/product/ProductInfoVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/inventory-service/src/main/java/com/nhh203/inventoryservice/viewmodel/product/ProductQuantityPostVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/inventory-service/src/main/java/com/nhh203/inventoryservice/viewmodel/warehouse/WarehouseDetailVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/inventory-service/src/main/java/com/nhh203/inventoryservice/viewmodel/warehouse/WarehouseGetVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/inventory-service/src/main/java/com/nhh203/inventoryservice/viewmodel/warehouse/WarehouseListGetVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/inventory-service/src/main/java/com/nhh203/inventoryservice/viewmodel/warehouse/WarehousePostVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/inventory-service/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/inventory-service/src/test/java/com/nhh203/inventoryservice/InventoryServiceApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/src/main/java/com/yas/location/LocationApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/src/main/java/com/yas/location/config/CorsConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/src/main/java/com/yas/location/config/DatabaseAutoConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/src/main/java/com/yas/location/config/RestClientConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/src/main/java/com/yas/location/config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/src/main/java/com/yas/location/config/SwaggerConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/src/main/java/com/yas/location/controller/AddressController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/src/main/java/com/yas/location/controller/CountryController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/src/main/java/com/yas/location/controller/CountryStorefrontController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/src/main/java/com/yas/location/controller/DistrictStorefrontController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/src/main/java/com/yas/location/controller/StateOrProvinceController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/src/main/java/com/yas/location/controller/StateOrProvinceStoreFrontController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/src/main/java/com/yas/location/exception/ApiExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/src/main/java/com/yas/location/exception/BadRequestException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/src/main/java/com/yas/location/exception/DuplicatedException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/src/main/java/com/yas/location/exception/NotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/src/main/java/com/yas/location/listener/CustomAuditingEntityListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/src/main/java/com/yas/location/mapper/AddressResponseMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/src/main/java/com/yas/location/mapper/CountryMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/src/main/java/com/yas/location/mapper/StateOrProvinceMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/src/main/java/com/yas/location/model/AbstractAuditEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/src/main/java/com/yas/location/model/Address.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/src/main/java/com/yas/location/model/Country.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/src/main/java/com/yas/location/model/District.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/src/main/java/com/yas/location/model/StateOrProvince.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/src/main/java/com/yas/location/repository/AddressRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/src/main/java/com/yas/location/repository/CountryRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/src/main/java/com/yas/location/repository/DistrictRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/src/main/java/com/yas/location/repository/StateOrProvinceRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/src/main/java/com/yas/location/service/AddressService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/src/main/java/com/yas/location/service/CountryService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/src/main/java/com/yas/location/service/DistrictService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/src/main/java/com/yas/location/service/StateOrProvinceService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/src/main/java/com/yas/location/utils/Constants.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/src/main/java/com/yas/location/utils/MessagesUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/src/main/java/com/yas/location/viewmodel/address/AddressDetailVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/src/main/java/com/yas/location/viewmodel/address/AddressGetVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/src/main/java/com/yas/location/viewmodel/address/AddressPostVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/src/main/java/com/yas/location/viewmodel/country/CountryListGetVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/src/main/java/com/yas/location/viewmodel/country/CountryPostVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/src/main/java/com/yas/location/viewmodel/country/CountryVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/src/main/java/com/yas/location/viewmodel/district/DistrictGetVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/src/main/java/com/yas/location/viewmodel/error/ErrorVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/src/main/java/com/yas/location/viewmodel/stateorprovince/StateOrProvinceAndCountryGetNameVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/src/main/java/com/yas/location/viewmodel/stateorprovince/StateOrProvinceListGetVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/src/main/java/com/yas/location/viewmodel/stateorprovince/StateOrProvincePostVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/src/main/java/com/yas/location/viewmodel/stateorprovince/StateOrProvinceVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/src/main/resources/db/changelog/data/changelog-0001.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/src/main/resources/db/changelog/db.changelog-master.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/src/main/resources/db/changelog/ddl/changelog-0001.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/src/main/resources/logback-spring.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/src/main/resources/messages/messages.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/src/test/java/com/yas/location/service/LocationServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/src/test/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/src/test/resources/logback-spring.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/location/src/test/resources/mockito-extensions/org.mockito.plugins.MockMaker" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/media/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/media/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/media/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/media/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/media/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/media/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/media/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/media/src/main/java/com/yas/media/MediaApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/media/src/main/java/com/yas/media/config/CorsConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/media/src/main/java/com/yas/media/config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/media/src/main/java/com/yas/media/config/SwaggerConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/media/src/main/java/com/yas/media/config/YasConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/media/src/main/java/com/yas/media/controller/MediaController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/media/src/main/java/com/yas/media/exception/ControllerAdvisor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/media/src/main/java/com/yas/media/exception/MultipartFileContentException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/media/src/main/java/com/yas/media/exception/NotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/media/src/main/java/com/yas/media/exception/UnsupportedMediaTypeException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/media/src/main/java/com/yas/media/model/Media.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/media/src/main/java/com/yas/media/repository/MediaRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/media/src/main/java/com/yas/media/service/MediaService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/media/src/main/java/com/yas/media/service/MediaServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/media/src/main/java/com/yas/media/viewmodel/ErrorVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/media/src/main/java/com/yas/media/viewmodel/MediaPostVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/media/src/main/java/com/yas/media/viewmodel/MediaVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/media/src/main/java/com/yas/media/viewmodel/NoFileMediaVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/media/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/media/src/main/resources/db/changelog/data/changelog-0001.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/media/src/main/resources/db/changelog/db.changelog-master.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/media/src/main/resources/db/changelog/ddl/changelog-0001.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/media/src/main/resources/logback-spring.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/media/src/test/java/com/yas/media/MediaApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/media/src/test/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/nginx/configuration/custom_proxy_settings.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/nginx/templates/default.conf.template" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/notification-service/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/notification-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/notification-service/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/notification-service/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/notification-service/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/notification-service/src/main/java/com/nhh203/notificationservice/NotificationServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/notification-service/src/main/java/com/nhh203/notificationservice/OrderPlacedEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/notification-service/src/main/java/com/nhh203/notificationservice/api/EmailAPI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/notification-service/src/main/java/com/nhh203/notificationservice/config/MailConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/notification-service/src/main/java/com/nhh203/notificationservice/config/WebGsonConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/notification-service/src/main/java/com/nhh203/notificationservice/config/kafka/CommonConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/notification-service/src/main/java/com/nhh203/notificationservice/config/kafka/ReactiveKafkaAppProperties.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/notification-service/src/main/java/com/nhh203/notificationservice/constant/AppConstant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/notification-service/src/main/java/com/nhh203/notificationservice/constant/KafkaConstant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/notification-service/src/main/java/com/nhh203/notificationservice/dto/EmailDetails.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/notification-service/src/main/java/com/nhh203/notificationservice/entity/Notification.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/notification-service/src/main/java/com/nhh203/notificationservice/event/EventConsumer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/notification-service/src/main/java/com/nhh203/notificationservice/service/EmailService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/notification-service/src/main/java/com/nhh203/notificationservice/service/NotificationService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/notification-service/src/main/java/com/nhh203/notificationservice/service/implement/EmailServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/notification-service/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/notification-service/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/notification-service/src/test/java/com/nhh203/notificationservice/NotificationServiceApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/OrderServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/config/CorsConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/config/DatabaseAutoConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/config/GsonConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/config/RestClientConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/config/ServiceUrlConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/config/SwaggerConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/config/WebClientConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/config/kafka/KafkaConsumerConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/config/kafka/KafkaProducerConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/controller/CheckoutController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/controller/OrderController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/dto/InventoryResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/dto/OrderLineItemResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/dto/OrderLineItemsRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/dto/OrderRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/dto/OrderResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/event/EventConsumer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/event/EventProducer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/event/OrderPlacedEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/exception/ApiExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/exception/BadRequestException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/exception/Forbidden.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/exception/NotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/exception/SignInRequiredException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/helper/MapperOrder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/listener/CustomAuditingEntityListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/model/AbstractAuditEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/model/Checkout.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/model/CheckoutItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/model/Order.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/model/OrderAddress.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/model/OrderItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/model/enumeration/ECheckoutState.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/model/enumeration/EDeliveryMethod.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/model/enumeration/EDeliveryStatus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/model/enumeration/EOrderStatus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/model/enumeration/EPaymentMethod.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/model/enumeration/EPaymentStatus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/repository/CheckoutItemRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/repository/CheckoutRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/repository/OrderAddressRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/repository/OrderItemRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/repository/OrderRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/service/CartService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/service/CheckoutService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/service/CustomerService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/service/OrderService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/service/ProductService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/service/impl/CheckoutServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/service/impl/OrderServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/utils/AuthenticationUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/utils/Constants.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/utils/MessagesUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/viewmodel/ErrorVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/viewmodel/checkout/CheckoutItemPostVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/viewmodel/checkout/CheckoutItemVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/viewmodel/checkout/CheckoutPostVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/viewmodel/checkout/CheckoutStatusPutVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/viewmodel/checkout/CheckoutVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/viewmodel/customer/CustomerVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/viewmodel/order/OrderAddressPostVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/viewmodel/order/OrderBriefVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/viewmodel/order/OrderExistsByProductAndUserGetVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/viewmodel/order/OrderGetVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/viewmodel/order/OrderItemGetVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/viewmodel/order/OrderItemPostVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/viewmodel/order/OrderItemVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/viewmodel/order/OrderListVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/viewmodel/order/OrderPostVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/viewmodel/order/OrderVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/viewmodel/order/PaymentOrderStatusVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/viewmodel/orderaddress/OrderAddressVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/viewmodel/product/ProductQuantityItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/java/com/nhh203/orderservice/viewmodel/product/ProductVariationVM.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/resources/db/changelog/data/changelog-0001.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/resources/db/changelog/db.changelog-master.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/resources/db/changelog/ddl/changelog-0001.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/main/resources/messages/messages.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/order-service/src/test/java/com/nhh203/orderservice/OrderServiceApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/payment-service/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/payment-service/config/default.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/payment-service/config/kafka.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/payment-service/controllers/Payment.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/payment-service/controllers/Vnpay.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/payment-service/database/database.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/payment-service/discovery/eureka-helper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/payment-service/exceptions/Exception.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/payment-service/exceptions/HttpStatusCode.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/payment-service/kafka/consumer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/payment-service/kafka/producer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/payment-service/models/Payment.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/payment-service/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/payment-service/routers/Payment.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/payment-service/routers/Vnpay.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/payment-service/server.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/payment-service/services/Payment.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/payment-service/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/ProductServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/Utils/BeanUtilsUpdate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/Utils/Constants.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/Utils/MessagesUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/Utils/StringUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/config/ApplicationConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/config/ClientConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/config/MapperConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/config/RestClientConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/config/ServiceUrlConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/config/SwaggerConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/constant/AppConstant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/constant/PageableConstant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/controller/BrandController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/controller/CategoryController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/controller/ProductAttributeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/controller/ProductAttributeGroupController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/controller/ProductAttributeValueController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/controller/ProductController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/controller/ProductOptionController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/controller/ProductOptionValueController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/controller/ProductTemplateController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/dto/req/CategoryRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/dto/req/ProductRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/dto/res/CategoryResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/dto/res/ProductResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/exception/ApiExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/exception/payload/ExceptionMessage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/exception/wrapper/BadRequestException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/exception/wrapper/CategoryNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/exception/wrapper/DuplicatedException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/exception/wrapper/NotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/exception/wrapper/ProductNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/helper/CategoryMappingHelper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/helper/ProductMappingHelper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/model/AbstractMappedEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/model/Brand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/model/Category.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/model/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/model/ProductCategory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/model/ProductImage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/model/ProductOption.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/model/ProductOptionCombination.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/model/ProductOptionValue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/model/ProductRelated.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/model/attribute/ProductAttribute.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/model/attribute/ProductAttributeGroup.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/model/attribute/ProductAttributeTemplate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/model/attribute/ProductAttributeValue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/model/attribute/ProductTemplate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/model/enumeration/FilterExistInWHSelection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/repository/BrandRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/repository/CategoryRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/repository/CategoryRepositoryPagingAndSorting.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/repository/ProductAttributeGroupRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/repository/ProductAttributeRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/repository/ProductAttributeTemplateRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/repository/ProductAttributeValueRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/repository/ProductCategoryRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/repository/ProductImageRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/repository/ProductOptionCombinationRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/repository/ProductOptionRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/repository/ProductOptionValueRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/repository/ProductRelatedRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/repository/ProductRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/repository/ProductTemplateRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/service/BrandService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/service/CategoryService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/service/MediaService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/service/ProductAttributeGroupService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/service/ProductAttributeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/service/ProductOptionService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/service/ProductService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/service/ProductTemplateService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/service/implement/BrandServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/service/implement/CategoryServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/service/implement/MediaServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/service/implement/ProductAttributeGroupServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/service/implement/ProductAttributeServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/service/implement/ProductOptionServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/service/implement/ProductServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/service/implement/ProductTemplateServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/validation/PriceValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/validation/ValidateProductPrice.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/viewmodel/ImageVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/viewmodel/NoFileMediaVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/viewmodel/P/ProductQuantityPutVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/viewmodel/brand/BrandListGetVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/viewmodel/brand/BrandPostVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/viewmodel/brand/BrandVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/viewmodel/category/CategoryGetDetailVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/viewmodel/category/CategoryGetVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/viewmodel/category/CategoryPostVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/viewmodel/error/ErrorVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/viewmodel/product/ProductDetailGetVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/viewmodel/product/ProductDetailVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/viewmodel/product/ProductESDetailVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/viewmodel/product/ProductExportingDetailVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/viewmodel/product/ProductFeatureGetVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/viewmodel/product/ProductGetDetailVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/viewmodel/product/ProductInfoVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/viewmodel/product/ProductListGetFromCategoryVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/viewmodel/product/ProductListGetVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/viewmodel/product/ProductListVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/viewmodel/product/ProductOptionValuePostVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/viewmodel/product/ProductOptionValuePutVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/viewmodel/product/ProductPostVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/viewmodel/product/ProductPutVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/viewmodel/product/ProductQuantityPostVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/viewmodel/product/ProductQuantityPutVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/viewmodel/product/ProductSlugGetVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/viewmodel/product/ProductThumbnailGetVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/viewmodel/product/ProductThumbnailVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/viewmodel/product/ProductVariationGetVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/viewmodel/product/ProductVariationPostVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/viewmodel/product/ProductVariationPutVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/viewmodel/product/ProductsGetVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/viewmodel/productattribute/ProductAttributeGetVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/viewmodel/productattribute/ProductAttributeGroupGetVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/viewmodel/productattribute/ProductAttributeGroupListGetVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/viewmodel/productattribute/ProductAttributeGroupPostVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/viewmodel/productattribute/ProductAttributeGroupVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/viewmodel/productattribute/ProductAttributeListGetVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/viewmodel/productattribute/ProductAttributePostVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/viewmodel/productattribute/ProductAttributeTemplateGetVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/viewmodel/productattribute/ProductAttributeTemplatePostVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/viewmodel/productattribute/ProductAttributeValueGetVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/viewmodel/productattribute/ProductAttributeValuePostVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/viewmodel/productattribute/ProductAttributeValueVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/viewmodel/productattribute/ProductAttributeVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/viewmodel/productoption/ProductOptionGetVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/viewmodel/productoption/ProductOptionListGetVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/viewmodel/productoption/ProductOptionPostVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/viewmodel/productoption/ProductOptionValueGetVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/viewmodel/producttemplate/ProductTemplateGetVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/viewmodel/producttemplate/ProductTemplateListGetVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/viewmodel/producttemplate/ProductTemplatePostVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/java/com/nhh203/productservice/viewmodel/producttemplate/ProductTemplateVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/resources/db/changelog/db.changelog-master.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/main/resources/messages/messages.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/product-service/src/test/java/com/nhh203/productservice/ProductServiceApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/promotion-service/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/promotion-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/promotion-service/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/promotion-service/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/promotion-service/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/promotion-service/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/promotion-service/src/main/java/com/nhh203/promotionservice/PromotionServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/promotion-service/src/main/java/com/nhh203/promotionservice/config/WebConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/promotion-service/src/main/java/com/nhh203/promotionservice/controller/PromotionController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/promotion-service/src/main/java/com/nhh203/promotionservice/model/DiscountAppEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/promotion-service/src/main/java/com/nhh203/promotionservice/model/DiscountCodeEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/promotion-service/src/main/java/com/nhh203/promotionservice/model/dto/DiscountCodeResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/promotion-service/src/main/java/com/nhh203/promotionservice/model/dto/PromotionDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/promotion-service/src/main/java/com/nhh203/promotionservice/repository/DiscountAppRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/promotion-service/src/main/java/com/nhh203/promotionservice/repository/DiscountCodeRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/promotion-service/src/main/java/com/nhh203/promotionservice/service/IDiscount.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/promotion-service/src/main/java/com/nhh203/promotionservice/service/implement/PromotionImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/promotion-service/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/promotion-service/src/test/java/com/nhh203/promotionservice/PromotionServiceApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/rating/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/rating/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/rating/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/rating/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/rating/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/rating/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/rating/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/rating/src/main/java/com/yas/rating/RatingApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/rating/src/main/java/com/yas/rating/config/CorsConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/rating/src/main/java/com/yas/rating/config/DatabaseAutoConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/rating/src/main/java/com/yas/rating/config/RestClientConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/rating/src/main/java/com/yas/rating/config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/rating/src/main/java/com/yas/rating/config/ServiceUrlConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/rating/src/main/java/com/yas/rating/config/SwaggerConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/rating/src/main/java/com/yas/rating/controller/RatingController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/rating/src/main/java/com/yas/rating/exception/AccessDeniedException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/rating/src/main/java/com/yas/rating/exception/ApiExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/rating/src/main/java/com/yas/rating/exception/BadRequestException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/rating/src/main/java/com/yas/rating/exception/NotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/rating/src/main/java/com/yas/rating/exception/ResourceExistedException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/rating/src/main/java/com/yas/rating/listener/CustomAuditingEntityListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/rating/src/main/java/com/yas/rating/model/AbstractAuditEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/rating/src/main/java/com/yas/rating/model/Rating.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/rating/src/main/java/com/yas/rating/repository/RatingRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/rating/src/main/java/com/yas/rating/service/CustomerService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/rating/src/main/java/com/yas/rating/service/OrderService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/rating/src/main/java/com/yas/rating/service/RatingService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/rating/src/main/java/com/yas/rating/utils/AuthenticationUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/rating/src/main/java/com/yas/rating/utils/Constants.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/rating/src/main/java/com/yas/rating/utils/MessagesUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/rating/src/main/java/com/yas/rating/viewmodel/CustomerVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/rating/src/main/java/com/yas/rating/viewmodel/ErrorVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/rating/src/main/java/com/yas/rating/viewmodel/OrderExistsByProductAndUserGetVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/rating/src/main/java/com/yas/rating/viewmodel/RatingListVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/rating/src/main/java/com/yas/rating/viewmodel/RatingPostVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/rating/src/main/java/com/yas/rating/viewmodel/RatingVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/rating/src/main/java/com/yas/rating/viewmodel/ResponeStatusVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/rating/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/rating/src/main/resources/db/changelog/data/changelog-0001.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/rating/src/main/resources/db/changelog/db.changelog-master.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/rating/src/main/resources/db/changelog/ddl/changelog-0001.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/rating/src/main/resources/db/changelog/ddl/changelog-0002.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/rating/src/main/resources/logback-spring.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/rating/src/main/resources/messages/messages.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/rating/src/test/java/com/yas/rating/service/RatingServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/rating/src/test/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/rating/src/test/resources/logback-spring.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/rating/src/test/resources/mockito-extensions/org.mockito.plugins.MockMaker" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront-bff/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront-bff/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront-bff/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront-bff/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront-bff/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront-bff/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront-bff/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront-bff/src/main/java/com/yas/storefrontbff/StorefrontBffApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront-bff/src/main/java/com/yas/storefrontbff/config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront-bff/src/main/java/com/yas/storefrontbff/config/ServiceUrlConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront-bff/src/main/java/com/yas/storefrontbff/controller/AuthenticationController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront-bff/src/main/java/com/yas/storefrontbff/viewmodel/AuthenticatedUserVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront-bff/src/main/java/com/yas/storefrontbff/viewmodel/AuthenticationInfoVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront-bff/src/main/java/com/yas/storefrontbff/viewmodel/CartDetailVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront-bff/src/main/java/com/yas/storefrontbff/viewmodel/CartGetDetailVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront-bff/src/main/java/com/yas/storefrontbff/viewmodel/CartItemVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront-bff/src/main/java/com/yas/storefrontbff/viewmodel/GuestUserVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront-bff/src/main/java/com/yas/storefrontbff/viewmodel/TokenResponseVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront-bff/src/main/resources/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront-bff/src/main/resources/logback-spring.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront-bff/wait-for-it.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/.env.development" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/.env.production" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/.prettierignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/.prettierrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/asset/data/data_header_client.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/asset/icons/icon-pay-01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/asset/icons/icon-pay-02.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/asset/icons/icon-pay-03.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/asset/icons/icon-pay-04.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/asset/icons/icon-pay-05.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/asset/images/main-banner-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/asset/images/main-banner-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/asset/images/main-banner-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/asset/images/no-result.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/asset/images/sub-banner.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/common/components/AuthenticationInfo.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/common/components/BreadcrumbComponent.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/common/components/ImageWithFallback.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/common/components/Layout.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/common/components/ProductCard.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/common/components/ProductImageGallery.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/common/components/ProfileLayout.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/common/components/SpinnerComponent.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/common/components/UserProfileLeftSideBar.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/common/components/common/Footer.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/common/components/common/Header.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/common/components/dialog/ConfirmationDialog.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/common/constants/Common.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/common/images/bg_banner.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/common/images/default-avatar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/common/images/search-promote-image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/common/items/Banner.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/common/items/Input.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/common/items/ModalChooseDefaultAddress.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/common/items/ModalDeleteCustom.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/common/items/OptionSelect.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/common/items/ProductItems.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/context/AppContext.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/context/CartContext.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/context/UserInfoContext.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/address/components/AddressCard.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/address/components/AddressForm.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/address/models/AddressModel.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/address/services/AddressService.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/breadcrumb/model/BreadcrumbModel.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/cart/models/AddToCartModel.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/cart/models/Cart.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/cart/models/CartItem.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/cart/models/ProductSlug.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/cart/models/UpdateCartModel.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/cart/services/CartService.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/catalog/components/DetailHeader.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/catalog/components/ProductDetails.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/catalog/components/RelatedProducts.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/catalog/components/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/catalog/models/Category.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/catalog/models/Media.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/catalog/models/Product.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/catalog/models/ProductAttribute.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/catalog/models/ProductDetail.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/catalog/models/ProductFeature.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/catalog/models/ProductOptionValueGet.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/catalog/models/ProductOptions.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/catalog/models/ProductThumbnail.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/catalog/models/ProductVariation.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/catalog/models/ProductsGet.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/catalog/services/CategoryService.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/catalog/services/ProductService.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/catalog/services/ToastService.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/country/models/Country.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/country/services/CountryService.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/customer/services/CustomerService.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/district/models/District.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/district/services/DistrictService.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/home/components/Banner.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/home/components/Category.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/home/components/FeaturedProduct.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/home/components/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/media/models/Media.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/media/services/MediaService.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/order/components/CheckOutAddress.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/order/components/CheckOutDetail.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/order/components/ModalAddressList.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/order/components/OrderCard.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/order/components/OrderStatusTab.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/order/models/Checkout.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/order/models/CheckoutItem.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/order/models/EDeliveryMethod.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/order/models/EDeliveryStatus.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/order/models/EOrderStatus.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/order/models/Order.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/order/models/OrderGetVm.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/order/models/OrderItem.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/order/models/OrderItemGetVm.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/order/services/OrderService.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/paymentPaypal/models/CapturePaymentPaypalResponse.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/paymentPaypal/models/InitPaymentPaypalRequest.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/paymentPaypal/models/InitPaymentPaypalResponse.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/paymentPaypal/models/PaymentPaypalFailureMesasge.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/paymentPaypal/services/PaymentPaypalService.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/profile/models/Customer.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/profile/models/ProfileRequest.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/profile/services/ProfileService.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/rating/components/PostRatingForm.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/rating/components/RatingList.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/rating/components/Star.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/rating/components/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/rating/models/Rating.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/rating/models/RatingPost.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/rating/services/RatingService.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/search/components/SearchFilter.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/search/components/SearchResultLayout.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/search/components/SearchSort.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/search/models/Aggregations.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/search/models/ProductSearchResult.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/search/models/ProductSearchSuggestions.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/search/models/SearchParams.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/search/models/SearchProductResponse.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/search/models/SearchSuggestion.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/search/models/SortType.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/search/services/SearchService.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/stateAndProvince/models/StateOrProvince.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/modules/stateAndProvince/services/StatesOrProvicesService.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/next-env.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/next.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/pages/404.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/pages/_app.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/pages/about/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/pages/address/[id]/edit.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/pages/address/create.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/pages/address/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/pages/cart/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/pages/checkout/[id].tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/pages/complete-payment/[capture].tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/pages/contact/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/pages/history/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/pages/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/pages/my-orders/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/pages/products/[slug].tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/pages/products/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/pages/profile/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/pages/redirect/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/pages/search/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/public/static/images/default-fallback-image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/public/vercel.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/sonar-project.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/styles/404.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/styles/Footer.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/styles/Header.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/styles/HomePage.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/styles/MyOrder.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/styles/ProductCard.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/styles/address.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/styles/cart.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/styles/checkout.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/styles/completePayment.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/styles/form.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/styles/globals.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/styles/modules/search/SearchFilter.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/styles/modules/search/SearchPage.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/styles/modules/search/SearchSort.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/styles/productDetail.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/styles/productList.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/styles/spinner.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/styles/util.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/utils/concatQueryString.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/utils/formatPrice.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/utils/orderUtil.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/utils/useDebounce.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/storefront/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/tax/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/tax/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/tax/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/tax/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/tax/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/tax/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/tax/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/tax/src/main/java/com/yas/tax/TaxApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/tax/src/main/java/com/yas/tax/config/CorsConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/tax/src/main/java/com/yas/tax/config/DatabaseAutoConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/tax/src/main/java/com/yas/tax/config/RestClientConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/tax/src/main/java/com/yas/tax/config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/tax/src/main/java/com/yas/tax/config/ServiceUrlConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/tax/src/main/java/com/yas/tax/config/SwaggerConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/tax/src/main/java/com/yas/tax/constants/ApiConstant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/tax/src/main/java/com/yas/tax/constants/MessageCode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/tax/src/main/java/com/yas/tax/constants/PageableConstant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/tax/src/main/java/com/yas/tax/controller/TaxClassController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/tax/src/main/java/com/yas/tax/controller/TaxRateController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/tax/src/main/java/com/yas/tax/exception/ApiExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/tax/src/main/java/com/yas/tax/exception/BadRequestException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/tax/src/main/java/com/yas/tax/exception/DuplicatedException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/tax/src/main/java/com/yas/tax/exception/NotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/tax/src/main/java/com/yas/tax/listener/CustomAuditingEntityListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/tax/src/main/java/com/yas/tax/model/AbstractAuditEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/tax/src/main/java/com/yas/tax/model/TaxClass.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/tax/src/main/java/com/yas/tax/model/TaxRate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/tax/src/main/java/com/yas/tax/repository/TaxClassRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/tax/src/main/java/com/yas/tax/repository/TaxRateRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/tax/src/main/java/com/yas/tax/service/LocationService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/tax/src/main/java/com/yas/tax/service/TaxClassService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/tax/src/main/java/com/yas/tax/service/TaxRateService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/tax/src/main/java/com/yas/tax/utils/Constants.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/tax/src/main/java/com/yas/tax/utils/MessagesUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/tax/src/main/java/com/yas/tax/viewmodel/error/ErrorVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/tax/src/main/java/com/yas/tax/viewmodel/location/StateOrProvinceAndCountryGetNameVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/tax/src/main/java/com/yas/tax/viewmodel/taxclass/TaxClassListGetVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/tax/src/main/java/com/yas/tax/viewmodel/taxclass/TaxClassPostVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/tax/src/main/java/com/yas/tax/viewmodel/taxclass/TaxClassVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/tax/src/main/java/com/yas/tax/viewmodel/taxrate/TaxRateGetDetailVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/tax/src/main/java/com/yas/tax/viewmodel/taxrate/TaxRateListGetVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/tax/src/main/java/com/yas/tax/viewmodel/taxrate/TaxRatePostVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/tax/src/main/java/com/yas/tax/viewmodel/taxrate/TaxRateVm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/tax/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/tax/src/main/resources/db/changelog/data/changelog-0001.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/tax/src/main/resources/db/changelog/db.changelog-master.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/tax/src/main/resources/db/changelog/ddl/changelog-0001.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/tax/src/main/resources/logback-spring.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/tax/src/main/resources/messages/messages.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/tax/src/test/java/com/yas/tax/service/TaxServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/tax/src/test/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/tax/src/test/resources/logback-spring.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/tax/src/test/resources/mockito-extensions/org.mockito.plugins.MockMaker" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/user-service/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/user-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/user-service/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/user-service/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/user-service/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/user-service/src/main/java/com/nhh203/userservice/UserServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/user-service/src/main/java/com/nhh203/userservice/api/UserAuth.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/user-service/src/main/java/com/nhh203/userservice/api/UserManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/user-service/src/main/java/com/nhh203/userservice/api/UserRole.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/user-service/src/main/java/com/nhh203/userservice/config/ModelMapperConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/user-service/src/main/java/com/nhh203/userservice/config/WebClientConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/user-service/src/main/java/com/nhh203/userservice/config/WebGsonConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/user-service/src/main/java/com/nhh203/userservice/config/WebSecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/user-service/src/main/java/com/nhh203/userservice/config/kafka/CommonConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/user-service/src/main/java/com/nhh203/userservice/config/kafka/ReactiveKafkaAppProperties.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/user-service/src/main/java/com/nhh203/userservice/constant/AppConstant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/user-service/src/main/java/com/nhh203/userservice/constant/KafkaConstant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/user-service/src/main/java/com/nhh203/userservice/event/EventProducer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/user-service/src/main/java/com/nhh203/userservice/exception/ApiExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/user-service/src/main/java/com/nhh203/userservice/exception/payload/ExceptionMessage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/user-service/src/main/java/com/nhh203/userservice/exception/payload/TokenErrorOrAccessTimeOut.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/user-service/src/main/java/com/nhh203/userservice/exception/wrapper/EmailOrUsernameNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/user-service/src/main/java/com/nhh203/userservice/exception/wrapper/PasswordNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/user-service/src/main/java/com/nhh203/userservice/exception/wrapper/PhoneNumberNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/user-service/src/main/java/com/nhh203/userservice/exception/wrapper/RoleNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/user-service/src/main/java/com/nhh203/userservice/exception/wrapper/UserNotAuthenticatedException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/user-service/src/main/java/com/nhh203/userservice/exception/wrapper/UserNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/user-service/src/main/java/com/nhh203/userservice/http/HeaderGenerator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/user-service/src/main/java/com/nhh203/userservice/listener/CustomAuditingEntityListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/user-service/src/main/java/com/nhh203/userservice/model/dto/request/ChangePasswordRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/user-service/src/main/java/com/nhh203/userservice/model/dto/request/EmailDetails.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/user-service/src/main/java/com/nhh203/userservice/model/dto/request/Login.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/user-service/src/main/java/com/nhh203/userservice/model/dto/request/SignUp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/user-service/src/main/java/com/nhh203/userservice/model/dto/request/UserDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/user-service/src/main/java/com/nhh203/userservice/model/dto/response/InformationMessage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/user-service/src/main/java/com/nhh203/userservice/model/dto/response/JwtResponseMessage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/user-service/src/main/java/com/nhh203/userservice/model/dto/response/ResponseMessage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/user-service/src/main/java/com/nhh203/userservice/model/entity/AbstractAuditEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/user-service/src/main/java/com/nhh203/userservice/model/entity/Role.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/user-service/src/main/java/com/nhh203/userservice/model/entity/RoleName.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/user-service/src/main/java/com/nhh203/userservice/model/entity/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/user-service/src/main/java/com/nhh203/userservice/repository/RoleRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/user-service/src/main/java/com/nhh203/userservice/repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/user-service/src/main/java/com/nhh203/userservice/security/jwt/JwtEntryPoint.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/user-service/src/main/java/com/nhh203/userservice/security/jwt/JwtProvider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/user-service/src/main/java/com/nhh203/userservice/security/jwt/JwtTokenFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/user-service/src/main/java/com/nhh203/userservice/security/userprinciple/UserDetailService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/user-service/src/main/java/com/nhh203/userservice/security/userprinciple/UserPrinciple.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/user-service/src/main/java/com/nhh203/userservice/service/EmailService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/user-service/src/main/java/com/nhh203/userservice/service/RoleService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/user-service/src/main/java/com/nhh203/userservice/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/user-service/src/main/java/com/nhh203/userservice/service/imple/RoleImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/user-service/src/main/java/com/nhh203/userservice/service/imple/UserImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/user-service/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/user-service/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/root/user-service/src/test/java/com/nhh203/userservice/UserServiceApplicationTests.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../shoppeAdvance/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../shoppeAdvance/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../shoppeAdvance/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../shoppeAdvance/yarn.lock" afterDir="false" />
     </list>
@@ -32,43 +1182,15 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExternalProjectsData">
-    <projectState path="$PROJECT_DIR$/demo">
-      <ProjectState />
-    </projectState>
-    <projectState path="$PROJECT_DIR$/payment-service">
-      <ProjectState />
-    </projectState>
-  </component>
-  <component name="ExternalProjectsManager">
-    <system id="GRADLE">
-      <state>
-        <projects_view>
-          <tree_state>
-            <expand />
-            <select />
-          </tree_state>
-        </projects_view>
-      </state>
-    </system>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Dockerfile" />
-        <option value="Interface" />
-        <option value="Record" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="jar://$MAVEN_REPOSITORY$/io/projectreactor/reactor-core/3.6.6/reactor-core-3.6.6-sources.jar!/reactor/core/publisher/Mono.java" root0="SKIP_INSPECTION" />
-    <setting file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/6.1.8/spring-web-6.1.8-sources.jar!/org/springframework/http/ResponseEntity.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/user-service/src/main/java/com/nhh203/userservice/config/WebSecurityConfig.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -83,117 +1205,77 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
-  </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 1
+  &quot;associatedIndex&quot;: 2
 }</component>
-  <component name="ProjectId" id="2hECjyqyc3vmPEk4ijqu7rEKbnp" />
+  <component name="ProjectId" id="2jk3fxHTLyQsSRy024c4ebnuqt5" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="abbreviatePackageNames" value="true" />
+    <option name="autoscrollFromSource" value="true" />
+    <option name="flattenModules" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Docker.docker-compose.yml.mysql-container: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yml.mysqlcontainer: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yml.phpmyadmin: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProductServiceApplicationTests.shouldCreateProduct.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.discovery-service [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.product-service [org.apache.maven.plugins:maven-clean-plugin:3.3.2:clean].executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.ApiGatewayApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.CartServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.CommonServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.ConfigServerApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;Spring Boot.DiscoveryServiceApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;Spring Boot.GatewayServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.InventoryServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.NotificationServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.OrderServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.ProductServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.PromotionServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.Service2Application.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.UserServiceApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/java/microservice-ecorrmmer/microservice-ecorrmmer/root&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.Java&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Maven.customer-service [org.apache.maven.plugins:maven-clean-plugin:3.3.2:clean].executor": "Run",
+    "Maven.product-service [clean].executor": "Run",
+    "Maven.product-service [org.apache.maven.plugins:maven-clean-plugin:3.3.2:clean].executor": "Run",
+    "Maven.product-service [org.apache.maven.plugins:maven-install-plugin:3.1.2:help].executor": "Run",
+    "Maven.root [clean].executor": "Run",
+    "Maven.root [install].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.ApiGatewayApplication.executor": "Run",
+    "Spring Boot.Application.executor": "Run",
+    "Spring Boot.CartServiceApplication.executor": "Run",
+    "Spring Boot.CommonServiceApplication.executor": "Run",
+    "Spring Boot.CustomerApplication.executor": "Debug",
+    "Spring Boot.OrderServiceApplication.executor": "Debug",
+    "Spring Boot.ProductServiceApplication.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/java/microservice-ecorrmmer/microservice-ecorrmmer",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Global Libraries",
+    "project.structure.proportion": "0.15390626",
+    "project.structure.side.proportion": "0.5773672",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.nhh203.productservice.viewmodel.productattribute" />
-      <recent name="com.nhh203.productservice.viewmodel.productoption" />
-      <recent name="com.nhh203.productservice.viewmodel.producttemplate" />
-      <recent name="com.nhh203.productservice.viewmodel.brand" />
-      <recent name="com.nhh203.productservice.viewmodel.category" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\java\microservice-ecorrmmer\microservice-ecorrmmer" />
-      <recent name="D:\java\microservice-ecorrmmer\microservice-ecorrmmer\user-service" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\java\microservice-ecorrmmer\microservice-ecorrmmer\product-service\src\main\resources\db\changelog" />
-      <recent name="D:\java\microservice-ecorrmmer\microservice-ecorrmmer" />
+      <recent name="D:\java\microservice-ecorrmmer\microservice-ecorrmmer\root" />
     </key>
   </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
-        <option value="Application" />
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
         <option value="SpringBootApplicationConfigurationType" />
-      </set>
-    </option>
-    <option name="excludedTypes">
-      <set>
-        <option value="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" />
-        <option value="HttpClient.HttpRequestRunConfigurationType" />
-        <option value="JBossConfiguration" />
-        <option value="TomeeConfiguration" />
       </set>
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.ProductServiceApplication">
-    <configuration default="true" type="JetRunConfigurationType">
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="api-gateway" />
@@ -202,8 +1284,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="backoffice-bff" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.yas.backofficebff.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CartServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="cart-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.nhh203.cartservice.CartServiceApplication" />
       <method v="2">
@@ -225,6 +1313,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CustomerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="customer-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.customer.CustomerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DiscoveryServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="discovery-service" />
@@ -237,6 +1332,20 @@
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="inventory-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.nhh203.inventoryservice.InventoryServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LocationApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="location" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.yas.location.LocationApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MediaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="media" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.yas.media.MediaApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -255,15 +1364,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="ProductServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="product-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.nhh203.productservice.ProductServiceApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.nhh203.productservice.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -276,111 +1379,91 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
-      <module name="user-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.nhh203.userservice.UserServiceApplication" />
+    <configuration name="RatingApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="rating" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.yas.rating.RatingApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
-      <deployment type="docker-compose.yml">
-        <settings />
-      </deployment>
-      <method v="2" />
+    <configuration name="StorefrontBffApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="storefront-bff" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.yas.storefrontbff.StorefrontBffApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Spring Boot.ProductServiceApplication" />
-      </list>
-    </recent_temporary>
+    <configuration name="TaxApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="tax" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.yas.tax.TaxApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
         <option value="jdk-17.0.9-corretto-17.0.9-f644763e9732-ebaef533" />
-        <option value="jdk-20.0.2-corretto-20.0.2.1-f644763e9732-27d99999" />
       </set>
     </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-  <component name="SvnConfiguration">
-    <configuration>C:\Users\xpro2\AppData\Roaming\Subversion</configuration>
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="447c1c78-67d2-470c-a366-c5ba87c39106" name="Changes" comment="" />
-      <created>1717149989908</created>
+      <changelist id="4ad7a240-6f5b-4e85-8326-ff6b7f28f723" name="Changes" comment="" />
+      <created>1721917355989</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1717149989908</updated>
-      <workItem from="1717149990978" duration="362000" />
-      <workItem from="1717150554787" duration="2580000" />
-      <workItem from="1717162479078" duration="6792000" />
-      <workItem from="1717173842281" duration="150000" />
-      <workItem from="1717174019794" duration="1624000" />
-      <workItem from="1717223287693" duration="20426000" />
-      <workItem from="1717305953374" duration="11202000" />
-      <workItem from="1717318353729" duration="430000" />
-      <workItem from="1717318796329" duration="460000" />
-      <workItem from="1717319286477" duration="5377000" />
-      <workItem from="1717396701848" duration="15787000" />
-      <workItem from="1717413782654" duration="399000" />
-      <workItem from="1717414700132" duration="109000" />
-      <workItem from="1717414824871" duration="51000" />
-      <workItem from="1717414895500" duration="422000" />
-      <workItem from="1717415353556" duration="3129000" />
-      <workItem from="1717471223131" duration="1085000" />
-      <workItem from="1717748513202" duration="938000" />
-      <workItem from="1717827214682" duration="3545000" />
-      <workItem from="1718015765750" duration="4375000" />
-      <workItem from="1718029543854" duration="163000" />
-      <workItem from="1718029718911" duration="12459000" />
-      <workItem from="1718088017457" duration="1745000" />
-      <workItem from="1718091551170" duration="2380000" />
-      <workItem from="1718100106671" duration="2067000" />
-      <workItem from="1718110307762" duration="3192000" />
-      <workItem from="1718114326626" duration="32000" />
-      <workItem from="1718131789681" duration="105000" />
-      <workItem from="1718131960629" duration="513000" />
-      <workItem from="1718165794881" duration="1754000" />
-      <workItem from="1718208014753" duration="855000" />
-      <workItem from="1718209283040" duration="3317000" />
-      <workItem from="1718214014140" duration="97000" />
-      <workItem from="1718214159631" duration="24000" />
-      <workItem from="1718214319622" duration="1111000" />
-      <workItem from="1718251421030" duration="1022000" />
-      <workItem from="1718260140471" duration="1024000" />
-      <workItem from="1718261721721" duration="4270000" />
-      <workItem from="1718266726424" duration="4646000" />
-      <workItem from="1718276684515" duration="246000" />
-      <workItem from="1718276963359" duration="7705000" />
-      <workItem from="1718286168679" duration="10976000" />
-      <workItem from="1718325129024" duration="7022000" />
-      <workItem from="1718344645053" duration="10043000" />
-      <workItem from="1718382493168" duration="3364000" />
-      <workItem from="1718423494099" duration="18843000" />
-      <workItem from="1718451514100" duration="2162000" />
-      <workItem from="1718454592557" duration="38000" />
-      <workItem from="1720534533276" duration="12255000" />
-      <workItem from="1720605425859" duration="338000" />
-      <workItem from="1720699060824" duration="4358000" />
-      <workItem from="1720790148255" duration="51000" />
-      <workItem from="1721460889292" duration="22000" />
-      <workItem from="1721461358382" duration="214000" />
-      <workItem from="1721469807716" duration="21447000" />
-      <workItem from="1721545087252" duration="18449000" />
-      <workItem from="1721573242068" duration="11417000" />
-      <workItem from="1721608027916" duration="5094000" />
-      <workItem from="1721616111455" duration="13972000" />
-      <workItem from="1721635906900" duration="4732000" />
-      <workItem from="1721650722387" duration="10913000" />
-      <workItem from="1721718224293" duration="3217000" />
-      <workItem from="1721917263198" duration="92000" />
-      <workItem from="1721925942572" duration="8000" />
-      <workItem from="1721926426591" duration="10000" />
-      <workItem from="1722273152257" duration="29000" />
+      <updated>1721917355989</updated>
+      <workItem from="1721917357232" duration="1035000" />
+      <workItem from="1721918438623" duration="3219000" />
+      <workItem from="1721925894174" duration="47000" />
+      <workItem from="1721925951930" duration="75000" />
+      <workItem from="1721926033794" duration="380000" />
+      <workItem from="1721926437850" duration="554000" />
+      <workItem from="1721927054547" duration="1813000" />
+      <workItem from="1721929216384" duration="2340000" />
+      <workItem from="1721931925007" duration="2749000" />
+      <workItem from="1721965876548" duration="788000" />
+      <workItem from="1721966687339" duration="4669000" />
+      <workItem from="1721971692395" duration="10000" />
+      <workItem from="1721971719769" duration="1450000" />
+      <workItem from="1721978838988" duration="17938000" />
+      <workItem from="1722004972672" duration="9258000" />
+      <workItem from="1722051617361" duration="8521000" />
+      <workItem from="1722069504994" duration="6179000" />
+      <workItem from="1722081029567" duration="1239000" />
+      <workItem from="1722141316383" duration="843000" />
+      <workItem from="1722143301127" duration="779000" />
+      <workItem from="1722144121634" duration="5257000" />
+      <workItem from="1722151782305" duration="1432000" />
+      <workItem from="1722153310013" duration="2421000" />
+      <workItem from="1722243277266" duration="61000" />
+      <workItem from="1722243359317" duration="240000" />
+      <workItem from="1722261969934" duration="2092000" />
+      <workItem from="1722273176338" duration="980000" />
+      <workItem from="1722282144525" duration="2000" />
+      <workItem from="1722342989600" duration="96000" />
+      <workItem from="1722350996148" duration="1475000" />
+      <workItem from="1722355918847" duration="2131000" />
+      <workItem from="1722410784310" duration="569000" />
+      <workItem from="1722417508470" duration="1343000" />
+      <workItem from="1722422631740" duration="3483000" />
+      <workItem from="1722445628098" duration="3108000" />
+      <workItem from="1722493052984" duration="3683000" />
+      <workItem from="1722591916389" duration="2340000" />
+      <workItem from="1722618286049" duration="339000" />
+      <workItem from="1722619023353" duration="28000" />
+      <workItem from="1722619109561" duration="4414000" />
+      <workItem from="1722623594394" duration="14000" />
+      <workItem from="1722623626308" duration="145000" />
+      <workItem from="1722623814025" duration="1236000" />
+      <workItem from="1722661919445" duration="7586000" />
+      <workItem from="1722676493975" duration="11809000" />
+      <workItem from="1722747826537" duration="5740000" />
+      <workItem from="1722777450304" duration="1717000" />
+      <workItem from="1722779446264" duration="3811000" />
     </task>
     <servers />
   </component>
@@ -398,21 +1481,19 @@
       </map>
     </option>
   </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <breakpoint enabled="true" type="java-exception">
-          <properties class="org.springframework.web.reactive.function.client.WebClientRequestException" package="org.springframework.web.reactive.function.client" />
+          <properties class="org.hibernate.HibernateException" package="org.hibernate" />
           <option name="timeStamp" value="1" />
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
+    <watches-manager>
+      <inline-watch fileUrl="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/6.1.8/spring-web-6.1.8-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java" line="264">
+        <watch expression="((ProcessingException)ex.target).cause" language="JAVA" custom="javax.ws.rs.ProcessingException" />
+      </inline-watch>
+    </watches-manager>
   </component>
 </project>

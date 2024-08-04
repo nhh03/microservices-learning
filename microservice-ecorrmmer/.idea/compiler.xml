@@ -7,39 +7,63 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="config-server" />
-        <module name="cart-service" />
-        <module name="inventory-service" />
-        <module name="common-service" />
-        <module name="promotion-service" />
         <module name="api-gateway" />
-        <module name="product-service" />
-        <module name="order-service" />
-        <module name="user-service" />
+        <module name="config-server" />
         <module name="discovery-service" />
+      </profile>
+      <profile name="Annotation profile for root" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct-processor/1.4.1.Final/mapstruct-processor-1.4.1.Final.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct/1.4.1.Final/mapstruct-1.4.1.Final.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.32/lombok-1.18.32.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok-mapstruct-binding/0.2.0/lombok-mapstruct-binding-0.2.0.jar" />
+        </processorPath>
+        <module name="cart-service" />
+        <module name="common-service" />
+        <module name="customer-service" />
+        <module name="promotion-service" />
+        <module name="rating" />
+        <module name="product-service" />
+        <module name="tax" />
+        <module name="media" />
         <module name="notification-service" />
+        <module name="inventory-service" />
+        <module name="backoffice-bff" />
+        <module name="storefront-bff" />
+        <module name="location" />
+        <module name="order-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="commonservice" target="17" />
-      <module name="payment-service" target="17" />
+      <module name="com.nhh203" target="17" />
+      <module name="user-service" target="1.5" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="api-gateway" options="-parameters" />
+      <module name="backoffice-bff" options="-parameters" />
       <module name="cart-service" options="-parameters" />
+      <module name="com.nhh203" options="-parameters" />
       <module name="common-service" options="-parameters" />
-      <module name="commonservice" options="-parameters" />
       <module name="config-server" options="-parameters" />
+      <module name="customer-service" options="-parameters" />
       <module name="discovery-service" options="-parameters" />
       <module name="inventory-service" options="-parameters" />
+      <module name="location" options="-parameters" />
+      <module name="media" options="-parameters" />
       <module name="notification-service" options="-parameters" />
       <module name="order-service" options="-parameters" />
-      <module name="payment-service" options="-parameters" />
       <module name="product-service" options="-parameters" />
       <module name="promotion-service" options="-parameters" />
-      <module name="user-service" options="-parameters" />
+      <module name="rating" options="-parameters" />
+      <module name="root" options="-parameters" />
+      <module name="storefront-bff" options="-parameters" />
+      <module name="tax" options="-parameters" />
+      <module name="user-service" options="" />
     </option>
   </component>
 </project>
