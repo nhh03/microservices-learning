@@ -21,14 +21,14 @@ export async function getCart(): Promise<Cart> {
   return Promise.reject(response);
 }
 
-export async function getCartProductThumbnail(ids: number[]): Promise<ProductThumbnail[]> {
+export async function getCartProductThumbnail(ids: string[]): Promise<ProductThumbnail[]> {
   const response = await fetch(`api/product/storefront/products/list-featured?productId=` + ids, {
     headers: { 'Content-type': 'application/json; charset=UTF-8' },
   });
   return await response.json();
 }
 
-export async function removeProductInCart(productId: number) {
+export async function removeProductInCart(productId: string) {
   const response = await fetch('/api/cart/storefront/cart-item?productId=' + productId, {
     method: 'DELETE',
     headers: { 'Content-type': 'application/json; charset=UTF-8' },

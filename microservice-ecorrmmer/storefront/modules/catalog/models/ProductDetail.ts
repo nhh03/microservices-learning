@@ -1,5 +1,5 @@
 export type ProductDetail = {
-  id: number;
+  id: string;
   name: string;
   brandName: string;
   productCategories: string[];

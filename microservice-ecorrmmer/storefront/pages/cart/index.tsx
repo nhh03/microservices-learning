@@ -25,7 +25,7 @@ import { toastError } from '@/modules/catalog/services/ToastService';
 const Cart = () => {
   const router = useRouter();
   type Item = {
-    productId: number;
+    productId: string;
     quantity: number;
     productName: string;
     slug: string;
@@ -37,7 +37,7 @@ const Cart = () => {
 
   const [loaded, setLoaded] = useState(false);
 
-  const [productIdRemove, setProductIdRemove] = useState<number>(0);
+  const [productIdRemove, setProductIdRemove] = useState<string>('');
 
   const [isOpenRemoveDialog, setIsOpenRemoveDialog] = useState(false);
 
@@ -51,7 +51,7 @@ const Cart = () => {
     cartDetails: [
       {
         id: 0,
-        productId: 0,
+        productId: '',
         quantity: 0,
       },
     ],
@@ -62,7 +62,7 @@ const Cart = () => {
     return formatPrice(item.price * item.quantity);
   };
 
-  const getProductThumbnails = (productIds: number[]) => {
+  const getProductThumbnails = (productIds: string[]) => {
     return getCartProductThumbnail(productIds);
   };
 
@@ -104,7 +104,7 @@ const Cart = () => {
     setTotalPrice(totalPrice);
   }, [items]);
 
-  const removeProduct = (productId: number) => {
+  const removeProduct = (productId: string) => {
     removeProductInCart(productId)
       .then(() => loadCart())
       .catch((err) => {
@@ -113,7 +113,7 @@ const Cart = () => {
     setIsOpenRemoveDialog(false);
   };
 
-  const handlePlus = (productId: number) => {
+  const handlePlus = (productId: string) => {
     addToCart([
       {
         productId: productId,
@@ -126,7 +126,7 @@ const Cart = () => {
       });
   };
 
-  const handleMinus = (productId: number, productQuantity: number) => {
+  const handleMinus = (productId: string, productQuantity: number) => {
     if (productQuantity === 1) {
       removeProductInCart(productId)
         .then(() => loadCart())
@@ -145,11 +145,11 @@ const Cart = () => {
     }
   };
 
-  const handleQuantityOnChange = (productId: number, quanity: number) => {
+  const handleQuantityOnChange = (productId: string, quanity: number) => {
     items.find((item) => item.productId === productId)!.quantity = quanity;
   };
 
-  const handleQuantityKeyDown = (productId: number, key: string) => {
+  const handleQuantityKeyDown = (productId: string, key: string) => {
     if (key === 'Enter') {
       updateCart({
         productId: productId,
@@ -168,7 +168,7 @@ const Cart = () => {
     }
   };
 
-  const handleCartQuantityInputOnBlur = (productId: number, newQuantity: number) => {
+  const handleCartQuantityInputOnBlur = (productId: string, newQuantity: number) => {
     updateCart({
       productId: productId,
       quantity: newQuantity,
@@ -185,7 +185,7 @@ const Cart = () => {
       );
   };
 
-  const openRemoveConfirmDialog = (productId: number) => {
+  const openRemoveConfirmDialog = (productId: string) => {
     setProductIdRemove(productId);
     setIsOpenRemoveDialog(true);
   };

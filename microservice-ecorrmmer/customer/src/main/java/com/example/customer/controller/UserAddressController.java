@@ -34,13 +34,13 @@ public class UserAddressController {
     }
 
     @DeleteMapping("/storefront/user-address/{id}")
-    public ResponseEntity deleteAddress(@PathVariable Long id) {
+    public ResponseEntity<Void> deleteAddress(@PathVariable Long id) {
         userAddressService.deleteAddress(id);
         return ResponseEntity.ok().build();
     }
 
     @PutMapping("/storefront/user-address/{id}")
-    public ResponseEntity chooseDefaultAddress(@PathVariable Long id) {
+    public ResponseEntity<Void> chooseDefaultAddress(@PathVariable Long id) {
         userAddressService.chooseDefaultAddress(id);
         return ResponseEntity.ok().build();
     }

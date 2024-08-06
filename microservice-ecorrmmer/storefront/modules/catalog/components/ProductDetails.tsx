@@ -104,7 +104,8 @@ export default function ProductDetails({
         quantity: 1,
         parentProductId: product.hasOptions ? product.id : null,
       },
-    ];
+    ];  
+    console.log(payload);
     await addToCart(payload)
       .then((_response) => {
         toastSuccess('Add to cart success');

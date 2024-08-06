@@ -6,7 +6,6 @@ import org.springframework.http.MediaType;
 import org.springframework.web.client.RestClient;
 @Configuration
 public class RestClientConfig {
-
     @Bean
     public RestClient getRestClient(RestClient.Builder restClientBuilder) {
         return restClientBuilder

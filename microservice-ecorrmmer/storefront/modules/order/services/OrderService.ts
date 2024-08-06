@@ -29,7 +29,7 @@ export async function getMyOrders(
 }
 
 export async function createCheckout(checkout: Checkout): Promise<Checkout | null> {
-  const response = await fetch('/api/order/storefront/checkouts', {
+  const response = await fetch('http://localhost:8087/api/order/storefront/checkouts', {
     method: 'POST',
     body: JSON.stringify(checkout),
     headers: { 'Content-type': 'application/json; charset=UTF-8' },

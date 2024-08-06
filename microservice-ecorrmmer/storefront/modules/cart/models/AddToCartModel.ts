@@ -1,5 +1,5 @@
 export type AddToCartModel = {
-  productId: number;
+  productId: string;
   quantity: number;
-  parentProductId?: number | null;
+  parentProductId?: string | null;
 };

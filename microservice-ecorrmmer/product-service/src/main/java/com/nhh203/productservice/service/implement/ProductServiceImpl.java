@@ -317,32 +317,38 @@ public class ProductServiceImpl implements ProductService {
 		Page<Product> productPage = productRepository.getFeaturedProduct(pageable);
 		List<Product> products = productPage.getContent();
 		for (Product product : products) {
-			productThumbnailVms.add(new ProductThumbnailGetVm(product.getProductId(), product.getProductTitle(), product.getSlug(),
-					//					mediaService.getMedia(product.getThumbnailMediaId()).url(),
-					"123", product.getPrice().doubleValue()));
+			productThumbnailVms.add(new ProductThumbnailGetVm(
+					product.getProductId(),
+					product.getProductTitle(),
+					product.getSlug(),
+					mediaService.getMedia(product.getThumbnailMediaId()).url(),
+					product.getPrice().doubleValue()));
 		}
 		return new ProductFeatureGetVm(productThumbnailVms, productPage.getTotalPages());
 	}
 
 	@Override
 	public ProductDetailGetVm getProductDetail(String slug) {
-		Product product = productRepository.findBySlugAndIsPublishedTrue(slug).orElseThrow(() -> new NotFoundException(Constants.ERROR_CODE.PRODUCT_NOT_FOUND, slug));
-
+		Product product = productRepository.findBySlugAndIsPublishedTrue(slug)
+				.orElseThrow(() -> new NotFoundException(Constants.ERROR_CODE.PRODUCT_NOT_FOUND, slug));
 		Long productThumbnailMediaId = product.getThumbnailMediaId();
-		//		String productThumbnailUrl = mediaService.getMedia(productThumbnailMediaId).url() ;
-
+		String productThumbnailUrl = mediaService.getMedia(productThumbnailMediaId).url();
 		List<String> productImageMediaUrls = new ArrayList<>();
 		if (CollectionUtils.isNotEmpty(product.getProductImages())) {
 			for (ProductImage image : product.getProductImages()) {
 				productImageMediaUrls.add(mediaService.getMedia(image.getImageId()).url());
 			}
 		}
-
 		List<ProductAttributeGroupGetVm> productAttributeGroupsVm = new ArrayList<>();
 		List<ProductAttributeValue> productAttributeValues = product.getAttributeValues();
 		if (CollectionUtils.isNotEmpty(productAttributeValues)) {
-			List<ProductAttributeGroup> productAttributeGroups = productAttributeValues.stream().map(productAttributeValue -> productAttributeValue.getProductAttribute().getProductAttributeGroup()).distinct().toList();
-
+			List<ProductAttributeGroup> productAttributeGroups = productAttributeValues
+					.stream()
+					.map(productAttributeValue -> productAttributeValue
+							.getProductAttribute()
+							.getProductAttributeGroup())
+					.distinct()
+					.toList();
 			productAttributeGroups.forEach(productAttributeGroup -> {
 				List<ProductAttributeValueVm> productAttributeValueVms = new ArrayList<>();
 				productAttributeValues.forEach(productAttributeValue -> {
@@ -358,8 +364,21 @@ public class ProductServiceImpl implements ProductService {
 			});
 		}
 
-		return new ProductDetailGetVm(product.getProductId(), product.getProductTitle(), product.getBrand() == null ? null : product.getBrand().getName(), product.getProductCategories().stream().map(category -> category.getCategory().getCategoryTitle()).toList(), productAttributeGroupsVm, product.getShortDescription(), product.getDescription(), product.getSpecification(), product.isAllowedToOrder(), product.isPublished(), product.isFeatured(), product.isHasOptions(), product.getPrice().doubleValue(), "",
-				//				productThumbnailUrl,
+		return new ProductDetailGetVm(
+				product.getProductId(),
+				product.getProductTitle(),
+				product.getBrand() == null ? null : product.getBrand().getName(),
+				product.getProductCategories().stream().map(category -> category.getCategory().getCategoryTitle()).toList(),
+				productAttributeGroupsVm,
+				product.getShortDescription(),
+				product.getDescription(),
+				product.getSpecification(),
+				product.isAllowedToOrder(),
+				product.isPublished(),
+				product.isFeatured(),
+				product.isHasOptions(),
+				product.getPrice().doubleValue(),
+				productThumbnailUrl,
 				productImageMediaUrls);
 	}
 
@@ -378,8 +397,10 @@ public class ProductServiceImpl implements ProductService {
 		List<ProductThumbnailGetVm> productThumbnailVms = new ArrayList<>();
 		List<Product> products = productPage.getContent();
 		for (Product product : products) {
-			productThumbnailVms.add(new ProductThumbnailGetVm(product.getProductId(), product.getProductTitle(), product.getSlug(), "123",
-					//					mediaService.getMedia(product.getThumbnailMediaId()).url(),
+			productThumbnailVms.add(new ProductThumbnailGetVm(
+					product.getProductId(),
+					product.getProductTitle(), product.getSlug(),
+					mediaService.getMedia(product.getThumbnailMediaId()).url(),
 					product.getPrice().doubleValue()));
 		}
 		return new ProductsGetVm(productThumbnailVms, productPage.getNumber(), productPage.getSize(), (int) productPage.getTotalElements(), productPage.getTotalPages(), productPage.isLast());
@@ -389,16 +410,32 @@ public class ProductServiceImpl implements ProductService {
 	public List<ProductVariationGetVm> getProductVariationsByParentId(String id) {
 		Product parentProduct = productRepository.findById(id).orElseThrow(() -> new NotFoundException(Constants.ERROR_CODE.PRODUCT_NOT_FOUND, id));
 		if (Boolean.TRUE.equals(parentProduct.isHasOptions())) {
-			List<Product> productVariations = parentProduct.getProducts().stream().filter(Product::isPublished).toList();
+			List<Product> productVariations = parentProduct.getProducts()
+					.stream()
+					.filter(Product::isPublished)
+					.toList();
 
 			return productVariations.stream().map(product -> {
 				List<ProductOptionCombination> productOptionCombinations = productOptionCombinationRepository.findAllByProduct(product);
-				Map<String, String> options = productOptionCombinations.stream().collect(Collectors.toMap(productOptionCombination -> productOptionCombination.getProductOption().getName(), ProductOptionCombination::getValue));
-				return new ProductVariationGetVm(product.getProductId(), product.getProductTitle(), product.getSlug(), product.getSku(), product.getGtin(), product.getPrice(), new ImageVm(product.getThumbnailMediaId(), ""
-						//								mediaService.getMedia(product.getThumbnailMediaId()).url()
-				), product.getProductImages().stream().map(productImage -> new ImageVm(productImage.getImageId(), "")
-						//										mediaService.getMedia(productImage.getImageId()).url()
-				).toList(), options);
+				Map<String, String> options = productOptionCombinations
+						.stream()
+						.collect(Collectors.toMap(productOptionCombination -> productOptionCombination
+								.getProductOption().getName(), ProductOptionCombination::getValue));
+				return new ProductVariationGetVm(
+						product.getProductId(),
+						product.getProductTitle(),
+						product.getSlug(),
+						product.getSku(),
+						product.getGtin(),
+						product.getPrice(),
+						new ImageVm(product.getThumbnailMediaId(),
+								mediaService.getMedia(product.getThumbnailMediaId()).url()),
+						product.getProductImages()
+								.stream()
+								.map(productImage -> new ImageVm(
+										productImage.getImageId(),
+										mediaService.getMedia(productImage.getImageId()).url())
+								).toList(), options);
 			}).toList();
 		} else {
 			throw new BadRequestException(Constants.ERROR_CODE.PRODUCT_NOT_HAVE_VARIATION, id);
@@ -515,8 +552,11 @@ public class ProductServiceImpl implements ProductService {
 	@Override
 	public List<ProductThumbnailGetVm> getFeaturedProductsById(List<String> productIds) {
 		List<Product> products = productRepository.findAllByProductIdIn(productIds);
-		return products.stream().map(product -> new ProductThumbnailGetVm(product.getProductId(), product.getProductTitle(), product.getSlug(), "",
-				//				mediaService.getMedia(product.getThumbnailMediaId()).url(),
+		return products.stream().map(product -> new ProductThumbnailGetVm(
+				product.getProductId(),
+				product.getProductTitle(),
+				product.getSlug(),
+				mediaService.getMedia(product.getThumbnailMediaId()).url(),
 				product.getPrice().doubleValue())).toList();
 	}
 

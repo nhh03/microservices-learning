@@ -59,6 +59,7 @@ services:
   identity:
     image: quay.io/keycloak/keycloak:21.0.2
     command: [ 'start-dev', '--import-realm' ]
+    restart:  on-failure
     environment:
       KEYCLOAK_ADMIN: admin
       KEYCLOAK_ADMIN_PASSWORD: admin
@@ -85,7 +86,6 @@ services:
       - OAUTH_USE_PKCE=true
     networks:
       - yas-network
-
   mysqlcontainer:
     image: mysql:latest
     restart: always
@@ -98,6 +98,16 @@ services:
       MYSQL_PASSWORD: root
     volumes:
       - microservice-ecorrmmer_mysql_db1:/var/lib/mysql
+    networks:
+      - yas-network
+
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    ports:
+      - "8888:80"
+    environment:
+      - PMA_ARBITRARY=1
     networks:
       - yas-network
 

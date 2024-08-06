@@ -1,7 +1,7 @@
 import { Media } from './Media';
 
 export type ProductVariation = {
-  id: number;
+  id: string;
   name: string;
   slug: string;
   sku: string;

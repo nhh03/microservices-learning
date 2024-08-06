@@ -1,6 +1,6 @@
 export type CheckoutItem = {
   id?: number;
-  productId: number;
+  productId: string;
   productName: string;
   quantity: number;
   productPrice: number;

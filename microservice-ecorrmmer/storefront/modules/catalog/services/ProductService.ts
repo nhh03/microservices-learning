@@ -9,15 +9,14 @@ export async function getFeaturedProducts(pageNo: number): Promise<ProductFeatur
   const response = await fetch(`api/product/storefront/products/featured?pageNo=${pageNo}`);
   return response.json();
 }
-
 export async function getProductDetail(slug: string): Promise<ProductDetail> {
-  const response = await fetch(process.env.API_BASE_PATH + '/product/storefront/product/' + slug);
-  return response.json();
+  const res = await fetch(`http://localhost:8087/api/product/storefront/product/`  +slug);
+  return res.json();
 }
 
-export async function getProductOptionValues(productId: number): Promise<ProductOptionValueGet[]> {
+export async function getProductOptionValues(productId: string): Promise<ProductOptionValueGet[]> {
   const res = await fetch(
-    `${process.env.API_BASE_PATH}/product/storefront/product-option-values/${productId}`
+    `http://localhost:8087/api/product/storefront/product-option-values/${productId}`
   );
   if (res.status >= 200 && res.status < 300) return res.json();
   return Promise.reject(res);
@@ -29,10 +28,10 @@ export async function getProductByMultiParams(queryString: string): Promise<Prod
 }
 
 export async function getProductVariationsByParentId(
-  parentId: number
+  parentId: string
 ): Promise<ProductVariation[]> {
   const res = await fetch(
-    `${process.env.API_BASE_PATH}/product/storefront/product-variations/${parentId}`
+    `http://localhost:8087/api/product/storefront/product-variations/${parentId}`
   );
   if (res.status >= 200 && res.status < 300) return res.json();
   return Promise.reject(res);

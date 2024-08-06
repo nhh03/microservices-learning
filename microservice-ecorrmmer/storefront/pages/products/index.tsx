@@ -110,7 +110,7 @@ const ProductList = () => {
   return (
     <Container>
       <Head>
-        <title>Product Lisst</title>
+        <title>Product List</title>
       </Head>
       <BreadcrumbComponent props={crumb} />
 

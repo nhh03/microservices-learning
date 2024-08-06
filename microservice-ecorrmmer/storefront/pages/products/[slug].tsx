@@ -38,7 +38,6 @@ export const getServerSideProps: GetServerSideProps = async (
   context: GetServerSidePropsContext
 ) => {
   const { slug, pvid } = context.query;
-
   // fetch product by slug
   const product = await getProductDetail(slug as string);
   if (!product.id) return { notFound: true };
@@ -49,8 +48,7 @@ export const getServerSideProps: GetServerSideProps = async (
   if (product.hasOptions) {
     // fetch product options
     try {
-      const productOptionValue = await getProductOptionValues(product.id);
-
+      const productOptionValue = await getProductOptionValues(product.id) ;
       for (const option of productOptionValue) {
         const index = productOptions.findIndex(
           (productOption) => productOption.name === option.productOptionName
@@ -62,7 +60,6 @@ export const getServerSideProps: GetServerSideProps = async (
             name: option.productOptionName,
             value: [option.productOptionValue],
           };
-
           productOptions.push(newProductOption);
         }
       }
@@ -73,6 +70,7 @@ export const getServerSideProps: GetServerSideProps = async (
     // fetch product variations
     try {
       productVariations = await getProductVariationsByParentId(product.id);
+      console.log(productVariations);
     } catch (error) {
       console.error(error);
     }
@@ -197,7 +195,6 @@ const ProductDetailsPage = ({ product, productOptions, productVariations, pvid }
                   <th></th>
                 </tr>
               </thead>
-
               <tbody>
                 {attributeGroup.productAttributeValues.map((productAttribute) => (
                   <tr key={productAttribute.name}>

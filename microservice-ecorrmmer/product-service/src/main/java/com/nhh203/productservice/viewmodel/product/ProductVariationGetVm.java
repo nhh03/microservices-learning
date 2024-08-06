@@ -14,5 +14,5 @@ public record ProductVariationGetVm(String id,
                                     BigDecimal price,
                                     ImageVm thumbnail,
                                     List<ImageVm> productImages,
-                                    Map<String, String> optionss){
+                                    Map<String, String> options){
 }

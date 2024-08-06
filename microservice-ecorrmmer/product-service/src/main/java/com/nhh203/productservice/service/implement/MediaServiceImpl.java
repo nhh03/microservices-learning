@@ -46,7 +46,8 @@ public class MediaServiceImpl implements MediaService {
 			//TODO return default no image url
 			return new NoFileMediaVm(null, "", "", "", "");
 		}
-		final URI url = UriComponentsBuilder.fromHttpUrl(serviceUrlConfig.media()).path("/medias/{id}").buildAndExpand(id).toUri();
+		final URI url = UriComponentsBuilder.fromHttpUrl(serviceUrlConfig.media())
+				.path("/medias/{id}").buildAndExpand(id).toUri();
 		return restClient.get()
 				.uri(url)
 				.retrieve()

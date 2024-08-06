@@ -10,7 +10,7 @@ export async function createUserAddress(address: Address) {
 }
 
 export async function getUserAddress() {
-  const response = await fetch(`/api/customer/storefront/user-address`);
+  const response = await fetch(`http://localhos/api/customer/storefront/user-address`);
   return response.json();
 }
 
