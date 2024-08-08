@@ -110,25 +110,24 @@ public class WarehouseService {
 	}
 
 	@Transactional(readOnly = true)
-    public WarehouseListGetVm getPageableWarehouses(final int pageNo, final int pageSize) {
-        final Pageable pageable = PageRequest.of(pageNo, pageSize);
-        final Page<Warehouse> warehousePage = warehouseRepository.findAll(pageable);
-        final List<Warehouse> warehouseList = warehousePage.getContent();
+	public WarehouseListGetVm getPageableWarehouses(final int pageNo, final int pageSize) {
+		final Pageable pageable = PageRequest.of(pageNo, pageSize);
+		final Page<Warehouse> warehousePage = warehouseRepository.findAll(pageable);
+		final List<Warehouse> warehouseList = warehousePage.getContent();
 
-        final List<WarehouseGetVm> warehouseVms = warehouseList.stream()
-                .map(WarehouseGetVm::fromModel)
-                .toList();
+		final List<WarehouseGetVm> warehouseVms = warehouseList.stream()
+				.map(WarehouseGetVm::fromModel)
+				.toList();
 
-        return new WarehouseListGetVm(
-                warehouseVms,
-                warehousePage.getNumber(),
-                warehousePage.getSize(),
-                (int) warehousePage.getTotalElements(),
-                warehousePage.getTotalPages(),
-                warehousePage.isLast()
-        );
-    }
-
+		return new WarehouseListGetVm(
+				warehouseVms,
+				warehousePage.getNumber(),
+				warehousePage.getSize(),
+				(int) warehousePage.getTotalElements(),
+				warehousePage.getTotalPages(),
+				warehousePage.isLast()
+		);
+	}
 
 
 }

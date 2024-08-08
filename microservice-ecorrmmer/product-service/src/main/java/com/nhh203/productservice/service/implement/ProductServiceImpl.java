@@ -169,7 +169,28 @@ public class ProductServiceImpl implements ProductService {
 
 	@Override
 	public ProductGetDetailVm createProduct(ProductPostVm productPostVm) {
-		Product mainProduct = Product.builder().productTitle(productPostVm.name()).slug(productPostVm.slug()).description(productPostVm.description()).shortDescription(productPostVm.shortDescription()).specification(productPostVm.specification()).sku(productPostVm.sku()).gtin(productPostVm.gtin()).price(BigDecimal.valueOf(productPostVm.price())).isAllowedToOrder(productPostVm.isAllowedToOrder()).isPublished(productPostVm.isPublished()).isFeatured(productPostVm.isFeatured()).isVisibleIndividually(productPostVm.isVisibleIndividually()).stockTrackingEnabled(productPostVm.stockTrackingEnabled()).taxIncluded(productPostVm.taxIncluded()).metaTitle(productPostVm.metaTitle()).metaKeyword(productPostVm.metaKeyword()).metaDescription(productPostVm.description()).hasOptions(CollectionUtils.isNotEmpty(productPostVm.variations()) && CollectionUtils.isNotEmpty(productPostVm.productOptionValues())).productCategories(List.of()).taxClassId(productPostVm.taxClassId()).build();
+		Product mainProduct = Product.builder()
+				.productTitle(productPostVm.name())
+				.slug(productPostVm.slug())
+				.description(productPostVm.description())
+				.shortDescription(productPostVm.shortDescription())
+				.specification(productPostVm.specification())
+				.sku(productPostVm.sku())
+				.gtin(productPostVm.gtin())
+				.price(BigDecimal.valueOf(productPostVm.price()))
+				.isAllowedToOrder(productPostVm.isAllowedToOrder())
+				.isPublished(productPostVm.isPublished())
+				.isFeatured(productPostVm.isFeatured())
+				.isVisibleIndividually(productPostVm.isVisibleIndividually())
+				.stockTrackingEnabled(productPostVm.stockTrackingEnabled())
+				.taxIncluded(productPostVm.taxIncluded())
+				.metaTitle(productPostVm.metaTitle())
+				.metaKeyword(productPostVm.metaKeyword())
+				.metaDescription(productPostVm.description())
+				.hasOptions(CollectionUtils.isNotEmpty(productPostVm.variations()) && CollectionUtils.isNotEmpty(productPostVm.productOptionValues()))
+				.productCategories(List.of())
+				.taxClassId(productPostVm.taxClassId())
+				.build();
 		setProductBrand(productPostVm.brandId(), mainProduct);
 		List<ProductCategory> productCategories = setProductCategories(productPostVm.categoryIds(), mainProduct);
 		mainProduct.setProductCategories(productCategories);
@@ -509,7 +530,8 @@ public class ProductServiceImpl implements ProductService {
 
 	@Override
 	public void subtractStockQuantity(List<ProductQuantityPutVm> productQuantityItems) {
-		ListUtils.partition(productQuantityItems, 5).forEach(it -> partitionUpdateStockQuantityByCalculation(it, this.subtractStockQuantity()));
+		ListUtils.partition(productQuantityItems, 5)
+				.forEach(it -> partitionUpdateStockQuantityByCalculation(it, this.subtractStockQuantity()));
 	}
 
 	@Override
@@ -520,8 +542,9 @@ public class ProductServiceImpl implements ProductService {
 	@Override
 	public void partitionUpdateStockQuantityByCalculation(List<ProductQuantityPutVm> productQuantityItems, BiFunction<Long, Long, Long> calculation) {
 		var productIds = productQuantityItems.stream().map(ProductQuantityPutVm::productId).toList();
-
-		var productQuantityItemMap = productQuantityItems.stream().collect(Collectors.toMap(ProductQuantityPutVm::productId, Function.identity(), this::mergeProductQuantityItem));
+		var productQuantityItemMap = productQuantityItems
+				.stream()
+				.collect(Collectors.toMap(ProductQuantityPutVm::productId, Function.identity(), this::mergeProductQuantityItem));
 
 		List<Product> products = this.productRepository.findAllByProductIdIn(productIds);
 		products.forEach(product -> {

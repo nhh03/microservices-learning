@@ -30,10 +30,12 @@
         <module name="tax" />
         <module name="media" />
         <module name="notification-service" />
+        <module name="payment-paypal" />
         <module name="inventory-service" />
         <module name="backoffice-bff" />
         <module name="storefront-bff" />
         <module name="location" />
+        <module name="payment" />
         <module name="order-service" />
       </profile>
     </annotationProcessing>
@@ -57,6 +59,8 @@
       <module name="media" options="-parameters" />
       <module name="notification-service" options="-parameters" />
       <module name="order-service" options="-parameters" />
+      <module name="payment" options="-parameters" />
+      <module name="payment-paypal" options="-parameters" />
       <module name="product-service" options="-parameters" />
       <module name="promotion-service" options="-parameters" />
       <module name="rating" options="-parameters" />

@@ -18,7 +18,6 @@ public class LocationService {
 	public AddressDetailVm getAddressById(Long id) {
 		return null;
 	}
-
 	public AddressVm createAddress(AddressPostVm addressPostVm) {
 		return null;
 	}
@@ -26,7 +25,6 @@ public class LocationService {
 	public void updateAddress(Long id, AddressPostVm addressPostVm) {
 
 	}
-
 	public void deleteAddress(Long addressId) {
 
 	}

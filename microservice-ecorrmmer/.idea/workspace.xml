@@ -5,13 +5,58 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ad7a240-6f5b-4e85-8326-ff6b7f28f723" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/payment-paypal/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-paypal/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-paypal/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-paypal/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-paypal/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-paypal/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-paypal/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-paypal/src/main/java/com/yas/paymentpaypal/PaymentPaypalApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-paypal/src/main/java/com/yas/paymentpaypal/config/CorsConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-paypal/src/main/java/com/yas/paymentpaypal/config/PaypalConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-paypal/src/main/java/com/yas/paymentpaypal/config/RestClientConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-paypal/src/main/java/com/yas/paymentpaypal/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-paypal/src/main/java/com/yas/paymentpaypal/config/ServiceUrlConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-paypal/src/main/java/com/yas/paymentpaypal/config/SwaggerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-paypal/src/main/java/com/yas/paymentpaypal/controller/PaypalController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-paypal/src/main/java/com/yas/paymentpaypal/exception/ApiExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-paypal/src/main/java/com/yas/paymentpaypal/exception/BadRequestException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-paypal/src/main/java/com/yas/paymentpaypal/exception/ForbiddenException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-paypal/src/main/java/com/yas/paymentpaypal/exception/NotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-paypal/src/main/java/com/yas/paymentpaypal/exception/SignInRequiredException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-paypal/src/main/java/com/yas/paymentpaypal/model/CheckoutIdHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-paypal/src/main/java/com/yas/paymentpaypal/model/PaymentProviderHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-paypal/src/main/java/com/yas/paymentpaypal/service/PaymentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-paypal/src/main/java/com/yas/paymentpaypal/service/PaypalService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-paypal/src/main/java/com/yas/paymentpaypal/utils/AuthenticationUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-paypal/src/main/java/com/yas/paymentpaypal/utils/Constants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-paypal/src/main/java/com/yas/paymentpaypal/utils/MessagesUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-paypal/src/main/java/com/yas/paymentpaypal/viewmodel/CapturedPaymentVm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-paypal/src/main/java/com/yas/paymentpaypal/viewmodel/ErrorVm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-paypal/src/main/java/com/yas/paymentpaypal/viewmodel/PaypalRequestPayment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-paypal/src/main/java/com/yas/paymentpaypal/viewmodel/RequestPayment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-paypal/src/main/java/com/yas/paymentpaypal/viewmodel/ResponeStatusVm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-paypal/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-paypal/src/main/resources/logback-spring.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-paypal/src/main/resources/messages/messages.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-paypal/src/test/java/com/yas/paymentpaypal/serivce/PaypalServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-paypal/src/test/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-paypal/src/test/resources/logback-spring.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-paypal/src/test/resources/mockito-extensions/org.mockito.plugins.MockMaker" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/config/MapperConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/config/MapperConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/config/RestClientConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/config/RestClientConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storefront/.env.development" beforeDir="false" afterPath="$PROJECT_DIR$/storefront/.env.development" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storefront/modules/catalog/services/ProductService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/storefront/modules/catalog/services/ProductService.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storefront/pages/products/[slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/storefront/pages/products/[slug].tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/nhh203/inventoryservice/controller/WarehouseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/nhh203/inventoryservice/controller/WarehouseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/nhh203/inventoryservice/model/Stock.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/nhh203/inventoryservice/model/Stock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/nhh203/inventoryservice/service/LocationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/nhh203/inventoryservice/service/LocationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/nhh203/inventoryservice/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/nhh203/inventoryservice/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/nhh203/inventoryservice/service/WarehouseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/nhh203/inventoryservice/service/WarehouseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/src/main/java/com/yas/media/model/Media.java" beforeDir="false" afterPath="$PROJECT_DIR$/media/src/main/java/com/yas/media/model/Media.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/service/implement/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/service/implement/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/viewmodel/product/ProductPostVm.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/viewmodel/product/ProductPostVm.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +72,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$MAVEN_REPOSITORY$/com/paypal/sdk/checkout-sdk/2.0.0/checkout-sdk-2.0.0.jar!/com/paypal/orders/OrderRequest.class" root0="SKIP_INSPECTION" />
   </component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -80,7 +128,7 @@
     "Spring Boot.ProductServiceApplication.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/java/microservice-ecorrmmer/microservice-ecorrmmer/storefront-bff",
+    "last_opened_file_path": "D:/java/microservice-ecorrmmer/microservice-ecorrmmer/payment-paypal",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -200,6 +248,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PaymentApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="payment" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.yas.payment.PaymentApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PaymentPaypalApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="payment-paypal" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.yas.paymentpaypal.PaymentPaypalApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ProductServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="product-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.nhh203.productservice.ProductServiceApplication" />
@@ -301,6 +363,8 @@
       <workItem from="1722777450304" duration="1717000" />
       <workItem from="1722779446264" duration="4247000" />
       <workItem from="1722843859678" duration="7454000" />
+      <workItem from="1723051440605" duration="6938000" />
+      <workItem from="1723100374387" duration="5795000" />
     </task>
     <servers />
   </component>

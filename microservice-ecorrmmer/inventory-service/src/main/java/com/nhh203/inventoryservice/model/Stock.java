@@ -22,5 +22,4 @@ public class Stock extends AbstractAuditEntity {
 	@ManyToOne
 	@JoinColumn(name = "warehouse_id", nullable = false)
 	private Warehouse warehouse;
-
 }

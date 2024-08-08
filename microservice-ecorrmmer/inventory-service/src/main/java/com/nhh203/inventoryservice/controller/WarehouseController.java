@@ -25,6 +25,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 @RequiredArgsConstructor
 public class WarehouseController {
 	private final WarehouseService warehouseService;
+
 	@PostMapping
 	@ApiResponses(value = {
 			@ApiResponse(responseCode = ApiConstant.CODE_201, description = ApiConstant.CREATED, content = @Content(schema = @Schema(implementation = WarehouseGetVm.class))),
