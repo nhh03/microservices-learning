@@ -29,6 +29,4 @@ public class CheckoutController {
 	public ResponseEntity<Long> updateCheckoutStatus(@Valid @RequestBody CheckoutStatusPutVm checkoutStatusPutVm) {
 		return ResponseEntity.ok(checkoutService.updateCheckoutStatus(checkoutStatusPutVm));
 	}
-
-
 }

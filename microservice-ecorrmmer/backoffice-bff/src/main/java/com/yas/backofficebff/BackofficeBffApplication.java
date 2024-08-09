@@ -6,9 +6,8 @@ import org.springframework.security.config.annotation.web.reactive.EnableWebFlux
 
 @SpringBootApplication
 @EnableWebFluxSecurity
-public class Application {
-
+public class BackofficeBffApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
+		SpringApplication.run(BackofficeBffApplication.class, args);
 	}
 }

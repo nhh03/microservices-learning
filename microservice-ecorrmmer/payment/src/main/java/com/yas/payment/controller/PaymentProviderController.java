@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/payment-providers")
 public class PaymentProviderController {
     private final PaymentProviderService paymentProviderService;
-
     @GetMapping("/{id}/additional-settings")
     public ResponseEntity<String> getAdditionalSettings(@PathVariable("id") String id) {
         return ResponseEntity.ok(paymentProviderService
