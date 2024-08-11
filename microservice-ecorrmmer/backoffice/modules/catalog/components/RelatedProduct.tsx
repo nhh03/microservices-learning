@@ -23,12 +23,12 @@ const RelatedProduct = ({ setValue, getValue }: Props) => {
 
   useEffect(() => {
     if (id) {
-      fetchRelatedProduct(+id);
+      fetchRelatedProduct(id as string);  // get related product by id
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
 
-  const fetchRelatedProduct = (productId: number) => {
+  const fetchRelatedProduct = (productId: string) => {
     getRelatedProductByProductId(productId)
       .then((results) => {
         setSelectedRelatedProduct(results);

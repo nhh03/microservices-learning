@@ -20,35 +20,6 @@ services:
   #        SPRING_DATASOURCE_USERNAME: root
   #        SPRING_DATASOURCE_PASSWORD: root
 
-  zookeeper:
-    image: confluentinc/cp-zookeeper:7.0.1
-    container_name: zookeeper
-    restart: on-failure
-    ports:
-      - "2181:2181"
-    environment:
-      ZOOKEEPER_CLIENT_PORT: 2181
-      ZOOKEEPER_TICK_TIME: 2000
-    networks:
-      - yas-network
-
-  broker:
-    image: confluentinc/cp-kafka:7.0.1
-    container_name: broker
-    ports:
-      - "9092:9092"
-    depends_on:
-      - zookeeper
-    environment:
-      KAFKA_BROKER_ID: 1
-      KAFKA_ZOOKEEPER_CONNECT: 'zookeeper:2181'
-      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_INTERNAL:PLAINTEXT
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092,PLAINTEXT_INTERNAL://broker:29092
-      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
-      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
-      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
-    networks:
-      - yas-network
   zipkin:
     image: openzipkin/zipkin:latest
     container_name: zipkin
@@ -59,7 +30,7 @@ services:
   identity:
     image: quay.io/keycloak/keycloak:21.0.2
     command: [ 'start-dev', '--import-realm' ]
-    restart:  on-failure
+    restart: on-failure
     environment:
       KEYCLOAK_ADMIN: admin
       KEYCLOAK_ADMIN_PASSWORD: admin
@@ -76,7 +47,6 @@ services:
       - ./identity/themes/yas/theme:/opt/keycloak/themes
     networks:
       - yas-network
-
   swagger-ui:
     image: swaggerapi/swagger-ui:v4.16.0
     environment:
@@ -100,7 +70,6 @@ services:
       - microservice-ecorrmmer_mysql_db1:/var/lib/mysql
     networks:
       - yas-network
-
   phpmyadmin:
     image: phpmyadmin
     restart: always
@@ -110,7 +79,70 @@ services:
       - PMA_ARBITRARY=1
     networks:
       - yas-network
-
+  zookeeper:
+    image: confluentinc/cp-zookeeper:7.0.1
+    container_name: zookeeper
+    restart: always
+    ports:
+      - '2181:2181'
+      - '2888:2888'
+      - '3888:3888'
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+    networks:
+      - yas-network
+  kafka:
+    image: confluentinc/cp-kafka:7.0.1
+    hostname: ${KAFKA_SERVICE_HOST}
+    container_name: kafka
+    ports:
+      - "9092:9092"
+    depends_on:
+      - zookeeper
+    environment:
+      - KAFKA_BROKER_ID
+      - KAFKA_ZOOKEEPER_CONNECT
+      - KAFKA_LISTENER_SECURITY_PROTOCOL_MAP
+      - KAFKA_ADVERTISED_LISTENERS
+      - KAFKA_INTER_BROKER_LISTENER_NAME
+      - KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR
+    networks:
+      - yas-network
+  kafka-connect:
+    image: debezium/connect:2.2
+    restart: always
+    ports:
+      - '8093:8093'
+      - '5005:5005'
+    depends_on:
+      - kafka
+    environment:
+      - BOOTSTRAP_SERVERS=kafka:9092
+      - GROUP_ID=1
+      - CONFIG_STORAGE_TOPIC=kafka_connect_configs
+      - OFFSET_STORAGE_TOPIC=kafka_connect_offsets
+    networks:
+      - yas-network
+  akhq:
+    image: tchiotludo/akhq:0.24.0
+    environment:
+      AKHQ_CONFIGURATION: |
+        akhq:
+          connections:
+            docker-kafka-server:
+              properties:
+                bootstrap.servers: 'kafka:9092'
+              connect:
+                - name: "kafka-connect"
+                  url: "http://kafka-connect:8093/"
+    ports:
+      - '8089:8080'
+    depends_on:
+      - kafka
+      - kafka-connect
+    networks:
+      - yas-network
 volumes:
   microservice-ecorrmmer_mysql_db1:
     external: true

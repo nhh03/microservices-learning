@@ -27,11 +27,11 @@ const ProductVariations = ({ getValue, setValue }: Props) => {
 
   useEffect(() => {
     if (id) {
-      loadExistingVariant(+id);
+      loadExistingVariant(id as string);
     }
   }, [id]);
 
-  const loadExistingVariant = (id: number) => {
+  const loadExistingVariant = (id: string) => {
     getVariationsByProductId(id).then((results) => {
       if (results) {
         const listOptionCombine: string[] = [];

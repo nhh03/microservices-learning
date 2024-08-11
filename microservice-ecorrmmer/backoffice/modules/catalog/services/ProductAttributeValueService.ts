@@ -2,7 +2,7 @@ import { ProductAttributeValue } from '../models/ProductAttributeValue';
 import { ProductAttributeValuePost } from '../models/ProductAttributeValuePost';
 
 export async function getAttributeValueOfProduct(
-  productId: number
+  productId: string
 ): Promise<ProductAttributeValue[]> {
   const response = await fetch('/api/product/backoffice/product-attribute-value/' + productId);
   return response.json();

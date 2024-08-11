@@ -31,6 +31,7 @@
         <module name="media" />
         <module name="notification-service" />
         <module name="payment-paypal" />
+        <module name="search" />
         <module name="inventory-service" />
         <module name="backoffice-bff" />
         <module name="storefront-bff" />
@@ -65,6 +66,7 @@
       <module name="promotion-service" options="-parameters" />
       <module name="rating" options="-parameters" />
       <module name="root" options="-parameters" />
+      <module name="search" options="-parameters" />
       <module name="storefront-bff" options="-parameters" />
       <module name="tax" options="-parameters" />
       <module name="user-service" options="" />

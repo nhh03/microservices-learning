@@ -26,7 +26,7 @@ const ProductCategoryMapping = ({ product, setValue, getValue: _getValue }: Prop
       listCheckCategory = [];
       if (checkCategory.length === 0) {
         product?.categories.map((item: any) => {
-          listCheckCategory.push(item.id.toString());
+          listCheckCategory.push(item.categoryId.toString());
         });
         setCheckCategory(listCheckCategory);
       }

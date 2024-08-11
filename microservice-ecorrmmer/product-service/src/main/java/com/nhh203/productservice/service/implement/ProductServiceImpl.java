@@ -66,7 +66,11 @@ public class ProductServiceImpl implements ProductService {
 	ModelMapper modelMapper;
 	Gson gson;
 
-	private static void setValuesForVariantExisting(List<ProductImage> newProductImages, ProductVariationPutVm variant, Product variantInDB) {
+	private static void setValuesForVariantExisting(
+			List<ProductImage> newProductImages,
+			ProductVariationPutVm variant,
+			Product variantInDB
+	) {
 		if (variantInDB != null) {
 			variantInDB.setProductTitle(variant.name());
 			variantInDB.setSlug(variant.slug());
@@ -480,18 +484,37 @@ public class ProductServiceImpl implements ProductService {
 
 	@Override
 	public ProductESDetailVm getProductESDetailById(String productId) {
-		Product product = productRepository.findById(productId).orElseThrow(() -> new NotFoundException(Constants.ERROR_CODE.PRODUCT_NOT_FOUND, productId));
+		Product product = productRepository.findById(productId)
+				.orElseThrow(() -> new NotFoundException(Constants.ERROR_CODE.PRODUCT_NOT_FOUND, productId));
 		Long thumbnailMediaId = null;
 		if (null != product.getThumbnailMediaId()) {
 			thumbnailMediaId = product.getThumbnailMediaId();
 		}
-		List<String> categoryNames = product.getProductCategories().stream().map(productCategory -> productCategory.getCategory().getCategoryTitle()).toList();
-		List<String> attributeNames = product.getAttributeValues().stream().map(attributeValue -> attributeValue.getProductAttribute().getName()).toList();
+		List<String> categoryNames = product.getProductCategories()
+				.stream()
+				.map(productCategory -> productCategory.getCategory().getCategoryTitle())
+				.toList();
+		List<String> attributeNames = product.getAttributeValues()
+				.stream()
+				.map(attributeValue -> attributeValue.getProductAttribute().getName())
+				.toList();
 		String brandName = null;
 		if (null != product.getBrand()) {
 			brandName = product.getBrand().getName();
 		}
-		return new ProductESDetailVm(product.getProductId(), product.getProductTitle(), product.getSlug(), product.getPrice(), product.isPublished(), product.isVisibleIndividually(), product.isAllowedToOrder(), product.isFeatured(), thumbnailMediaId, brandName, categoryNames, attributeNames);
+		return new ProductESDetailVm(
+				product.getProductId(),
+				product.getProductTitle(),
+				product.getSlug(),
+				product.getPrice(),
+				product.isPublished(),
+				product.isVisibleIndividually(),
+				product.isAllowedToOrder(),
+				product.isFeatured(),
+				thumbnailMediaId,
+				brandName,
+				categoryNames,
+				attributeNames);
 	}
 
 	@Override
@@ -585,9 +608,10 @@ public class ProductServiceImpl implements ProductService {
 
 	@Override
 	public ProductDetailVm getProductById(String productId) {
-		Product product = productRepository.findById(productId).orElseThrow(() -> new NotFoundException(Constants.ERROR_CODE.PRODUCT_NOT_FOUND, productId));
+		Product product = productRepository.findById(productId)
+				.orElseThrow(() -> new NotFoundException(Constants.ERROR_CODE.PRODUCT_NOT_FOUND, productId));
 		List<ImageVm> productImageMedias = new ArrayList<>();
-		if (null != product.getProductImages()) {
+		if (null != product.getProductImages() && CollectionUtils.isNotEmpty(product.getProductImages())) {
 			for (ProductImage image : product.getProductImages()) {
 				productImageMedias.add(new ImageVm(image.getImageId(), mediaService.getMedia(image.getImageId()).url()));
 			}
@@ -606,14 +630,43 @@ public class ProductServiceImpl implements ProductService {
 		if (null != product.getBrand()) {
 			brandId = product.getBrand().getId();
 		}
-		return new ProductDetailVm(product.getProductId(), product.getProductTitle(), product.getShortDescription(), product.getDescription(), product.getSpecification(), product.getSku(), product.getGtin(), product.getSlug(), product.isAllowedToOrder(), product.isPublished(), product.isFeatured(), product.isVisibleIndividually(), product.isStockTrackingEnabled(), product.getPrice().doubleValue(), brandId, categories, product.getMetaTitle(), product.getMetaKeyword(), product.getMetaDescription(), thumbnailMedia, productImageMedias, product.getTaxClassId());
+		return new ProductDetailVm(
+				product.getProductId(),
+				product.getProductTitle(),
+				product.getShortDescription(),
+				product.getDescription(),
+				product.getSpecification(),
+				product.getSku(),
+				product.getGtin(),
+				product.getSlug(),
+				product.isAllowedToOrder(),
+				product.isPublished(),
+				product.isFeatured(),
+				product.isVisibleIndividually(),
+				product.isStockTrackingEnabled(),
+				product.getPrice().doubleValue(),
+				brandId,
+				categories,
+				product.getMetaTitle(),
+				product.getMetaKeyword(),
+				product.getMetaDescription(),
+				thumbnailMedia,
+				productImageMedias,
+				product.getTaxClassId());
 	}
 
-	private void updateExistingVariants(ProductPutVm productPutVm, List<ProductImage> newProductImages, List<Product> existingVariants) {
+	private void updateExistingVariants(
+			ProductPutVm productPutVm,
+			List<ProductImage> newProductImages,
+			List<Product> existingVariants
+	) {
 		if (CollectionUtils.isNotEmpty(productPutVm.variations())) {
 			productPutVm.variations().forEach(variant -> {
 				if (variant.id() != null) {
-					Product variantInDB = existingVariants.stream().filter(pVariant -> variant.id().toString().equals(pVariant.getProductId())).findFirst().orElse(null);
+					Product variantInDB = existingVariants.stream()
+							.filter(pVariant -> variant.id().toString().equals(pVariant.getProductId()))
+							.findFirst()
+							.orElse(null);
 					setValuesForVariantExisting(newProductImages, variant, variantInDB);
 				}
 			});

@@ -5,10 +5,73 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ad7a240-6f5b-4e85-8326-ff6b7f28f723" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/delete-connectors.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.search.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka/connects/debezium-product.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/config/JacksonConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/src/main/java/com/yas/search/ElasticsearchApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/src/main/java/com/yas/search/config/CorsConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/src/main/java/com/yas/search/config/ElasticsearchDataConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/src/main/java/com/yas/search/config/ImperativeClientConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/src/main/java/com/yas/search/config/RestClientConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/src/main/java/com/yas/search/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/src/main/java/com/yas/search/config/ServiceUrlConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/src/main/java/com/yas/search/config/SwaggerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/src/main/java/com/yas/search/constant/document_fields/ProductField.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/src/main/java/com/yas/search/constant/enums/ESortType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/src/main/java/com/yas/search/constants/Action.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/src/main/java/com/yas/search/constants/MessageCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/src/main/java/com/yas/search/consumer/ProductSyncDataConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/src/main/java/com/yas/search/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/src/main/java/com/yas/search/document/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/src/main/java/com/yas/search/exception/ApiExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/src/main/java/com/yas/search/exception/BadRequestException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/src/main/java/com/yas/search/exception/DuplicatedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/src/main/java/com/yas/search/exception/NotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/src/main/java/com/yas/search/repository/ProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/src/main/java/com/yas/search/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/src/main/java/com/yas/search/service/ProductSyncDataService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/src/main/java/com/yas/search/utils/MessagesUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/src/main/java/com/yas/search/viewmodel/ProductESDetailVm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/src/main/java/com/yas/search/viewmodel/ProductGetVm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/src/main/java/com/yas/search/viewmodel/ProductListGetVm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/src/main/java/com/yas/search/viewmodel/ProductNameGetVm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/src/main/java/com/yas/search/viewmodel/ProductNameListVm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/src/main/java/com/yas/search/viewmodel/error/ErrorVm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/src/main/resources/esconfig/elastic-analyzer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/src/main/resources/logback-spring.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/src/main/resources/messages/messages.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/src/test/java/com/yas/search/service/ProductServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/src/test/java/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/src/test/java/resources/logback-spring.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/src/test/java/resources/mockito-extensions/org.mockito.plugins.MockMaker" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search/wait-for-it.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/start-source-connectors.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backoffice-bff/src/main/java/com/yas/backofficebff/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/backoffice-bff/src/main/java/com/yas/backofficebff/BackofficeBffApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/nhh203/orderservice/controller/CheckoutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/nhh203/orderservice/controller/CheckoutController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment/src/main/java/com/yas/payment/controller/PaymentProviderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment/src/main/java/com/yas/payment/controller/PaymentProviderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backoffice/modules/catalog/components/CategoryMapping.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/backoffice/modules/catalog/components/CategoryMapping.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backoffice/modules/catalog/components/ProductVariation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/backoffice/modules/catalog/components/ProductVariation.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backoffice/modules/catalog/components/RelatedProduct.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/backoffice/modules/catalog/components/RelatedProduct.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backoffice/modules/catalog/services/ProductAttributeValueService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backoffice/modules/catalog/services/ProductAttributeValueService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backoffice/modules/catalog/services/ProductService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backoffice/modules/catalog/services/ProductService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backoffice/pages/catalog/products/[id]/edit.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/backoffice/pages/catalog/products/[id]/edit.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backoffice/pages/catalog/products/[id]/productAttributes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/backoffice/pages/catalog/products/[id]/productAttributes.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/controller/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/service/implement/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nhh203/productservice/service/implement/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storefront/modules/home/components/FeaturedProduct.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/storefront/modules/home/components/FeaturedProduct.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,12 +122,16 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Docker.docker-compose.search.yml.search: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml.kafka: Compose Deployment.executor": "Run",
     "Maven.customer-service [org.apache.maven.plugins:maven-clean-plugin:3.3.2:clean].executor": "Run",
     "Maven.product-service [clean].executor": "Run",
     "Maven.product-service [org.apache.maven.plugins:maven-clean-plugin:3.3.2:clean].executor": "Run",
     "Maven.product-service [org.apache.maven.plugins:maven-install-plugin:3.1.2:help].executor": "Run",
     "Maven.root [clean].executor": "Run",
     "Maven.root [install].executor": "Run",
+    "Maven.search [clean].executor": "Run",
+    "Maven.search [install].executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -77,8 +144,11 @@
     "Spring Boot.CartServiceApplication.executor": "Debug",
     "Spring Boot.CommonServiceApplication.executor": "Run",
     "Spring Boot.CustomerApplication.executor": "Debug",
+    "Spring Boot.ElasticsearchApplication.executor": "Debug",
+    "Spring Boot.MediaApplication.executor": "Debug",
     "Spring Boot.OrderServiceApplication.executor": "Run",
-    "Spring Boot.ProductServiceApplication.executor": "Run",
+    "Spring Boot.ProductServiceApplication.executor": "Debug",
+    "Spring Boot.StorefrontBffApplication.executor": "Debug",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/java/microservice-ecorrmmer/microservice-ecorrmmer",
@@ -87,7 +157,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Global Libraries",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15390626",
     "project.structure.side.proportion": "0.5773672",
     "run.configurations.included.in.services": "true",
@@ -112,18 +182,11 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.BackofficeBffApplication">
+  <component name="RunManager" selected="Spring Boot.ElasticsearchApplication">
     <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="api-gateway" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.nhh203.apigateway.ApiGatewayApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="backoffice-bff" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.yas.backofficebff.Application" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -174,6 +237,13 @@
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="discovery-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.nhh203.discoveryservice.DiscoveryServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ElasticsearchApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="search" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.yas.search.ElasticsearchApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -264,18 +334,52 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.search.yml.search: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="search" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.search.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.kafka: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="kafka" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <list>
+      <item itemvalue="Docker.docker-compose.yml.kafka: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.search.yml.search: Compose Deployment" />
+      <item itemvalue="Spring Boot.MediaApplication" />
+      <item itemvalue="Spring Boot.ElasticsearchApplication" />
       <item itemvalue="Spring Boot.ApiGatewayApplication" />
       <item itemvalue="Spring Boot.OrderServiceApplication" />
       <item itemvalue="Spring Boot.DiscoveryServiceApplication" />
-      <item itemvalue="Spring Boot.Application" />
       <item itemvalue="Spring Boot.CartServiceApplication" />
       <item itemvalue="Spring Boot.CommonServiceApplication" />
       <item itemvalue="Spring Boot.ConfigServerApplication" />
       <item itemvalue="Spring Boot.CustomerApplication" />
       <item itemvalue="Spring Boot.InventoryServiceApplication" />
       <item itemvalue="Spring Boot.LocationApplication" />
-      <item itemvalue="Spring Boot.MediaApplication" />
       <item itemvalue="Spring Boot.NotificationServiceApplication" />
       <item itemvalue="Spring Boot.PaymentApplication" />
       <item itemvalue="Spring Boot.PaymentPaypalApplication" />
@@ -288,7 +392,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.docker-compose.yml.kafka: Compose Deployment" />
         <item itemvalue="Spring Boot.BackofficeBffApplication" />
+        <item itemvalue="Docker.docker-compose.search.yml.search: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -359,7 +465,14 @@
       <workItem from="1723051440605" duration="6938000" />
       <workItem from="1723100374387" duration="5852000" />
       <workItem from="1723137282969" duration="824000" />
-      <workItem from="1723178029367" duration="2205000" />
+      <workItem from="1723178029367" duration="2480000" />
+      <workItem from="1723189799145" duration="6676000" />
+      <workItem from="1723264019627" duration="1168000" />
+      <workItem from="1723268308963" duration="8573000" />
+      <workItem from="1723279023789" duration="15938000" />
+      <workItem from="1723302098102" duration="3213000" />
+      <workItem from="1723343857362" duration="3650000" />
+      <workItem from="1723347601061" duration="2134000" />
     </task>
     <servers />
   </component>
@@ -378,18 +491,14 @@
     </option>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="org.hibernate.HibernateException" package="org.hibernate" />
-          <option name="timeStamp" value="1" />
-        </breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <inline-watch fileUrl="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/6.1.8/spring-web-6.1.8-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java" line="264">
         <watch expression="((ProcessingException)ex.target).cause" language="JAVA" custom="javax.ws.rs.ProcessingException" />
       </inline-watch>
     </watches-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

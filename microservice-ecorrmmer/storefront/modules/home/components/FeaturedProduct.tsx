@@ -13,6 +13,7 @@ const FeaturedProduct = () => {
 
   useEffect(() => {
     getFeaturedProducts(pageNo).then((res) => {
+      console.log(res);
       setProduct(res.productList);
       setTotalPage(res.totalPage);
     });

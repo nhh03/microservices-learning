@@ -20,7 +20,7 @@ export async function exportProducts(productName: string, brandName: string) {
 }
 
 export async function getProduct(id: string){
-  const response = await fetch('/api/product/backoffice/products/' + id);
+  const response = await fetch('http://localhost:8087/api/product/backoffice/products/' + id);
   return await response.json();
 }
 
@@ -34,8 +34,8 @@ export async function createProduct(product: ProductPayload) {
   return response;
 }
 
-export async function updateProduct(id: number, product: ProductPayload) {
-  const response = await fetch('/api/product/backoffice/products/' + id, {
+export async function updateProduct(id: string, product: ProductPayload) {
+  const response = await fetch('http://localhost:8087/api/product/backoffice/products/' + id, {
     method: 'PUT',
     body: JSON.stringify(product),
     headers: { 'Content-Type': 'application/json' },
@@ -52,13 +52,13 @@ export async function deleteProduct(id: number) {
   else return await response.json();
 }
 
-export async function getVariationsByProductId(productId: number): Promise<Variantion[]> {
-  const res = await fetch(`/api/product/backoffice/product-variations/${productId}`);
+export async function getVariationsByProductId(productId: string): Promise<Variantion[]> {
+  const res = await fetch(`http://localhost:8087/api/product/backoffice/product-variations/${productId}`);
   if (res.status >= 200 && res.status < 300) return res.json();
   return Promise.reject(res);
 }
 
-export async function getRelatedProductByProductId(productId: number): Promise<Product[]> {
+export async function getRelatedProductByProductId(productId: string): Promise<Product[]> {
   const res = await fetch(`/api/product/backoffice/products/related-products/${productId}`, {
     method: 'GET',
     headers: { 'Content-Type': 'application/json' },

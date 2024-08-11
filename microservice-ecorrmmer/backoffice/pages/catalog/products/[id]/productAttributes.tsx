@@ -44,7 +44,7 @@ const ProductAttributes: NextPage = () => {
   useEffect(() => {
     if (id) {
       let checkIdValid = true;
-      getAttributeValueOfProduct(+id)
+      getAttributeValueOfProduct(id as string)
         .then((data) => {
           setAttributeOfProducts(data);
           setAttributeOfCurrentProducts(data);

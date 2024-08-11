@@ -1,0 +1,20 @@
+{
+  "connector.class": "io.debezium.connector.mysql.MySqlConnector",
+  "topic.prefix": "dbproduct",
+  "database.user": "root",
+  "database.hostname": "mysqlcontainer",
+  "database.server.name": "productservice",
+  "database.server.id": "184054",
+  "database.port": "3306",
+  "database.password": "root",
+  "database.include.list": "product",
+  "database.history.kafka.bootstrap.servers": "localhost:9092",
+  "database.history.kafka.topic": "schema-changes.product",
+  "key.converter.schemas.enable": "false",
+  "value.converter.schemas.enable": "false",
+  "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+  "key.converter": "org.apache.kafka.connect.json.JsonConverter",
+  "schema.include.list": "public",
+  "table.include.list": "public.product"
+}
+

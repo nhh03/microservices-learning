@@ -43,7 +43,6 @@ public class CategoryController {
 	private final CategoryService categoryService;
 	private final CategoryRepository categoryRepository;
 
-
 	@Hidden
 	// TODO : fetch all categories
 	@GetMapping("/categories")

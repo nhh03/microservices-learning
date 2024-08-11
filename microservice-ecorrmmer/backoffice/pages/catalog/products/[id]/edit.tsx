@@ -63,12 +63,13 @@ const EditProduct: NextPage = () => {
   const onSubmit: SubmitHandler<FormProduct> = (data) => {
     if (id) {
       const payload = mapFormProductToProductPayload(data);
-      updateProduct(+id, payload)
-        .then(async (res) => {
-          handleUpdatingResponse(res);
-          router.replace(PRODUCT_URL).catch((error) => console.log(error));
-        })
-        .catch((error) => console.log(error));
+      console.log(payload); //Check payload
+      // updateProduct(id as string, payload)
+      //   .then(async (res) => {
+      //     handleUpdatingResponse(res);
+      //     router.replace(PRODUCT_URL).catch((error) => console.log(error));
+      //   })
+      //   .catch((error) => console.log(error));
     }
   };
   if (isLoading) return <p>Loading...</p>;
